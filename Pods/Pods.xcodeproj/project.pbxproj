@@ -1,0 +1,1118 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B004271A3540F4A7497B083C7BEC43 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB9259BE3E40F3DC225230C5CBDE83 /* ApolloStore.swift */; };
+		05B2A27272B2CE67127CD9DD9E729606 /* buttonRoundedRegularHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 509DC0416F0CA1670916DF5AF0D6D543 /* buttonRoundedRegularHighlighted.png */; };
+		0920CADC8A860904439BBCB704261E76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		097083C009DC181784C062222020113F /* ResultOrPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC8002E7CF8CB0609244C8A8FE3DA9 /* ResultOrPromise.swift */; };
+		0BE0EB2E46F8813032EC45640B8B595B /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2FA3DFC24F9FE7A286EB58AB0EAA21A4 /* hu.lproj */; };
+		0EB4EA6580DAE04E7C6E70ECF6434B32 /* buttonRoundedRegular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F47D2D2AA97E6FCF94CF9C6462F693BE /* buttonRoundedRegular@2x.png */; };
+		0F55F645986549CC71562CA5F99351EB /* JSONSerializationFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8332B18C409BDEE5A2E32C72B438E4 /* JSONSerializationFormat.swift */; };
+		10102D2E1E4FCF01E4839F71170EF4FA /* hr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DA79B9B66571715562D67E977D938320 /* hr.lproj */; };
+		10E71ECB9306E5534B085AEA0BCD8A52 /* buttonRoundedDeleteHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4915A72E004902EA8196D23101E520 /* buttonRoundedDeleteHighlighted@2x.png */; };
+		1741C39F86DB6FEA459F2B549CD326FB /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F9C4F4449D4E22F92D84A6DFD9DA5195 /* Arrow.png */; };
+		1B9228F487DF7B494E7E8E93DF2D2371 /* buttonRoundedDeleteHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 405E98466E2B9DCE7E58363A87C54506 /* buttonRoundedDeleteHighlighted.png */; };
+		20E38E32A7DB892F88BC1421D4D6A03B /* GraphQLResponseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34246C6B47426A06AE70CE1BE3190E66 /* GraphQLResponseGenerator.swift */; };
+		211848600C7182B0051E73DE82B20421 /* Rectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8DA1350EA4427224A83BDF36A9C6F51 /* Rectangle@3x.png */; };
+		24A0A688E5F0450FE1460E1830109EEB /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6940030DE473A5BD340E30A40BD17F9 /* DataLoader.swift */; };
+		2744196B80834C8C64B2B22220285201 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A53063532E56B820C958B9CB9AF242BF /* nl.lproj */; };
+		2D1377F64EC27D44D821A9EF34EE862D /* GraphQLInputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47540D36B25AEA7F28CAC3B066996657 /* GraphQLInputValue.swift */; };
+		3334363611D795C848F8E771DDB1A1A5 /* GraphQLExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70F3C518E8A3E410822BEB47764446 /* GraphQLExecutor.swift */; };
+		34F1B4DCE098F105AAE2C9CA9A58EF85 /* Blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4CB6F0B90CA79E3B8096A631C58A0 /* Blur@2x.png */; };
+		35720EF83CF77037C3DF93CCA5394BF6 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F9946BF9AA0519840114971774C522DD /* nb.lproj */; };
+		3945A29814E4B1E9C9A2DD1DE72522D4 /* JSONStandardTypeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9CA9E80DB14644DA6A086D3A2FC2D /* JSONStandardTypeConversions.swift */; };
+		3B13A83F0B416416FE3AE60DD68D00B4 /* buttonRoundedDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8233C4D45741DE47BD017E6F840C4C18 /* buttonRoundedDelete@2x.png */; };
+		3C7486C088BC221EA5E88192BA316DD4 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4309DCF7FA3477BA4C7EE2ECF27A4 /* GraphQLError.swift */; };
+		3D99AEFD65C4B18FF4D751CC43DEAF0D /* IconGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B564E8E7D57FBA0E734A7866B02B11 /* IconGradient.png */; };
+		3E08E40938C162E223543E74CC97374E /* Cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A3DE4584C690FD800009ECC916DA469 /* Cancel@3x.png */; };
+		3FB11A9708614E901C97167958276AFC /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405448E313A21C9AEBE68579270A48E /* RecordSet.swift */; };
+		40902EEE245159F48FE2048E0DAE9168 /* feedbackActivity@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0100324BF200EB089030141BCED524A7 /* feedbackActivity@2x~ipad.png */; };
+		4548C1011A02C777B4B263AD821A2DD3 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 49548929070CAC1A66BAFB0440E3FE20 /* pt-PT.lproj */; };
+		45567CF12FE4EE67842F4AB8B41C9138 /* NormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CD3B057746EB7E12877E5C1D859171 /* NormalizedCache.swift */; };
+		47AC0559B014EAA414214010F97BA4C6 /* GraphQLResultNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EB7080DF41FA3D19FEAA3B0AB8A079 /* GraphQLResultNormalizer.swift */; };
+		4816D84F99C335BD69510B3CBCB3BC06 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9208A8A04B5407B0B59CB3833D09188 /* JSON.swift */; };
+		4A0EB5814435E932DC7DA439514950AB /* GraphQLSelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6BB38D1951B9DC2FFEFAE1E852197 /* GraphQLSelectionSet.swift */; };
+		4BD0CD3F98A9DECD717A405B6F5B7D85 /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D4F1A41791DC9DAB8B583EFF3DB26B /* Arrow@2x.png */; };
+		4EC2B357CD04FCBA1A75CC7A477153CC /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 297A983619D28422660983A56555C15F /* it.lproj */; };
+		4F01E11E5BC96B92C255589CF5BBCC49 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 994B84B776D888DE93BE2D288DDECFC3 /* de.lproj */; };
+		59CA5F7719005184AB71884C81DFA971 /* feedbackActivity~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D44148B8E0A326D652F8DFAB7E4FF5 /* feedbackActivity~ipad.png */; };
+		6472BDD504B3883BAAEC5F24E7027DA4 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC646329E62923E8F910D93DF4D7FD7 /* NetworkTransport.swift */; };
+		682F3F35A8D7954EAD87213CF6D92CA6 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 18B56C4ED26C7CAA2A2DADDA26D72870 /* en.lproj */; };
+		69C6A08FE46B8ECC10C4F538A249EF79 /* Apollo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB8AA6091DEAE47115CB364FCD995C5 /* Apollo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BB1817B430C72BBE099D23B39CECE0D /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55B5D0B74F294A5002603F3CD2129E7 /* Record.swift */; };
+		6DB1B3C86D07ACD1237F55ED964C32D6 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBE7C28AB79498F756699B7C672317 /* Promise.swift */; };
+		6EC8E3228BB60E487E156467919BA83A /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A26A9AD6BC5C5F478F4EC148313EF0EF /* fr.lproj */; };
+		7BF1BC9703683E3CDD159A6264CFB58B /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F94D0D7AE1DF6F8E5D87F239437EDB /* Rectangle.png */; };
+		7C4D1F326A2B12AE370997778531801A /* iconCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFCA15772EDEA6FC0379F9409AC277C /* iconCamera.png */; };
+		7D498B858EFD7F9E012A78B81781175B /* Cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05B6E2D041B2BBB7ADE08EECD534DE46 /* Cancel@2x.png */; };
+		7D99EDF1A4767CCDB9B5E29DA6D6B8D6 /* Ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D80C64900EC91DF6D55FE6B7E58A66EC /* Ok@2x.png */; };
+		7DDD41B9276BFE828CD85F7E049F9A7A /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DD2CBA44304AF28A3B9DAE92D7F0FBA2 /* ru.lproj */; };
+		7FC1A2AC6EE5A2A9FED69B5D8C39ECA9 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0D134B4DDCFF00F2DBB81562C71A6ACC /* tr.lproj */; };
+		852AE1AE9762452D89E501B86806C3AB /* GraphQLResultAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE9A32C0AF172032A3A8789E6C71E /* GraphQLResultAccumulator.swift */; };
+		854AF80F5192170ADCCB069E6259FEEE /* GraphQLDependencyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9F25D02D94D68DDBCDC1EE75381EE /* GraphQLDependencyTracker.swift */; };
+		8BCC46513958FD53CE2B58908A878CB6 /* Locking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110469D3333052DB8F14DE9CE4212BE /* Locking.swift */; };
+		8D401BC540B6CF254C8C5E2B2E41636D /* Rectangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEBF8F3D31687B6C20F833CA8B576AC /* Rectangle@2x.png */; };
+		8F7E5E1D1B7D7B814864BFCAEBCAF00F /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5E925232114DE0E2250788750837BF83 /* zh-Hans.lproj */; };
+		9369C7444953229DAAFC0D616CCAC0FF /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D69186739FBBBF04027411EF860EE325 /* ja.lproj */; };
+		945181D2B7E30D3C0B07EDEC26E1FC2B /* authorize_denied@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B14784E43DC2C73C3152F5A0C078AAE /* authorize_denied@3x.png */; };
+		94673DF28CFD10AF179F7D04CDA8BAC5 /* Blur@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59C7106FD26137AE64EF16D88DB3C980 /* Blur@3x.png */; };
+		94B7C8911B2A9A08A71606D9581A1148 /* buttonRoundedDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = AB53341580A793A3C0087CB77F83881F /* buttonRoundedDelete.png */; };
+		95B86A37516E4159141D192C653EC815 /* buttonRoundedRegularHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E40754D50B3A94ECB99E4E56D251EC4F /* buttonRoundedRegularHighlighted@2x.png */; };
+		970466C82DB88ECDDD27BF3E9DF4FC46 /* AppIconPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABEA9CB0AA2739F345196B89137F7C2 /* AppIconPlaceHolder.png */; };
+		9E4F23BFA9B082F66DDE6CBF826350B4 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5A6BAB023352E2D4838822874666 /* ApolloClient.swift */; };
+		9F49CE13A71C3E9806C1884E9E5EBE7F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B6890F6EBAF64A404C0BEFC9E01B55 /* Result.swift */; };
+		A07DC3A253D19FA20F0B13FC61601E08 /* Pods-betrating-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C64C313FDFC42567DB24125D5E000FBB /* Pods-betrating-dummy.m */; };
+		A416F348274132328F2F7889EE0070B0 /* buttonRoundedRegular.png in Resources */ = {isa = PBXBuildFile; fileRef = A51ADCE1D1777ED35E0BBBA2C3485C3D /* buttonRoundedRegular.png */; };
+		A7F758E72285085E768B3196D47984A1 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA23C3CCC87B1B957EC4265FBF7CF9E /* AsynchronousOperation.swift */; };
+		A8D32AA73678855CF6E93D4FFEA2F7AF /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 44B163796223EF22B7C1C011BB59DB6D /* pt.lproj */; };
+		A9DDA23615CC07AA99D48471BF75C2C1 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AC150E48E73F95CC2ED431F550A812FD /* es.lproj */; };
+		AD12DCF1C2174A7E2FA68AF2D7D59DAF /* feedbackActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF78E1DFE117E11E448E732517B33ED /* feedbackActivity@2x.png */; };
+		B7EF762FF3731C4DCFEB4D2191CE557F /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C67471B9517866BD3F83278A15018 /* GraphQLResult.swift */; };
+		B8D849B69A2177B7C31381E54D1A0712 /* fa.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C2CB63F4E798E47EEECA28F555B9C /* fa.lproj */; };
+		BA2233A98BC53B7D3A80D66A15750525 /* Blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 7643342AD2FF9207C64720929C0C1406 /* Blur.png */; };
+		BC1C82D8C94A6C209D100AC3AA449D38 /* GraphQLQueryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C23049782AB7E168A3249F92817E2 /* GraphQLQueryWatcher.swift */; };
+		BC29C2B0DC8755CF00E12C7C4AFBF695 /* check-and-run-apollo-codegen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 5C3ED10CB9876DAC58BAACB8F0065DF8 /* check-and-run-apollo-codegen.sh */; };
+		BF9BA87EFEB1661385681C47E3F5AF1F /* iconCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D7979E30F0EE17C5E7678AC94245A4 /* iconCamera@2x.png */; };
+		C2309D01A3D237536CC3C74B1A36592F /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D7296F3F747F29D2890D2686F0E698 /* GraphQLOperation.swift */; };
+		C55B22B5563005DBE84409659356E8F3 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 139D817667CB58E88DED5CF582DDD010 /* Cancel.png */; };
+		C5A0C07491F9D94C99DE288D0159AB65 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57EDBC9C4DDF59E2432044945BAA87 /* Collections.swift */; };
+		C7386CA0B7A4E7F8D3D58EBCBCCC78F2 /* GraphQLSelectionSetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DAC9CA0B5177B93F2AFBEC9647A345 /* GraphQLSelectionSetMapper.swift */; };
+		CA8BF5345E764D249B03B1A6778AED0F /* Ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D6B49D2287BB92F5DC6D004517DAF2 /* Ok.png */; };
+		CCFF4CE602C8186E2465ADE936E75F08 /* IconGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A001EBAAED8D4965E63BF699F651DFCE /* IconGradient@2x.png */; };
+		CF06D2A6538A5E191A84AAD84742D4B2 /* FeedbackPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E8768EA700F5D86C7BC654DB076DA441 /* FeedbackPlaceholder.png */; };
+		D066A410387CD904D2FC3E3F10FFEBA4 /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3FAD3EFD3DF0FAA0AFC63FEF1F66E3 /* GraphQLResponse.swift */; };
+		D07FABF52BC4DA8B8D3C35DCAD6BC2BD /* authorize_denied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 093F50B7322DDE1C82E5773FAB0C5140 /* authorize_denied@2x.png */; };
+		D9DEFA783A3190B4261843DCF2D07E6E /* feedbackActivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A87D6E42FEB5A4E85DB844BDC41EAA /* feedbackActivity@3x.png */; };
+		DDC7B4901BAFE62B6B02777D1FA029F4 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 729352DB5CF79C820492B284D3A2F937 /* bg.png */; };
+		E244908082C989A96CA733AD2B3C78AB /* Arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D249AB6E8938C00EA281C5A390A016 /* Arrow@3x.png */; };
+		E5949F0C4BB0DB1C3D66F2B59E2C227C /* InMemoryNormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81BDAE5623AAD4222118A5E2117E8A5 /* InMemoryNormalizedCache.swift */; };
+		EB31F7C05E4247DB1FAB104A815E7BCC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF68A14FF34554DFA7385116C08F1923 /* Utilities.swift */; };
+		ECAE78B15FAE7AF144F6EA0A1F03AF16 /* Ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F78058A1A2F02A6ECD3091AA57ACFE38 /* Ok@3x.png */; };
+		EDD612F4B3F2AA0839C8AECBA1135337 /* Pods-betrating-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 634B473B4098A0ACE971D26D65217F31 /* Pods-betrating-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEBE916DB2F225C07EF64E2D05060418 /* authorize_denied.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D55BD1381116FEC6E19BA5CEA56642 /* authorize_denied.png */; };
+		F00ACA4CF72B404017C79B34D9921343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F6E58345690D1BAD17BB1A399234DF01 /* HTTPNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D47149FCB10C740A0DF5E6FE6C3140 /* HTTPNetworkTransport.swift */; };
+		F8443B0C224312ED79FECFA39C145C96 /* Apollo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2228BCE972FACDA667F62CE61D78063 /* Apollo-dummy.m */; };
+		FC3045CA8195C0BF3460910978BEE9B2 /* feedbackActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = 036882ABF29AE68939678C1F79E80AAC /* feedbackActivity.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33420436987BC5D52830380DEF8B00CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C587F1B2FA2CB38A29F84936DEFD569D;
+			remoteInfo = "HockeySDK-HockeySDKResources";
+		};
+		F1BBD3C583368E277FFA15F5C44CD739 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2010E78719F690490FE4CE58BC774303;
+			remoteInfo = Apollo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002CC89FD06CBA2A7EDCF6CB147BA802 /* YMMYandexMetricaConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaConfiguration.h; path = dynamic/YandexMobileMetrica.framework/Headers/YMMYandexMetricaConfiguration.h; sourceTree = "<group>"; };
+		0100324BF200EB089030141BCED524A7 /* feedbackActivity@2x~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x~ipad.png"; sourceTree = "<group>"; };
+		036882ABF29AE68939678C1F79E80AAC /* feedbackActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = feedbackActivity.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity.png"; sourceTree = "<group>"; };
+		05B6E2D041B2BBB7ADE08EECD534DE46 /* Cancel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@2x.png"; sourceTree = "<group>"; };
+		07D55BD1381116FEC6E19BA5CEA56642 /* authorize_denied.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = authorize_denied.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied.png"; sourceTree = "<group>"; };
+		093F50B7322DDE1C82E5773FAB0C5140 /* authorize_denied@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@2x.png"; sourceTree = "<group>"; };
+		0CBC8002E7CF8CB0609244C8A8FE3DA9 /* ResultOrPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultOrPromise.swift; path = Sources/Apollo/ResultOrPromise.swift; sourceTree = "<group>"; };
+		0D134B4DDCFF00F2DBB81562C71A6ACC /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/tr.lproj"; sourceTree = "<group>"; };
+		139D817667CB58E88DED5CF582DDD010 /* Cancel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Cancel.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel.png"; sourceTree = "<group>"; };
+		146F1D0CC0B7985A0D7F190A526B7853 /* Pods-betrating-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-betrating-frameworks.sh"; sourceTree = "<group>"; };
+		14B6BB38D1951B9DC2FFEFAE1E852197 /* GraphQLSelectionSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLSelectionSet.swift; path = Sources/Apollo/GraphQLSelectionSet.swift; sourceTree = "<group>"; };
+		18B56C4ED26C7CAA2A2DADDA26D72870 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/en.lproj"; sourceTree = "<group>"; };
+		193A3389DC9B0B95714A217B75905507 /* YMMYandexMetricaReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaReporting.h; path = dynamic/YandexMobileMetrica.framework/Headers/YMMYandexMetricaReporting.h; sourceTree = "<group>"; };
+		1B6B3F8C8B9BF13F7442ACF198BD1009 /* YMMVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMVersion.h; path = dynamic/YandexMobileMetrica.framework/Headers/YMMVersion.h; sourceTree = "<group>"; };
+		1C27FACF2B48530549D14CF6B76853B7 /* Apollo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-prefix.pch"; sourceTree = "<group>"; };
+		1CEBE7C28AB79498F756699B7C672317 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Apollo/Promise.swift; sourceTree = "<group>"; };
+		1FFCA15772EDEA6FC0379F9409AC277C /* iconCamera.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = iconCamera.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera.png"; sourceTree = "<group>"; };
+		21BAC8F758D7B2B3E8A40D7ABFC5486E /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Apollo.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		297A983619D28422660983A56555C15F /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/it.lproj"; sourceTree = "<group>"; };
+		29D44148B8E0A326D652F8DFAB7E4FF5 /* feedbackActivity~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity~ipad.png"; sourceTree = "<group>"; };
+		2AC2278B06473BEBD16734473C125832 /* Pods_betrating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_betrating.framework; path = "Pods-betrating.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B14784E43DC2C73C3152F5A0C078AAE /* authorize_denied@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@3x.png"; sourceTree = "<group>"; };
+		2FA3DFC24F9FE7A286EB58AB0EAA21A4 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hu.lproj"; sourceTree = "<group>"; };
+		3110469D3333052DB8F14DE9CE4212BE /* Locking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locking.swift; path = Sources/Apollo/Locking.swift; sourceTree = "<group>"; };
+		32E47BAF99B2A1417382542DBF7818D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		334C23049782AB7E168A3249F92817E2 /* GraphQLQueryWatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLQueryWatcher.swift; path = Sources/Apollo/GraphQLQueryWatcher.swift; sourceTree = "<group>"; };
+		34246C6B47426A06AE70CE1BE3190E66 /* GraphQLResponseGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResponseGenerator.swift; path = Sources/Apollo/GraphQLResponseGenerator.swift; sourceTree = "<group>"; };
+		34EB7080DF41FA3D19FEAA3B0AB8A079 /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultNormalizer.swift; path = Sources/Apollo/GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
+		39D6B49D2287BB92F5DC6D004517DAF2 /* Ok.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Ok.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok.png"; sourceTree = "<group>"; };
+		3B7B5A6BAB023352E2D4838822874666 /* ApolloClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloClient.swift; path = Sources/Apollo/ApolloClient.swift; sourceTree = "<group>"; };
+		3F461AA84FD12D7DD15EE1917455193C /* Pods-betrating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-betrating.debug.xcconfig"; sourceTree = "<group>"; };
+		405E98466E2B9DCE7E58363A87C54506 /* buttonRoundedDeleteHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDeleteHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted.png"; sourceTree = "<group>"; };
+		41806818753DB75FBCC0EC84641E105C /* ResourceBundle-HockeySDKResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HockeySDKResources-Info.plist"; sourceTree = "<group>"; };
+		41B564E8E7D57FBA0E734A7866B02B11 /* IconGradient.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = IconGradient.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient.png"; sourceTree = "<group>"; };
+		4405448E313A21C9AEBE68579270A48E /* RecordSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordSet.swift; path = Sources/Apollo/RecordSet.swift; sourceTree = "<group>"; };
+		44B163796223EF22B7C1C011BB59DB6D /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt.lproj"; sourceTree = "<group>"; };
+		47237A94B696C57593F9BF5043327551 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework"; sourceTree = "<group>"; };
+		47540D36B25AEA7F28CAC3B066996657 /* GraphQLInputValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLInputValue.swift; path = Sources/Apollo/GraphQLInputValue.swift; sourceTree = "<group>"; };
+		48F6987CC96BD7247372AF8BB5937994 /* YandexMobileMetrica.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YandexMobileMetrica.framework; path = dynamic/YandexMobileMetrica.framework; sourceTree = "<group>"; };
+		49548929070CAC1A66BAFB0440E3FE20 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt-PT.lproj"; sourceTree = "<group>"; };
+		4A5C67471B9517866BD3F83278A15018 /* GraphQLResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResult.swift; path = Sources/Apollo/GraphQLResult.swift; sourceTree = "<group>"; };
+		4DEBF8F3D31687B6C20F833CA8B576AC /* Rectangle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@2x.png"; sourceTree = "<group>"; };
+		4E9C2CB63F4E798E47EEECA28F555B9C /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fa.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fa.lproj"; sourceTree = "<group>"; };
+		4EC9CA9E80DB14644DA6A086D3A2FC2D /* JSONStandardTypeConversions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONStandardTypeConversions.swift; path = Sources/Apollo/JSONStandardTypeConversions.swift; sourceTree = "<group>"; };
+		509DC0416F0CA1670916DF5AF0D6D543 /* buttonRoundedRegularHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegularHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted.png"; sourceTree = "<group>"; };
+		546434BBC52C8E4F5D193E479E3B27A5 /* Pods-betrating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-betrating.release.xcconfig"; sourceTree = "<group>"; };
+		59C7106FD26137AE64EF16D88DB3C980 /* Blur@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@3x.png"; sourceTree = "<group>"; };
+		5AA23C3CCC87B1B957EC4265FBF7CF9E /* AsynchronousOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsynchronousOperation.swift; path = Sources/Apollo/AsynchronousOperation.swift; sourceTree = "<group>"; };
+		5B20EACC51270D5E4D9F1DCC01463E92 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B95EC1048FBB7FD6ECC887167F8526E /* Pods-betrating-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-betrating-resources.sh"; sourceTree = "<group>"; };
+		5C3ED10CB9876DAC58BAACB8F0065DF8 /* check-and-run-apollo-codegen.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = "check-and-run-apollo-codegen.sh"; path = "scripts/check-and-run-apollo-codegen.sh"; sourceTree = "<group>"; };
+		5E925232114DE0E2250788750837BF83 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/zh-Hans.lproj"; sourceTree = "<group>"; };
+		634B473B4098A0ACE971D26D65217F31 /* Pods-betrating-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-betrating-umbrella.h"; sourceTree = "<group>"; };
+		650AC5E3A620137DA2F053CDF523686D /* YandexMobileMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YandexMobileMetrica.h; path = dynamic/YandexMobileMetrica.framework/Headers/YandexMobileMetrica.h; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		66B4309DCF7FA3477BA4C7EE2ECF27A4 /* GraphQLError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLError.swift; path = Sources/Apollo/GraphQLError.swift; sourceTree = "<group>"; };
+		69CABC566A90C5CA6662E8259BC5993A /* Apollo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Apollo.modulemap; sourceTree = "<group>"; };
+		6A2017D0CDFEF5F0E719B7DEF74E5F59 /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPreloadInfo.h; path = dynamic/YandexMobileMetrica.framework/Headers/YMMYandexMetricaPreloadInfo.h; sourceTree = "<group>"; };
+		6AADE9A32C0AF172032A3A8789E6C71E /* GraphQLResultAccumulator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultAccumulator.swift; path = Sources/Apollo/GraphQLResultAccumulator.swift; sourceTree = "<group>"; };
+		6ABEA9CB0AA2739F345196B89137F7C2 /* AppIconPlaceHolder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = AppIconPlaceHolder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/AppIconPlaceHolder.png"; sourceTree = "<group>"; };
+		6BE4CB6F0B90CA79E3B8096A631C58A0 /* Blur@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@2x.png"; sourceTree = "<group>"; };
+		6E70F3C518E8A3E410822BEB47764446 /* GraphQLExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLExecutor.swift; path = Sources/Apollo/GraphQLExecutor.swift; sourceTree = "<group>"; };
+		70DAC9CA0B5177B93F2AFBEC9647A345 /* GraphQLSelectionSetMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLSelectionSetMapper.swift; path = Sources/Apollo/GraphQLSelectionSetMapper.swift; sourceTree = "<group>"; };
+		729352DB5CF79C820492B284D3A2F937 /* bg.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = bg.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/bg.png"; sourceTree = "<group>"; };
+		72A0D4F34BB68841C1FD1B64E11EC583 /* YandexMobileMetrica-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetrica-umbrella.h"; path = "dynamic/YandexMobileMetrica.framework/Headers/YandexMobileMetrica-umbrella.h"; sourceTree = "<group>"; };
+		75D249AB6E8938C00EA281C5A390A016 /* Arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@3x.png"; sourceTree = "<group>"; };
+		7643342AD2FF9207C64720929C0C1406 /* Blur.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Blur.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur.png"; sourceTree = "<group>"; };
+		78D7979E30F0EE17C5E7678AC94245A4 /* iconCamera@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "iconCamera@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera@2x.png"; sourceTree = "<group>"; };
+		7DC646329E62923E8F910D93DF4D7FD7 /* NetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkTransport.swift; path = Sources/Apollo/NetworkTransport.swift; sourceTree = "<group>"; };
+		8233C4D45741DE47BD017E6F840C4C18 /* buttonRoundedDelete@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDelete@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete@2x.png"; sourceTree = "<group>"; };
+		87DB9259BE3E40F3DC225230C5CBDE83 /* ApolloStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloStore.swift; path = Sources/Apollo/ApolloStore.swift; sourceTree = "<group>"; };
+		88CD3B057746EB7E12877E5C1D859171 /* NormalizedCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NormalizedCache.swift; path = Sources/Apollo/NormalizedCache.swift; sourceTree = "<group>"; };
+		8A3DE4584C690FD800009ECC916DA469 /* Cancel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@3x.png"; sourceTree = "<group>"; };
+		8A57EDBC9C4DDF59E2432044945BAA87 /* Collections.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collections.swift; path = Sources/Apollo/Collections.swift; sourceTree = "<group>"; };
+		8F3FAD3EFD3DF0FAA0AFC63FEF1F66E3 /* GraphQLResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResponse.swift; path = Sources/Apollo/GraphQLResponse.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97B6890F6EBAF64A404C0BEFC9E01B55 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Apollo/Result.swift; sourceTree = "<group>"; };
+		98E549FF2CD09ABF518C63C371C71CA9 /* YMMYandexMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetrica.h; path = dynamic/YandexMobileMetrica.framework/Headers/YMMYandexMetrica.h; sourceTree = "<group>"; };
+		994B84B776D888DE93BE2D288DDECFC3 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/de.lproj"; sourceTree = "<group>"; };
+		A001EBAAED8D4965E63BF699F651DFCE /* IconGradient@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "IconGradient@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient@2x.png"; sourceTree = "<group>"; };
+		A26A9AD6BC5C5F478F4EC148313EF0EF /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fr.lproj"; sourceTree = "<group>"; };
+		A51ADCE1D1777ED35E0BBBA2C3485C3D /* buttonRoundedRegular.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegular.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular.png"; sourceTree = "<group>"; };
+		A53063532E56B820C958B9CB9AF242BF /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nl.lproj"; sourceTree = "<group>"; };
+		A55B5D0B74F294A5002603F3CD2129E7 /* Record.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Record.swift; path = Sources/Apollo/Record.swift; sourceTree = "<group>"; };
+		A6940030DE473A5BD340E30A40BD17F9 /* DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataLoader.swift; path = Sources/Apollo/DataLoader.swift; sourceTree = "<group>"; };
+		A737E9C0447F8F66181CCF5884ABBBA1 /* Pods-betrating.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-betrating.modulemap"; sourceTree = "<group>"; };
+		A81BDAE5623AAD4222118A5E2117E8A5 /* InMemoryNormalizedCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InMemoryNormalizedCache.swift; path = Sources/Apollo/InMemoryNormalizedCache.swift; sourceTree = "<group>"; };
+		A8DA1350EA4427224A83BDF36A9C6F51 /* Rectangle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@3x.png"; sourceTree = "<group>"; };
+		AB53341580A793A3C0087CB77F83881F /* buttonRoundedDelete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDelete.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete.png"; sourceTree = "<group>"; };
+		AC150E48E73F95CC2ED431F550A812FD /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/es.lproj"; sourceTree = "<group>"; };
+		AF68A14FF34554DFA7385116C08F1923 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = Sources/Apollo/Utilities.swift; sourceTree = "<group>"; };
+		B0A87D6E42FEB5A4E85DB844BDC41EAA /* feedbackActivity@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@3x.png"; sourceTree = "<group>"; };
+		B2228BCE972FACDA667F62CE61D78063 /* Apollo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Apollo-dummy.m"; sourceTree = "<group>"; };
+		BE4915A72E004902EA8196D23101E520 /* buttonRoundedDeleteHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDeleteHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted@2x.png"; sourceTree = "<group>"; };
+		BF854CCE8FEBC0264C9797ED9F8EEA36 /* Apollo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Apollo.xcconfig; sourceTree = "<group>"; };
+		C3D9F25D02D94D68DDBCDC1EE75381EE /* GraphQLDependencyTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLDependencyTracker.swift; path = Sources/Apollo/GraphQLDependencyTracker.swift; sourceTree = "<group>"; };
+		C64C313FDFC42567DB24125D5E000FBB /* Pods-betrating-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-betrating-dummy.m"; sourceTree = "<group>"; };
+		C6F94D0D7AE1DF6F8E5D87F239437EDB /* Rectangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Rectangle.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle.png"; sourceTree = "<group>"; };
+		C8D7296F3F747F29D2890D2686F0E698 /* GraphQLOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLOperation.swift; path = Sources/Apollo/GraphQLOperation.swift; sourceTree = "<group>"; };
+		C9208A8A04B5407B0B59CB3833D09188 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/Apollo/JSON.swift; sourceTree = "<group>"; };
+		CAB8AA6091DEAE47115CB364FCD995C5 /* Apollo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-umbrella.h"; sourceTree = "<group>"; };
+		D4D4F1A41791DC9DAB8B583EFF3DB26B /* Arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@2x.png"; sourceTree = "<group>"; };
+		D69186739FBBBF04027411EF860EE325 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ja.lproj"; sourceTree = "<group>"; };
+		D80C64900EC91DF6D55FE6B7E58A66EC /* Ok@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@2x.png"; sourceTree = "<group>"; };
+		D9393969B53C37B9F9A2DE19C30FCE3F /* HockeySDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = HockeySDKResources.bundle; path = "HockeySDK-HockeySDKResources.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9687BB1D28622EA0AEE65E6A95C1549 /* Pods-betrating-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-betrating-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DA79B9B66571715562D67E977D938320 /* hr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hr.lproj"; sourceTree = "<group>"; };
+		DA8332B18C409BDEE5A2E32C72B438E4 /* JSONSerializationFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONSerializationFormat.swift; path = Sources/Apollo/JSONSerializationFormat.swift; sourceTree = "<group>"; };
+		DCF78E1DFE117E11E448E732517B33ED /* feedbackActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x.png"; sourceTree = "<group>"; };
+		DD2CBA44304AF28A3B9DAE92D7F0FBA2 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ru.lproj"; sourceTree = "<group>"; };
+		E40754D50B3A94ECB99E4E56D251EC4F /* buttonRoundedRegularHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegularHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted@2x.png"; sourceTree = "<group>"; };
+		E8768EA700F5D86C7BC654DB076DA441 /* FeedbackPlaceholder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = FeedbackPlaceholder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/FeedbackPlaceholder.png"; sourceTree = "<group>"; };
+		F47D2D2AA97E6FCF94CF9C6462F693BE /* buttonRoundedRegular@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegular@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular@2x.png"; sourceTree = "<group>"; };
+		F78058A1A2F02A6ECD3091AA57ACFE38 /* Ok@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@3x.png"; sourceTree = "<group>"; };
+		F7D47149FCB10C740A0DF5E6FE6C3140 /* HTTPNetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPNetworkTransport.swift; path = Sources/Apollo/HTTPNetworkTransport.swift; sourceTree = "<group>"; };
+		F880D047928392E07FFF2A1CFE2904D4 /* Pods-betrating-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-betrating-acknowledgements.plist"; sourceTree = "<group>"; };
+		F9946BF9AA0519840114971774C522DD /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nb.lproj"; sourceTree = "<group>"; };
+		F9C4F4449D4E22F92D84A6DFD9DA5195 /* Arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Arrow.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		955034B17497FF6F586DF29783551264 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0920CADC8A860904439BBCB704261E76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37DD45E50D7583CBF08FA846BC0E21D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00ACA4CF72B404017C79B34D9921343 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83F41C35122B9469EFE0B26DE89F3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		148F090D814ECB785B08F17CD107165B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47237A94B696C57593F9BF5043327551 /* HockeySDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24CE2341874483EE8D6A00BB31B4B0F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C3ED10CB9876DAC58BAACB8F0065DF8 /* check-and-run-apollo-codegen.sh */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2C077CD1ADB8FA327373CF98641FAF57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				727D89E856AE737DC1836009C129A53F /* Apollo */,
+				BF7F5FB3616FA184B691B151DFCAB4E5 /* HockeySDK */,
+				B863D3E85D19D3A5093C25329AE5387B /* YandexMobileMetrica */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		49A1A6E7077C64C8D9CD21494B814978 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6ABEA9CB0AA2739F345196B89137F7C2 /* AppIconPlaceHolder.png */,
+				F9C4F4449D4E22F92D84A6DFD9DA5195 /* Arrow.png */,
+				D4D4F1A41791DC9DAB8B583EFF3DB26B /* Arrow@2x.png */,
+				75D249AB6E8938C00EA281C5A390A016 /* Arrow@3x.png */,
+				07D55BD1381116FEC6E19BA5CEA56642 /* authorize_denied.png */,
+				093F50B7322DDE1C82E5773FAB0C5140 /* authorize_denied@2x.png */,
+				2B14784E43DC2C73C3152F5A0C078AAE /* authorize_denied@3x.png */,
+				729352DB5CF79C820492B284D3A2F937 /* bg.png */,
+				7643342AD2FF9207C64720929C0C1406 /* Blur.png */,
+				6BE4CB6F0B90CA79E3B8096A631C58A0 /* Blur@2x.png */,
+				59C7106FD26137AE64EF16D88DB3C980 /* Blur@3x.png */,
+				AB53341580A793A3C0087CB77F83881F /* buttonRoundedDelete.png */,
+				8233C4D45741DE47BD017E6F840C4C18 /* buttonRoundedDelete@2x.png */,
+				405E98466E2B9DCE7E58363A87C54506 /* buttonRoundedDeleteHighlighted.png */,
+				BE4915A72E004902EA8196D23101E520 /* buttonRoundedDeleteHighlighted@2x.png */,
+				A51ADCE1D1777ED35E0BBBA2C3485C3D /* buttonRoundedRegular.png */,
+				F47D2D2AA97E6FCF94CF9C6462F693BE /* buttonRoundedRegular@2x.png */,
+				509DC0416F0CA1670916DF5AF0D6D543 /* buttonRoundedRegularHighlighted.png */,
+				E40754D50B3A94ECB99E4E56D251EC4F /* buttonRoundedRegularHighlighted@2x.png */,
+				139D817667CB58E88DED5CF582DDD010 /* Cancel.png */,
+				05B6E2D041B2BBB7ADE08EECD534DE46 /* Cancel@2x.png */,
+				8A3DE4584C690FD800009ECC916DA469 /* Cancel@3x.png */,
+				994B84B776D888DE93BE2D288DDECFC3 /* de.lproj */,
+				18B56C4ED26C7CAA2A2DADDA26D72870 /* en.lproj */,
+				AC150E48E73F95CC2ED431F550A812FD /* es.lproj */,
+				4E9C2CB63F4E798E47EEECA28F555B9C /* fa.lproj */,
+				036882ABF29AE68939678C1F79E80AAC /* feedbackActivity.png */,
+				DCF78E1DFE117E11E448E732517B33ED /* feedbackActivity@2x.png */,
+				0100324BF200EB089030141BCED524A7 /* feedbackActivity@2x~ipad.png */,
+				B0A87D6E42FEB5A4E85DB844BDC41EAA /* feedbackActivity@3x.png */,
+				29D44148B8E0A326D652F8DFAB7E4FF5 /* feedbackActivity~ipad.png */,
+				E8768EA700F5D86C7BC654DB076DA441 /* FeedbackPlaceholder.png */,
+				A26A9AD6BC5C5F478F4EC148313EF0EF /* fr.lproj */,
+				DA79B9B66571715562D67E977D938320 /* hr.lproj */,
+				2FA3DFC24F9FE7A286EB58AB0EAA21A4 /* hu.lproj */,
+				1FFCA15772EDEA6FC0379F9409AC277C /* iconCamera.png */,
+				78D7979E30F0EE17C5E7678AC94245A4 /* iconCamera@2x.png */,
+				41B564E8E7D57FBA0E734A7866B02B11 /* IconGradient.png */,
+				A001EBAAED8D4965E63BF699F651DFCE /* IconGradient@2x.png */,
+				297A983619D28422660983A56555C15F /* it.lproj */,
+				D69186739FBBBF04027411EF860EE325 /* ja.lproj */,
+				F9946BF9AA0519840114971774C522DD /* nb.lproj */,
+				A53063532E56B820C958B9CB9AF242BF /* nl.lproj */,
+				39D6B49D2287BB92F5DC6D004517DAF2 /* Ok.png */,
+				D80C64900EC91DF6D55FE6B7E58A66EC /* Ok@2x.png */,
+				F78058A1A2F02A6ECD3091AA57ACFE38 /* Ok@3x.png */,
+				44B163796223EF22B7C1C011BB59DB6D /* pt.lproj */,
+				49548929070CAC1A66BAFB0440E3FE20 /* pt-PT.lproj */,
+				C6F94D0D7AE1DF6F8E5D87F239437EDB /* Rectangle.png */,
+				4DEBF8F3D31687B6C20F833CA8B576AC /* Rectangle@2x.png */,
+				A8DA1350EA4427224A83BDF36A9C6F51 /* Rectangle@3x.png */,
+				DD2CBA44304AF28A3B9DAE92D7F0FBA2 /* ru.lproj */,
+				0D134B4DDCFF00F2DBB81562C71A6ACC /* tr.lproj */,
+				5E925232114DE0E2250788750837BF83 /* zh-Hans.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		49FB720407B010E64AA75A8C0B3E7F36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21BAC8F758D7B2B3E8A40D7ABFC5486E /* Apollo.framework */,
+				D9393969B53C37B9F9A2DE19C30FCE3F /* HockeySDKResources.bundle */,
+				2AC2278B06473BEBD16734473C125832 /* Pods_betrating.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E03D1ABDCEF3159C8F1BD3F80A9A4E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				69CABC566A90C5CA6662E8259BC5993A /* Apollo.modulemap */,
+				BF854CCE8FEBC0264C9797ED9F8EEA36 /* Apollo.xcconfig */,
+				B2228BCE972FACDA667F62CE61D78063 /* Apollo-dummy.m */,
+				1C27FACF2B48530549D14CF6B76853B7 /* Apollo-prefix.pch */,
+				CAB8AA6091DEAE47115CB364FCD995C5 /* Apollo-umbrella.h */,
+				5B20EACC51270D5E4D9F1DCC01463E92 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Apollo";
+			sourceTree = "<group>";
+		};
+		5B6E79F3B1A9E511BED1146F44CFA54C /* Pods-betrating */ = {
+			isa = PBXGroup;
+			children = (
+				32E47BAF99B2A1417382542DBF7818D1 /* Info.plist */,
+				A737E9C0447F8F66181CCF5884ABBBA1 /* Pods-betrating.modulemap */,
+				D9687BB1D28622EA0AEE65E6A95C1549 /* Pods-betrating-acknowledgements.markdown */,
+				F880D047928392E07FFF2A1CFE2904D4 /* Pods-betrating-acknowledgements.plist */,
+				C64C313FDFC42567DB24125D5E000FBB /* Pods-betrating-dummy.m */,
+				146F1D0CC0B7985A0D7F190A526B7853 /* Pods-betrating-frameworks.sh */,
+				5B95EC1048FBB7FD6ECC887167F8526E /* Pods-betrating-resources.sh */,
+				634B473B4098A0ACE971D26D65217F31 /* Pods-betrating-umbrella.h */,
+				3F461AA84FD12D7DD15EE1917455193C /* Pods-betrating.debug.xcconfig */,
+				546434BBC52C8E4F5D193E479E3B27A5 /* Pods-betrating.release.xcconfig */,
+			);
+			name = "Pods-betrating";
+			path = "Target Support Files/Pods-betrating";
+			sourceTree = "<group>";
+		};
+		727D89E856AE737DC1836009C129A53F /* Apollo */ = {
+			isa = PBXGroup;
+			children = (
+				80FE3B85923BD4F1E884A3BA9D3CB025 /* Core */,
+				4E03D1ABDCEF3159C8F1BD3F80A9A4E7 /* Support Files */,
+			);
+			name = Apollo;
+			path = Apollo;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2C077CD1ADB8FA327373CF98641FAF57 /* Pods */,
+				49FB720407B010E64AA75A8C0B3E7F36 /* Products */,
+				C6910C570E53D3847FB6A60A93E18CB8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80FE3B85923BD4F1E884A3BA9D3CB025 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B5A6BAB023352E2D4838822874666 /* ApolloClient.swift */,
+				87DB9259BE3E40F3DC225230C5CBDE83 /* ApolloStore.swift */,
+				5AA23C3CCC87B1B957EC4265FBF7CF9E /* AsynchronousOperation.swift */,
+				8A57EDBC9C4DDF59E2432044945BAA87 /* Collections.swift */,
+				A6940030DE473A5BD340E30A40BD17F9 /* DataLoader.swift */,
+				C3D9F25D02D94D68DDBCDC1EE75381EE /* GraphQLDependencyTracker.swift */,
+				66B4309DCF7FA3477BA4C7EE2ECF27A4 /* GraphQLError.swift */,
+				6E70F3C518E8A3E410822BEB47764446 /* GraphQLExecutor.swift */,
+				47540D36B25AEA7F28CAC3B066996657 /* GraphQLInputValue.swift */,
+				C8D7296F3F747F29D2890D2686F0E698 /* GraphQLOperation.swift */,
+				334C23049782AB7E168A3249F92817E2 /* GraphQLQueryWatcher.swift */,
+				8F3FAD3EFD3DF0FAA0AFC63FEF1F66E3 /* GraphQLResponse.swift */,
+				34246C6B47426A06AE70CE1BE3190E66 /* GraphQLResponseGenerator.swift */,
+				4A5C67471B9517866BD3F83278A15018 /* GraphQLResult.swift */,
+				6AADE9A32C0AF172032A3A8789E6C71E /* GraphQLResultAccumulator.swift */,
+				34EB7080DF41FA3D19FEAA3B0AB8A079 /* GraphQLResultNormalizer.swift */,
+				14B6BB38D1951B9DC2FFEFAE1E852197 /* GraphQLSelectionSet.swift */,
+				70DAC9CA0B5177B93F2AFBEC9647A345 /* GraphQLSelectionSetMapper.swift */,
+				F7D47149FCB10C740A0DF5E6FE6C3140 /* HTTPNetworkTransport.swift */,
+				A81BDAE5623AAD4222118A5E2117E8A5 /* InMemoryNormalizedCache.swift */,
+				C9208A8A04B5407B0B59CB3833D09188 /* JSON.swift */,
+				DA8332B18C409BDEE5A2E32C72B438E4 /* JSONSerializationFormat.swift */,
+				4EC9CA9E80DB14644DA6A086D3A2FC2D /* JSONStandardTypeConversions.swift */,
+				3110469D3333052DB8F14DE9CE4212BE /* Locking.swift */,
+				7DC646329E62923E8F910D93DF4D7FD7 /* NetworkTransport.swift */,
+				88CD3B057746EB7E12877E5C1D859171 /* NormalizedCache.swift */,
+				1CEBE7C28AB79498F756699B7C672317 /* Promise.swift */,
+				A55B5D0B74F294A5002603F3CD2129E7 /* Record.swift */,
+				4405448E313A21C9AEBE68579270A48E /* RecordSet.swift */,
+				97B6890F6EBAF64A404C0BEFC9E01B55 /* Result.swift */,
+				0CBC8002E7CF8CB0609244C8A8FE3DA9 /* ResultOrPromise.swift */,
+				AF68A14FF34554DFA7385116C08F1923 /* Utilities.swift */,
+				24CE2341874483EE8D6A00BB31B4B0F3 /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		81BE44A907546D3E85363FD437830F9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48F6987CC96BD7247372AF8BB5937994 /* YandexMobileMetrica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89F6C2B0F64F8EC6D66CD2DB1D14E274 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				650AC5E3A620137DA2F053CDF523686D /* YandexMobileMetrica.h */,
+				72A0D4F34BB68841C1FD1B64E11EC583 /* YandexMobileMetrica-umbrella.h */,
+				1B6B3F8C8B9BF13F7442ACF198BD1009 /* YMMVersion.h */,
+				98E549FF2CD09ABF518C63C371C71CA9 /* YMMYandexMetrica.h */,
+				002CC89FD06CBA2A7EDCF6CB147BA802 /* YMMYandexMetricaConfiguration.h */,
+				6A2017D0CDFEF5F0E719B7DEF74E5F59 /* YMMYandexMetricaPreloadInfo.h */,
+				193A3389DC9B0B95714A217B75905507 /* YMMYandexMetricaReporting.h */,
+				81BE44A907546D3E85363FD437830F9F /* Frameworks */,
+			);
+			name = Dynamic;
+			sourceTree = "<group>";
+		};
+		B863D3E85D19D3A5093C25329AE5387B /* YandexMobileMetrica */ = {
+			isa = PBXGroup;
+			children = (
+				89F6C2B0F64F8EC6D66CD2DB1D14E274 /* Dynamic */,
+			);
+			name = YandexMobileMetrica;
+			path = YandexMobileMetrica;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF7F5FB3616FA184B691B151DFCAB4E5 /* HockeySDK */ = {
+			isa = PBXGroup;
+			children = (
+				F0186F9C60DF17C3BDDE41296497C578 /* DefaultLib */,
+				D90FD22BC8BE283C85E2FE458C4E16DA /* Support Files */,
+			);
+			name = HockeySDK;
+			path = HockeySDK;
+			sourceTree = "<group>";
+		};
+		C6910C570E53D3847FB6A60A93E18CB8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B6E79F3B1A9E511BED1146F44CFA54C /* Pods-betrating */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D90FD22BC8BE283C85E2FE458C4E16DA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41806818753DB75FBCC0EC84641E105C /* ResourceBundle-HockeySDKResources-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HockeySDK";
+			sourceTree = "<group>";
+		};
+		F0186F9C60DF17C3BDDE41296497C578 /* DefaultLib */ = {
+			isa = PBXGroup;
+			children = (
+				148F090D814ECB785B08F17CD107165B /* Frameworks */,
+				49A1A6E7077C64C8D9CD21494B814978 /* Resources */,
+			);
+			name = DefaultLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		448BAAFC7F7AD61FDAE0DA6437C209C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69C6A08FE46B8ECC10C4F538A249EF79 /* Apollo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846934119AE8DC6130C3CA23A2CFFEAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD612F4B3F2AA0839C8AECBA1135337 /* Pods-betrating-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2010E78719F690490FE4CE58BC774303 /* Apollo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E2CE56DC643D5017563D19FFABFF064 /* Build configuration list for PBXNativeTarget "Apollo" */;
+			buildPhases = (
+				52CDDAB72D49A997CDED517908C05955 /* Sources */,
+				C37DD45E50D7583CBF08FA846BC0E21D /* Frameworks */,
+				914A0FCD43CDBEEFECD5F025FBDC1DE2 /* Resources */,
+				448BAAFC7F7AD61FDAE0DA6437C209C4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Apollo;
+			productName = Apollo;
+			productReference = 21BAC8F758D7B2B3E8A40D7ABFC5486E /* Apollo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88FADBE805261859A802A1BBACDF50BA /* Pods-betrating */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56721CBFB86D794BC1E53973B1DD1B43 /* Build configuration list for PBXNativeTarget "Pods-betrating" */;
+			buildPhases = (
+				4F02808860C7237FA6B7BA9DB96490C7 /* Sources */,
+				955034B17497FF6F586DF29783551264 /* Frameworks */,
+				846934119AE8DC6130C3CA23A2CFFEAB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				148D2364BD7D6B4C956066C699D409F2 /* PBXTargetDependency */,
+				04C9D2B1C769A8DA24188BC0C30CD23B /* PBXTargetDependency */,
+			);
+			name = "Pods-betrating";
+			productName = "Pods-betrating";
+			productReference = 2AC2278B06473BEBD16734473C125832 /* Pods_betrating.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C587F1B2FA2CB38A29F84936DEFD569D /* HockeySDK-HockeySDKResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FC2FABFCFEBF498AF80B6AE02C030A5 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */;
+			buildPhases = (
+				0FF9CBA4DD3425B7E8E790CB76D18160 /* Sources */,
+				D83F41C35122B9469EFE0B26DE89F3E2 /* Frameworks */,
+				EDD671D0392060F0FE733EF56A6C89BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HockeySDK-HockeySDKResources";
+			productName = "HockeySDK-HockeySDKResources";
+			productReference = D9393969B53C37B9F9A2DE19C30FCE3F /* HockeySDKResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 49FB720407B010E64AA75A8C0B3E7F36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2010E78719F690490FE4CE58BC774303 /* Apollo */,
+				C587F1B2FA2CB38A29F84936DEFD569D /* HockeySDK-HockeySDKResources */,
+				88FADBE805261859A802A1BBACDF50BA /* Pods-betrating */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		914A0FCD43CDBEEFECD5F025FBDC1DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC29C2B0DC8755CF00E12C7C4AFBF695 /* check-and-run-apollo-codegen.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD671D0392060F0FE733EF56A6C89BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				970466C82DB88ECDDD27BF3E9DF4FC46 /* AppIconPlaceHolder.png in Resources */,
+				1741C39F86DB6FEA459F2B549CD326FB /* Arrow.png in Resources */,
+				4BD0CD3F98A9DECD717A405B6F5B7D85 /* Arrow@2x.png in Resources */,
+				E244908082C989A96CA733AD2B3C78AB /* Arrow@3x.png in Resources */,
+				EEBE916DB2F225C07EF64E2D05060418 /* authorize_denied.png in Resources */,
+				D07FABF52BC4DA8B8D3C35DCAD6BC2BD /* authorize_denied@2x.png in Resources */,
+				945181D2B7E30D3C0B07EDEC26E1FC2B /* authorize_denied@3x.png in Resources */,
+				DDC7B4901BAFE62B6B02777D1FA029F4 /* bg.png in Resources */,
+				BA2233A98BC53B7D3A80D66A15750525 /* Blur.png in Resources */,
+				34F1B4DCE098F105AAE2C9CA9A58EF85 /* Blur@2x.png in Resources */,
+				94673DF28CFD10AF179F7D04CDA8BAC5 /* Blur@3x.png in Resources */,
+				94B7C8911B2A9A08A71606D9581A1148 /* buttonRoundedDelete.png in Resources */,
+				3B13A83F0B416416FE3AE60DD68D00B4 /* buttonRoundedDelete@2x.png in Resources */,
+				1B9228F487DF7B494E7E8E93DF2D2371 /* buttonRoundedDeleteHighlighted.png in Resources */,
+				10E71ECB9306E5534B085AEA0BCD8A52 /* buttonRoundedDeleteHighlighted@2x.png in Resources */,
+				A416F348274132328F2F7889EE0070B0 /* buttonRoundedRegular.png in Resources */,
+				0EB4EA6580DAE04E7C6E70ECF6434B32 /* buttonRoundedRegular@2x.png in Resources */,
+				05B2A27272B2CE67127CD9DD9E729606 /* buttonRoundedRegularHighlighted.png in Resources */,
+				95B86A37516E4159141D192C653EC815 /* buttonRoundedRegularHighlighted@2x.png in Resources */,
+				C55B22B5563005DBE84409659356E8F3 /* Cancel.png in Resources */,
+				7D498B858EFD7F9E012A78B81781175B /* Cancel@2x.png in Resources */,
+				3E08E40938C162E223543E74CC97374E /* Cancel@3x.png in Resources */,
+				4F01E11E5BC96B92C255589CF5BBCC49 /* de.lproj in Resources */,
+				682F3F35A8D7954EAD87213CF6D92CA6 /* en.lproj in Resources */,
+				A9DDA23615CC07AA99D48471BF75C2C1 /* es.lproj in Resources */,
+				B8D849B69A2177B7C31381E54D1A0712 /* fa.lproj in Resources */,
+				FC3045CA8195C0BF3460910978BEE9B2 /* feedbackActivity.png in Resources */,
+				AD12DCF1C2174A7E2FA68AF2D7D59DAF /* feedbackActivity@2x.png in Resources */,
+				40902EEE245159F48FE2048E0DAE9168 /* feedbackActivity@2x~ipad.png in Resources */,
+				D9DEFA783A3190B4261843DCF2D07E6E /* feedbackActivity@3x.png in Resources */,
+				59CA5F7719005184AB71884C81DFA971 /* feedbackActivity~ipad.png in Resources */,
+				CF06D2A6538A5E191A84AAD84742D4B2 /* FeedbackPlaceholder.png in Resources */,
+				6EC8E3228BB60E487E156467919BA83A /* fr.lproj in Resources */,
+				10102D2E1E4FCF01E4839F71170EF4FA /* hr.lproj in Resources */,
+				0BE0EB2E46F8813032EC45640B8B595B /* hu.lproj in Resources */,
+				7C4D1F326A2B12AE370997778531801A /* iconCamera.png in Resources */,
+				BF9BA87EFEB1661385681C47E3F5AF1F /* iconCamera@2x.png in Resources */,
+				3D99AEFD65C4B18FF4D751CC43DEAF0D /* IconGradient.png in Resources */,
+				CCFF4CE602C8186E2465ADE936E75F08 /* IconGradient@2x.png in Resources */,
+				4EC2B357CD04FCBA1A75CC7A477153CC /* it.lproj in Resources */,
+				9369C7444953229DAAFC0D616CCAC0FF /* ja.lproj in Resources */,
+				35720EF83CF77037C3DF93CCA5394BF6 /* nb.lproj in Resources */,
+				2744196B80834C8C64B2B22220285201 /* nl.lproj in Resources */,
+				CA8BF5345E764D249B03B1A6778AED0F /* Ok.png in Resources */,
+				7D99EDF1A4767CCDB9B5E29DA6D6B8D6 /* Ok@2x.png in Resources */,
+				ECAE78B15FAE7AF144F6EA0A1F03AF16 /* Ok@3x.png in Resources */,
+				4548C1011A02C777B4B263AD821A2DD3 /* pt-PT.lproj in Resources */,
+				A8D32AA73678855CF6E93D4FFEA2F7AF /* pt.lproj in Resources */,
+				7BF1BC9703683E3CDD159A6264CFB58B /* Rectangle.png in Resources */,
+				8D401BC540B6CF254C8C5E2B2E41636D /* Rectangle@2x.png in Resources */,
+				211848600C7182B0051E73DE82B20421 /* Rectangle@3x.png in Resources */,
+				7DDD41B9276BFE828CD85F7E049F9A7A /* ru.lproj in Resources */,
+				7FC1A2AC6EE5A2A9FED69B5D8C39ECA9 /* tr.lproj in Resources */,
+				8F7E5E1D1B7D7B814864BFCAEBCAF00F /* zh-Hans.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FF9CBA4DD3425B7E8E790CB76D18160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F02808860C7237FA6B7BA9DB96490C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A07DC3A253D19FA20F0B13FC61601E08 /* Pods-betrating-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CDDAB72D49A997CDED517908C05955 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8443B0C224312ED79FECFA39C145C96 /* Apollo-dummy.m in Sources */,
+				9E4F23BFA9B082F66DDE6CBF826350B4 /* ApolloClient.swift in Sources */,
+				00B004271A3540F4A7497B083C7BEC43 /* ApolloStore.swift in Sources */,
+				A7F758E72285085E768B3196D47984A1 /* AsynchronousOperation.swift in Sources */,
+				C5A0C07491F9D94C99DE288D0159AB65 /* Collections.swift in Sources */,
+				24A0A688E5F0450FE1460E1830109EEB /* DataLoader.swift in Sources */,
+				854AF80F5192170ADCCB069E6259FEEE /* GraphQLDependencyTracker.swift in Sources */,
+				3C7486C088BC221EA5E88192BA316DD4 /* GraphQLError.swift in Sources */,
+				3334363611D795C848F8E771DDB1A1A5 /* GraphQLExecutor.swift in Sources */,
+				2D1377F64EC27D44D821A9EF34EE862D /* GraphQLInputValue.swift in Sources */,
+				C2309D01A3D237536CC3C74B1A36592F /* GraphQLOperation.swift in Sources */,
+				BC1C82D8C94A6C209D100AC3AA449D38 /* GraphQLQueryWatcher.swift in Sources */,
+				D066A410387CD904D2FC3E3F10FFEBA4 /* GraphQLResponse.swift in Sources */,
+				20E38E32A7DB892F88BC1421D4D6A03B /* GraphQLResponseGenerator.swift in Sources */,
+				B7EF762FF3731C4DCFEB4D2191CE557F /* GraphQLResult.swift in Sources */,
+				852AE1AE9762452D89E501B86806C3AB /* GraphQLResultAccumulator.swift in Sources */,
+				47AC0559B014EAA414214010F97BA4C6 /* GraphQLResultNormalizer.swift in Sources */,
+				4A0EB5814435E932DC7DA439514950AB /* GraphQLSelectionSet.swift in Sources */,
+				C7386CA0B7A4E7F8D3D58EBCBCCC78F2 /* GraphQLSelectionSetMapper.swift in Sources */,
+				F6E58345690D1BAD17BB1A399234DF01 /* HTTPNetworkTransport.swift in Sources */,
+				E5949F0C4BB0DB1C3D66F2B59E2C227C /* InMemoryNormalizedCache.swift in Sources */,
+				4816D84F99C335BD69510B3CBCB3BC06 /* JSON.swift in Sources */,
+				0F55F645986549CC71562CA5F99351EB /* JSONSerializationFormat.swift in Sources */,
+				3945A29814E4B1E9C9A2DD1DE72522D4 /* JSONStandardTypeConversions.swift in Sources */,
+				8BCC46513958FD53CE2B58908A878CB6 /* Locking.swift in Sources */,
+				6472BDD504B3883BAAEC5F24E7027DA4 /* NetworkTransport.swift in Sources */,
+				45567CF12FE4EE67842F4AB8B41C9138 /* NormalizedCache.swift in Sources */,
+				6DB1B3C86D07ACD1237F55ED964C32D6 /* Promise.swift in Sources */,
+				6BB1817B430C72BBE099D23B39CECE0D /* Record.swift in Sources */,
+				3FB11A9708614E901C97167958276AFC /* RecordSet.swift in Sources */,
+				9F49CE13A71C3E9806C1884E9E5EBE7F /* Result.swift in Sources */,
+				097083C009DC181784C062222020113F /* ResultOrPromise.swift in Sources */,
+				EB31F7C05E4247DB1FAB104A815E7BCC /* Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04C9D2B1C769A8DA24188BC0C30CD23B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HockeySDK-HockeySDKResources";
+			target = C587F1B2FA2CB38A29F84936DEFD569D /* HockeySDK-HockeySDKResources */;
+			targetProxy = 33420436987BC5D52830380DEF8B00CC /* PBXContainerItemProxy */;
+		};
+		148D2364BD7D6B4C956066C699D409F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Apollo;
+			target = 2010E78719F690490FE4CE58BC774303 /* Apollo */;
+			targetProxy = F1BBD3C583368E277FFA15F5C44CD739 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		26F954BA177A9A46FFFD4E23ED11D67A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		59A10BB1B66062E55526E9CE9E235476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF854CCE8FEBC0264C9797ED9F8EEA36 /* Apollo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Apollo/Apollo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Apollo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Apollo/Apollo.modulemap";
+				PRODUCT_NAME = Apollo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DB0D52FA08662D10D2BDCC189F8E802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546434BBC52C8E4F5D193E479E3B27A5 /* Pods-betrating.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-betrating/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-betrating/Pods-betrating.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_betrating;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8BCE6FCE034D56C096BAB5CFE2FA51C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HockeySDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BF6BE47CC5F4BF666D17A0573DFC8B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF854CCE8FEBC0264C9797ED9F8EEA36 /* Apollo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Apollo/Apollo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Apollo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Apollo/Apollo.modulemap";
+				PRODUCT_NAME = Apollo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CBF64B5ABDF5B8A104537BC1EA22AFCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F461AA84FD12D7DD15EE1917455193C /* Pods-betrating.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-betrating/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-betrating/Pods-betrating.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_betrating;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F7C8884A4169F61E895CAA8D6AD1CE77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HockeySDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FC2FABFCFEBF498AF80B6AE02C030A5 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C8884A4169F61E895CAA8D6AD1CE77 /* Debug */,
+				8BCE6FCE034D56C096BAB5CFE2FA51C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */,
+				26F954BA177A9A46FFFD4E23ED11D67A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56721CBFB86D794BC1E53973B1DD1B43 /* Build configuration list for PBXNativeTarget "Pods-betrating" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF64B5ABDF5B8A104537BC1EA22AFCC /* Debug */,
+				5DB0D52FA08662D10D2BDCC189F8E802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E2CE56DC643D5017563D19FFABFF064 /* Build configuration list for PBXNativeTarget "Apollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF6BE47CC5F4BF666D17A0573DFC8B3E /* Debug */,
+				59A10BB1B66062E55526E9CE9E235476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

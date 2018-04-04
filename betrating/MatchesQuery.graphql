@@ -1,0 +1,22 @@
+
+query MatchesQuery($sport_slug: String!, $this_week: String!, $next_week: String!, $limit: Int!, $offset: Int!) {
+Match(lang: "ru", sport_slug: $sport_slug, type: "popular", orderby: ["match_date", "desc"], datebetween: [$this_week, $next_week], limit: $limit, skip: $offset) {
+unique_tournament_name
+league {
+name
+country_name
+}
+league_slug
+match_date
+status {
+code
+name
+}
+result_score
+teams {
+name
+logo(preset: "w64-h64")
+}
+}
+}
+

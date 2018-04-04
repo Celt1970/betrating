@@ -1,0 +1,22 @@
+PODS:
+  - Apollo (0.7.0):
+    - Apollo/Core (= 0.7.0)
+  - Apollo/Core (0.7.0)
+  - HockeySDK (5.1.2):
+    - HockeySDK/DefaultLib (= 5.1.2)
+  - HockeySDK/DefaultLib (5.1.2)
+  - YandexMobileMetrica/Dynamic (2.9.6)
+
+DEPENDENCIES:
+  - Apollo (~> 0.7.0)
+  - HockeySDK (~> 5.1.2)
+  - YandexMobileMetrica/Dynamic (= 2.9.6)
+
+SPEC CHECKSUMS:
+  Apollo: d6649ac06168660e70c6226c4eadfc0770791ba5
+  HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
+  YandexMobileMetrica: 330c11f9e4b8b3b72454c0cd80f61b4231467ebe
+
+PODFILE CHECKSUM: 2809aea146c697262fb629e744dcb1ca686857bf
+
+COCOAPODS: 1.4.0
