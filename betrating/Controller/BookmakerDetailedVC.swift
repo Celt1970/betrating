@@ -25,28 +25,21 @@ class BookmakerDetailedVC: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var id = 0
+    var service = NetworkService()
     
-    
-    var service: NetworkService?
-    var session: URLSession{
-        let configuration = URLSessionConfiguration.default
-        let session = URLSession(configuration: configuration)
-        return session
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = NetworkService(session: session)
+        loadData()
+    }
+    
+    func loadData() {
         scrollView.isHidden = true
         activityIndicator.startAnimating()
-        service?.getBookmakerByID(id: id, completion: { [ weak self ] rate, connect  in
-            
-            if connect == true{
-                return
-            }
+        service.getBookmakerByID(id: id) { [weak self] rate in
             guard rate != nil else {return}
             
-            self?.service?.loadImage(url: rate!.logo!, completion: { [weak self ] image, connect in
+            self?.service.loadImage(url: rate!.logo!, completion: { [weak self ] image, connect in
                 if connect == true{
                     return
                 }
@@ -61,7 +54,7 @@ class BookmakerDetailedVC: UIViewController {
             self?.scrollView.reloadInputViews()
             self?.scrollView.isHidden = false
             self?.activityIndicator.stopAnimating()
-        })
+        }
         var contentRect = CGRect.zero
         
         for view in scrollView.subviews {

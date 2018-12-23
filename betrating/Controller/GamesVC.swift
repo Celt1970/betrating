@@ -201,7 +201,7 @@ class GamesVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         dateFormatter.locale = Locale(identifier: "ru-RU")
-        service = NetworkService(session: session)
+        service = NetworkService()
         service?.fetchMatches(category: gaameCategory,completion: {[weak self] games in
             switch self!.gaameCategory{
             case .soccer:

@@ -11,6 +11,7 @@ import Foundation
 class ForecastSmall{
     let id: Int
     let name: String
+    let slug: String?
     var currentName: String{
 
         let str = name.replacingOccurrences(of: " – ", with: "\n").replacingOccurrences(of: " &#8212; ", with: "\n")
@@ -31,10 +32,10 @@ class ForecastSmall{
     }
     
     init(json: [String:Any]) {
+        print(json)
         self.id = json["id"] as! Int
         self.name = json["name"] as! String
         self.leaguePreview = json["league_preview"] as! String
-        print(json["date"])
         let date = json["date"] as! [String : Any]
         let month = date["month"] as! String
         let day = date["day"] as! String
@@ -45,18 +46,25 @@ class ForecastSmall{
             if let parent = category["parent"] as? [String:Any] {
                 self.headerSecondPart = parent["name"] as? String
                 if let secondParent = parent["parent"] as? [String:Any]{
+                    self.slug = secondParent["slug"] as? String
                     self.headerThirdPart = secondParent["name"] as? String
+                    print(self.slug, self.currentName)
                 }else{
                     self.headerThirdPart = ""
+                    self.slug = ""
                 }
             }else{
                 self.headerSecondPart = ""
                 self.headerThirdPart = ""
+                self.slug = ""
+
             }
         }else{
             self.headerSecondPart = ""
             self.headerThirdPart = ""
             self.headerFirstPart = ""
+            self.slug = ""
+
         }
     }
 }

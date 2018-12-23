@@ -29,7 +29,7 @@ class RaitingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = NetworkService(session: session)
+        service = NetworkService()
         collectionView.isHidden = true
         activityIndicator.startAnimating()
         let tabBarHeight = (self.tabBarController?.tabBar.frame.size.height) ?? 0.0

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2010E78719F690490FE4CE58BC774303'
-               BlueprintName = 'Apollo'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Apollo.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AB132C4DC7EEC79BDA092562C5D9DAFE"
+               BlueprintName = "Apollo"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "Apollo.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -43,7 +43,7 @@ class ForecastVC: UIViewController {
         let session = URLSession(configuration: configuration)
         return session
     }
-    var service: NetworkService?
+    var service = NetworkService()
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffset = scrollView.contentOffset.y
@@ -51,17 +51,14 @@ class ForecastVC: UIViewController {
         let deltaOffset = maximumOffset - currentOffset
         
         if deltaOffset <= 0 {
-            loadMore()
+//            loadMore()
         }
     }
     func loadMore(){
         if loadMoreStatus == false{
             self.loadMoreStatus = true
             
-            service?.getForecastList(category: category1, offset: offset, limit: 50) { [weak self] list, connect in
-                if connect == true{
-                    return
-                }
+            service.getForecastList(category: category1, offset: offset, limit: 100) { [weak self] list in
                 guard list != nil else {return}
                 if list!.isEmpty{
                     self?.loadMoreStatus = false
@@ -164,10 +161,8 @@ class ForecastVC: UIViewController {
         collectionB.isHidden = true
         activityIndicator.startAnimating()
         
-        service?.getForecastList(category: category, offset: 0, limit: 50) { [weak self] list, connect in
-            if connect == true{
-                return
-            }
+        service.getForecastList(category: category, offset: 0, limit: 50) { [weak self] list in
+            
             guard list != nil else {return}
             switch category {
             case .all:
@@ -192,11 +187,9 @@ class ForecastVC: UIViewController {
         super.viewDidLoad()
         collectionB.isHidden = true
         activityIndicator.startAnimating()
-        service = NetworkService(session: session)
-        service?.getForecastList(category: category1, offset: 0, limit: 50) { [weak self] list, connect in
-            if connect == true{
-                return
-            }
+        service = NetworkService()
+        service.getForecastList(category: .all, offset: 0, limit: 100) { [weak self] list in
+            
             guard list != nil else {return}
             
             switch self!.category1 {

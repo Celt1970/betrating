@@ -12,6 +12,12 @@ DEPENDENCIES:
   - HockeySDK (~> 5.1.2)
   - YandexMobileMetrica/Dynamic (= 2.9.6)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Apollo
+    - HockeySDK
+    - YandexMobileMetrica
+
 SPEC CHECKSUMS:
   Apollo: d6649ac06168660e70c6226c4eadfc0770791ba5
   HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
@@ -19,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2809aea146c697262fb629e744dcb1ca686857bf
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

@@ -25,12 +25,10 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = NetworkService(session: session)
+        service = NetworkService()
         activityIndicator.startAnimating()
-        service?.getNewsList(completion: {[ weak self ] news, connect in
-            if connect == true{
-                return
-            }
+        service?.getNewsList(completion: {[ weak self ] news in
+            
             guard news != nil else {return}
             self?.news = news
             self?.collectionView?.reloadData()

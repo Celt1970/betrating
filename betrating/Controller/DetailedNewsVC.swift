@@ -32,16 +32,14 @@ class DetailedNewsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = NetworkService(session: session)
+        service = NetworkService()
         scrollView.isHidden = true
         activityIndecator.startAnimating()
         
         
         separatingView.isHidden = true
-        service?.getNewsByID(id: id, completion: { [weak self] news, connect in
-            if connect == true{
-                return
-            }
+        
+        service?.getNewsById(id: id) { [weak self] news  in
             guard news != nil else {return}
             
             self?.service?.loadImage(url: news!.preview, completion: { [ weak self ] image, connect in
@@ -70,7 +68,40 @@ class DetailedNewsVC: UIViewController {
             self?.separatingView.isHidden = false
             self?.scrollView.isHidden = false
             self?.activityIndecator.stopAnimating()
-        })
+        }
+//        service?.getNewsByID(id: id, completion: { [weak self] news, connect in
+//            if connect == true{
+//                return
+//            }
+//            guard news != nil else {return}
+//
+//            self?.service?.loadImage(url: news!.preview, completion: { [ weak self ] image, connect in
+//                if connect == true{
+//                    return
+//                }
+//                guard image != nil else {return}
+//                self?.newsImage.image = image
+//            })
+//
+//            self?.newsLabel.text = news?.name
+//            self?.dateLabel.text = news?.date
+//            self?.categoryLabel.text = news?.category?.joined(separator: " • ")
+//            self?.firstTextView.attributedText = news?.attrStr1
+//            if news?.attrStr2.string == ""{
+//                self?.secondTextView.isHidden = true
+//            }
+//            self?.secondTextView.attributedText = news?.attrStr2
+//
+//            let tags = news?.tags!.map({ (str: String) -> String in
+//                let some  = "#" + str
+//                return some
+//            })
+//
+//            self?.tagsLabel.text = tags?.joined(separator: "\n")
+//            self?.separatingView.isHidden = false
+//            self?.scrollView.isHidden = false
+//            self?.activityIndecator.stopAnimating()
+//        })
         // Do any additional setup after loading the view.
     }
 

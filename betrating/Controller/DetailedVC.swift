@@ -31,17 +31,15 @@ class DetailedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = NetworkService(session: session)
+        service = NetworkService()
         darkView.isHidden = true
         activityIndicator.startAnimating()
         
         
         
-        service?.getForecastById(id, completion: { [weak self] forecast, connect in
+        service?.getForecastById2(id, completion: { [weak self] forecast in
             
-            if connect == true{
-                return
-            }
+          
             guard forecast != nil else { return }
             self?.forecast = forecast!
             
