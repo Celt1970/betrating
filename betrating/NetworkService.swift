@@ -65,6 +65,7 @@ enum statisticsCategoryes: String{
 }
 
 class NetworkService{
+    
     private let baseUrl = URL(string: "http://betrating.ru/mobileapi")
     let dateFormatter = DateFormatter()
     var session: URLSession{
