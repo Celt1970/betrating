@@ -28,7 +28,6 @@ class ForecastDetailed{
         let range = NSRange(location: 0, length: str1.length)
 
         str1.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Helvetica", size: 15.0)!, range: range)
-//        print(str1)
         return str1
     }
     init (json: [String:Any]){

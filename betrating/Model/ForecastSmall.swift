@@ -32,7 +32,6 @@ class ForecastSmall{
     }
     
     init(json: [String:Any]) {
-        print(json)
         self.id = json["id"] as! Int
         self.name = json["name"] as! String
         self.leaguePreview = json["league_preview"] as! String
@@ -48,7 +47,6 @@ class ForecastSmall{
                 if let secondParent = parent["parent"] as? [String:Any]{
                     self.slug = secondParent["slug"] as? String
                     self.headerThirdPart = secondParent["name"] as? String
-                    print(self.slug, self.currentName)
                 }else{
                     self.headerThirdPart = ""
                     self.slug = ""

@@ -25,18 +25,7 @@ class RaitingsList{
     var hasDemo: Bool?
     var hasBetting: Bool?
     var hasMobileMode: Bool?
-//    var description: String?
-//    var attrStr: NSAttributedString{
-//        print(description)
-//        let str1 = try!NSMutableAttributedString(data: description!.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
-//                                                 options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
-//                                                 documentAttributes:  nil)
-//        let range = NSRange(location: 0, length: str1.length)
-//
-//        str1.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Helvetica", size: 20.0)!, range: range)
-//        print(str1)
-//        return str1
-//    }
+
     
     init(json: [String : Any]) {
         self.id = json["id"] as? Int

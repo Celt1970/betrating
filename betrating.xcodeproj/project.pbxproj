@@ -234,7 +234,6 @@
 				AAD4765A2008C73F00557679 /* Sources */,
 				AAD4765B2008C73F00557679 /* Frameworks */,
 				AAD4765C2008C73F00557679 /* Resources */,
-				903F08012D4DC0268353BA70 /* [CP] Embed Pods Frameworks */,
 				B62C2C66339695FB0FBB54CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -323,26 +322,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		903F08012D4DC0268353BA70 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-betrating/Pods-betrating-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
-				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-betrating/Pods-betrating-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B62C2C66339695FB0FBB54CD /* [CP] Copy Pods Resources */ = {

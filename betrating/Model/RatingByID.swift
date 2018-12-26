@@ -42,7 +42,6 @@ class RatingByID{
         return content1
     }
     var attrStr1: NSAttributedString{
-        //            print(description)
         let str1 = try!NSMutableAttributedString(data: firstStr.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
                                                  options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
                                                  documentAttributes:  nil)
@@ -69,11 +68,9 @@ class RatingByID{
         })
         
         
-        print(str1)
         return str1
     }
         var attrStr2: NSAttributedString{
-            //            print(description)
             let str1 = try!NSMutableAttributedString(data: ssecondStr.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
                                                      options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
                                                      documentAttributes:  nil)
@@ -100,7 +97,6 @@ class RatingByID{
             })
             
             
-            print(str1)
             return str1
         }
     

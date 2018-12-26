@@ -7,12 +7,8 @@
 //
 
 import UIKit
-import Apollo
 import HockeySDK;
-import YandexMobileMetrica
 
-let graphlQLEndpointURL = "https://api.scores24.ru/graphql"
-let apollo = ApolloClient(url: URL(string: graphlQLEndpointURL)!)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BITHockeyManager.shared().configure(withIdentifier: "5aba7ce612cf43168f0e430d2bce9c56")
         BITHockeyManager.shared().start()
         BITHockeyManager.shared().authenticator.authenticateInstallation() // This line is obsolete in the crash only builds
-        YMMYandexMetrica.activate(withApiKey: "ddd726cf-fda9-444f-857a-dafc6e0577d0")
 
         return true
     }
