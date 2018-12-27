@@ -8,62 +8,44 @@
 
 import Foundation
 
-class ForecastSmall{
-    let id: Int
+struct ForecastSmall: Codable {
     let name: String
-    let slug: String?
-    var currentName: String{
-
-        let str = name.replacingOccurrences(of: " – ", with: "\n").replacingOccurrences(of: " &#8212; ", with: "\n")
-        return str.capitalized
+    let id: Int
+    let league: URL
+    let date: ForecastDate
+    let category: ForecastCategory
+    var fullDate:String {
+        return date.fullDate
     }
-    let leaguePreview : String
-    let date: String
-    let headerFirstPart: String?
-    let headerSecondPart: String?
-    let headerThirdPart: String?
-    var fuulHeader: String{
-        if headerThirdPart != ""{
-            return  (headerSecondPart ?? "") + " • " + (headerFirstPart ?? "")
-        }else{
-            return  headerFirstPart ?? ""
-            
+    var header: String {
+        return [category.name, category.parent?.name].compactMap {return $0}.joined(separator: " • ")
+    }
+    var slug: String? {
+        return category.parent?.parent?.slug
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case id
+        case league = "league_preview"
+        case date
+        case category
+    }
+    
+    struct ForecastDate: Codable {
+        let day: String
+        let month: String
+        let time: String
+        
+        var fullDate: String{
+           return "\(day) \(month) \(time)"
         }
     }
     
-    init(json: [String:Any]) {
-        self.id = json["id"] as! Int
-        self.name = json["name"] as! String
-        self.leaguePreview = json["league_preview"] as! String
-        let date = json["date"] as! [String : Any]
-        let month = date["month"] as! String
-        let day = date["day"] as! String
-        let time = date["time"] as! String
-        self.date = "\(day) \(month) \(time)"
-        if let category = json["category"] as? [String:Any]{
-            self.headerFirstPart = category["name"] as? String
-            if let parent = category["parent"] as? [String:Any] {
-                self.headerSecondPart = parent["name"] as? String
-                if let secondParent = parent["parent"] as? [String:Any]{
-                    self.slug = secondParent["slug"] as? String
-                    self.headerThirdPart = secondParent["name"] as? String
-                }else{
-                    self.headerThirdPart = ""
-                    self.slug = ""
-                }
-            }else{
-                self.headerSecondPart = ""
-                self.headerThirdPart = ""
-                self.slug = ""
-
-            }
-        }else{
-            self.headerSecondPart = ""
-            self.headerThirdPart = ""
-            self.headerFirstPart = ""
-            self.slug = ""
-
-        }
+    class ForecastCategory: Codable {
+        let id: Int
+        let slug: String
+        let name: String
+        let parent: ForecastCategory?
     }
 }
-

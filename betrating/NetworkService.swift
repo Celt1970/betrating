@@ -228,14 +228,10 @@ class NetworkService{
                 }
                 return
             }
-            let list = json as! [[String:Any]]
-            var forecasts = [ForecastSmall]()
-            for item in list{
-                let forecast = ForecastSmall(json: item)
-                forecasts.append(forecast)
-            }
+            guard let decodedJson = try? JSONDecoder().decode([ForecastSmall].self, from: data) else { return }
+            
             DispatchQueue.main.async {
-                completion(forecasts)
+                completion(decodedJson)
             }
         }
     }

@@ -16,16 +16,16 @@ class ForecastCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     func configCell(currentForecast: ForecastSmall?, service: NetworkService?, indexPath: IndexPath){
-        self.dateLabel.text = currentForecast?.date
-        self.forecastTextLabel.text = currentForecast?.currentName
-        self.leagueLabel.text = currentForecast?.fuulHeader
+        self.dateLabel.text = currentForecast?.fullDate
+        self.forecastTextLabel.text = currentForecast?.name
+        self.leagueLabel.text = currentForecast?.header
         
         self.forecastImage.image = nil
         self.tag = indexPath.row
-        if currentForecast?.leaguePreview != nil{
+        if currentForecast?.league != nil{
             guard service != nil else {return}
 
-            service!.loadImage(url: currentForecast?.leaguePreview, completion: { image, connect in
+            service!.loadImage(url: currentForecast?.league.absoluteString, completion: { image, connect in
                 if connect == true{
                     return
                 }

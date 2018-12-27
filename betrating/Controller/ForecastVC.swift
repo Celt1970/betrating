@@ -32,7 +32,7 @@ class ForecastVC: UIViewController {
     let betRatingGray = UIColor(red: 99/255, green: 99/255, blue: 99/255, alpha: 1)
     
     var all: [ForecastSmall]?
-    var currentCategory: [ForecastSmall] = []
+    var filteredCategory: [ForecastSmall] = []
     var service = NetworkService()
     
     override func viewDidLoad() {
@@ -64,9 +64,9 @@ class ForecastVC: UIViewController {
             return forecast.slug == category.getCategory()
         }
         guard newForecast != nil, self.all != nil else { return }
-        self.currentCategory = newForecast!
+        self.filteredCategory = newForecast!
         if category == .all {
-            self.currentCategory = self.all!
+            self.filteredCategory = self.all!
         }
         self.update(.stop)
     }
@@ -89,9 +89,9 @@ class ForecastVC: UIViewController {
         service.getForecastList(category: .all,
                                 offset: 0,
                                 limit: 100) { [weak self] list in
-            guard list != nil else {return}
-            self?.all = list!
-            self?.currentCategory = list!
+            guard let list = list else {return}
+            self?.all = list
+            self?.filteredCategory = list
             self?.update(.stop)
         }
     }
@@ -117,12 +117,12 @@ extension ForecastVC: UICollectionViewDelegate, UICollectionViewDataSource{
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.currentCategory.count
+        return self.filteredCategory.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "forecastCell", for: indexPath) as! ForecastCell
-        let currentForecast: ForecastSmall = currentCategory[indexPath.row]
+        let currentForecast: ForecastSmall = filteredCategory[indexPath.row]
         cell.configCell(currentForecast: currentForecast,
                         service: service,
                         indexPath: indexPath)
@@ -139,7 +139,7 @@ extension ForecastVC: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentForecast = currentCategory[indexPath.row]
+        let currentForecast = filteredCategory[indexPath.row]
         let id = currentForecast.id
         self.idToTransfer = id
         performSegue(withIdentifier: "toForecastDetails", sender: self)
