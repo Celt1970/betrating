@@ -11,9 +11,9 @@ import Foundation
 struct ForecastSmall: Codable {
     let name: String
     let id: Int
-    let league: URL
-    let date: ForecastDate
-    let category: ForecastCategory
+    let leaguePreviewURL: URL
+    let date: BetratingDate
+    let category: BetratingCategory
     var fullDate:String {
         return date.fullDate
     }
@@ -27,25 +27,8 @@ struct ForecastSmall: Codable {
     enum CodingKeys: String, CodingKey {
         case name
         case id
-        case league = "league_preview"
+        case leaguePreviewURL = "league_preview"
         case date
         case category
-    }
-    
-    struct ForecastDate: Codable {
-        let day: String
-        let month: String
-        let time: String
-        
-        var fullDate: String{
-           return "\(day) \(month) \(time)"
-        }
-    }
-    
-    class ForecastCategory: Codable {
-        let id: Int
-        let slug: String
-        let name: String
-        let parent: ForecastCategory?
     }
 }

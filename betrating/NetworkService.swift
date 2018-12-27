@@ -96,18 +96,11 @@ class NetworkService{
     }
     
     func getNewsById(id: Int, completion: @escaping getNewsByIdCompletion) {
-        print(id)
         request(endPoint: "/news/\(id)") { data in
             guard let decoded = try? JSONDecoder().decode(NewsItem.self, from: data) else { return }
             DispatchQueue.main.async {
                 completion(decoded)
             }
-//            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-//            let list = json as! [String : Any]
-//            let currentNews = NewsItem(json: list)
-//            DispatchQueue.main.async {
-//                completion(currentNews)
-//            }
         }
     }
     
@@ -241,20 +234,26 @@ class NetworkService{
         }
     }
     
-    func getForecastById2(_ id: Int, completion: @escaping getForecastByIdCompletion){
+    func getForecastById(_ id: Int, completion: @escaping getForecastByIdCompletion){
+        print(id)
         request(endPoint: "/bets/\(id)") { data in
-            
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-            guard json != nil else{
-                print("Invalid json")
-                return
-            }
-            let list = json as! [String:Any]
-            let forecast = ForecastDetailed(json: list)
+            guard let decoded = try? JSONDecoder().decode(ForecastDetailed.self, from: data) else { return }
             
             DispatchQueue.main.async {
-                completion(forecast)
+                completion(decoded)
             }
+            
+//            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+//            guard json != nil else{
+//                print("Invalid json")
+//                return
+//            }
+//            let list = json as! [String:Any]
+//            let forecast = ForecastDetailed(json: list)
+//
+//            DispatchQueue.main.async {
+//                completion(forecast)
+//            }
         }
     }
     

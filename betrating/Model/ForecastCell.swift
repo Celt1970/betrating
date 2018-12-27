@@ -22,10 +22,10 @@ class ForecastCell: UICollectionViewCell {
         
         self.forecastImage.image = nil
         self.tag = indexPath.row
-        if currentForecast?.league != nil{
+        if currentForecast?.leaguePreviewURL != nil{
             guard service != nil else {return}
 
-            service!.loadImage(url: currentForecast?.league.absoluteString, completion: { image, connect in
+            service!.loadImage(url: currentForecast?.leaguePreviewURL.absoluteString, completion: { image, connect in
                 if connect == true{
                     return
                 }

@@ -10,10 +10,6 @@ import UIKit
 
 class ForecastVC: UIViewController {
     
-    private enum Condition {
-        case start, stop
-    }
-    
     @IBOutlet weak var allButton: UIButton!
     @IBOutlet weak var fotballButton: UIButton!
     @IBOutlet weak var hockeyButton: UIButton!
@@ -71,7 +67,7 @@ class ForecastVC: UIViewController {
         self.update(.stop)
     }
     
-    private func update(_ condition:Condition ) {
+    private func update(_ condition: Condition ) {
         switch condition {
         case .start:
             collectionB.isHidden = true
@@ -89,7 +85,10 @@ class ForecastVC: UIViewController {
         service.getForecastList(category: .all,
                                 offset: 0,
                                 limit: 100) { [weak self] list in
-            guard let list = list else {return}
+            guard let list = list else {
+                self?.update(.stop)
+                return
+        }
             self?.all = list
             self?.filteredCategory = list
             self?.update(.stop)

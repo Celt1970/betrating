@@ -478,6 +478,7 @@
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="activityIndicator" destination="qki-bo-XEB" id="gbP-XN-yOU"/>
+                        <outlet property="contentView" destination="JlZ-OA-SfS" id="tWQ-TU-hTO"/>
                         <outlet property="darkView" destination="Kn2-0q-iFg" id="smc-Gf-AdL"/>
                         <outlet property="forecastDate" destination="v3q-7G-JNH" id="e8V-rx-M6j"/>
                         <outlet property="forecastImage" destination="UPP-sh-G4M" id="FkA-TD-IM9"/>
