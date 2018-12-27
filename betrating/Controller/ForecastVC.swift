@@ -10,7 +10,7 @@ import UIKit
 
 class ForecastVC: UIViewController {
     
-    enum Condition {
+    private enum Condition {
         case start, stop
     }
     

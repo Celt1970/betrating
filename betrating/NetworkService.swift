@@ -96,13 +96,18 @@ class NetworkService{
     }
     
     func getNewsById(id: Int, completion: @escaping getNewsByIdCompletion) {
+        print(id)
         request(endPoint: "/news/\(id)") { data in
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-            let list = json as! [String : Any]
-            let currentNews = NewsItem(json: list)
+            guard let decoded = try? JSONDecoder().decode(NewsItem.self, from: data) else { return }
             DispatchQueue.main.async {
-                completion(currentNews)
+                completion(decoded)
             }
+//            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+//            let list = json as! [String : Any]
+//            let currentNews = NewsItem(json: list)
+//            DispatchQueue.main.async {
+//                completion(currentNews)
+//            }
         }
     }
     

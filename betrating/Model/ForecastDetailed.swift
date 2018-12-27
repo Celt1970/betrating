@@ -22,13 +22,13 @@ class ForecastDetailed{
     var secondParent: String?
     var thirdParent: String?
     var attrStr: NSAttributedString{
-        let str1 = try!NSMutableAttributedString(data: content!.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
+        let str = try!NSMutableAttributedString(data: content!.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
                                           options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
                                           documentAttributes:  nil)
-        let range = NSRange(location: 0, length: str1.length)
+        let range = NSRange(location: 0, length: str.length)
 
-        str1.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Helvetica", size: 15.0)!, range: range)
-        return str1
+        str.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "Helvetica", size: 15.0)!, range: range)
+        return str
     }
     init (json: [String:Any]){
         self.name = (json["name"] as? String) ?? ""
