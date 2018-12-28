@@ -20,12 +20,13 @@ extension BookmakersListVC: UICollectionViewDelegate, UICollectionViewDataSource
         let big = CGSize(width: collectionView.bounds.size.width - 20 , height:  collectionView.bounds.size.width  / 3 )
         let small =  CGSize(width: (collectionView.bounds.size.width - 35) / 2 , height:  collectionView.bounds.size.width  / 3 )
         
-        if indexPath.row == 0 || (raitings.count <= 2){
+        if indexPath.row == 0 {
             return big
-        }else{
+        } else {
             return small
         }
     }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -34,27 +35,14 @@ extension BookmakersListVC: UICollectionViewDelegate, UICollectionViewDataSource
         return raitings.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if indexPath.row == 0 || (raitings.count <= 2){
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "raitingCellBig", for: indexPath) as! RaitingCellBig
-            if raitings.count != 0{
-                let rate = raitings[indexPath.row]
-                cell.configure(raiting: rate, service: service, indexPath: indexPath, width: collectionView.bounds.width - 10, height: (collectionView.bounds.width - 20)  / 3 )
-            }
-            
-            return cell
-            
-        }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookmakersListCellSmall", for: indexPath) as! BookmakersListCellSmall
             if raitings.count != 0{
                 let rate = raitings[indexPath.row]
-                
-                cell.configure(raiting: rate, service: service, indexPath: indexPath, collectionView: collectionView)
+                cell.configure(raiting: rate,
+                               service: service,
+                               indexPath: indexPath)
             }
-            
             return cell
-        }
-        
     }
 }
 

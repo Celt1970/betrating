@@ -13,7 +13,7 @@
 		AA01FC4D20129F9200AA3DEB /* NewsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC4C20129F9200AA3DEB /* NewsListItem.swift */; };
 		AA01FC4F201361AD00AA3DEB /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC4E201361AD00AA3DEB /* NewsItem.swift */; };
 		AA01FC512013642D00AA3DEB /* DetailedNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC502013642D00AA3DEB /* DetailedNewsVC.swift */; };
-		AA07BF56200A369800478F8B /* RaitingCellSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07BF55200A369800478F8B /* RaitingCellSmall.swift */; };
+		AA07BF56200A369800478F8B /* BookmakersListCellSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07BF55200A369800478F8B /* BookmakersListCellSmall.swift */; };
 		AA07BF58200AB50F00478F8B /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07BF57200AB50F00478F8B /* FilterCell.swift */; };
 		AA07BF5A200AB77200478F8B /* FiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07BF59200AB77200478F8B /* FiltersVC.swift */; };
 		AA07BF5C200BA98300478F8B /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07BF5B200BA98300478F8B /* NewsVC.swift */; };
@@ -36,7 +36,6 @@
 		AAD476692008C73F00557679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD476682008C73F00557679 /* Assets.xcassets */; };
 		AAD4766C2008C73F00557679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD4766A2008C73F00557679 /* LaunchScreen.storyboard */; };
 		AAD47676200A291F00557679 /* BookmakersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD47675200A291F00557679 /* BookmakersListVC.swift */; };
-		AAD47678200A293A00557679 /* RaitingCellBig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD47677200A293A00557679 /* RaitingCellBig.swift */; };
 		F7B3CC3F0198F0D62D9968F4 /* Pods_betrating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1FC6E28631DC11EABAD646 /* Pods_betrating.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,7 @@
 		AA01FC4C20129F9200AA3DEB /* NewsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListItem.swift; sourceTree = "<group>"; };
 		AA01FC4E201361AD00AA3DEB /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		AA01FC502013642D00AA3DEB /* DetailedNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedNewsVC.swift; sourceTree = "<group>"; };
-		AA07BF55200A369800478F8B /* RaitingCellSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingCellSmall.swift; sourceTree = "<group>"; };
+		AA07BF55200A369800478F8B /* BookmakersListCellSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmakersListCellSmall.swift; sourceTree = "<group>"; };
 		AA07BF57200AB50F00478F8B /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		AA07BF59200AB77200478F8B /* FiltersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersVC.swift; sourceTree = "<group>"; };
 		AA07BF5B200BA98300478F8B /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
@@ -85,7 +84,6 @@
 		AAD4766B2008C73F00557679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD4766D2008C73F00557679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD47675200A291F00557679 /* BookmakersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmakersListVC.swift; sourceTree = "<group>"; };
-		AAD47677200A293A00557679 /* RaitingCellBig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingCellBig.swift; sourceTree = "<group>"; };
 		D427CE71218887106A7B8FAF /* Pods-betrating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-betrating.debug.xcconfig"; path = "Pods/Target Support Files/Pods-betrating/Pods-betrating.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +111,6 @@
 			children = (
 				AA07BF5B200BA98300478F8B /* NewsVC.swift */,
 				AA07BF59200AB77200478F8B /* FiltersVC.swift */,
-				AA0DBA3B201552430042E1BF /* ExtensionRatingTableViewDelegateAndDataSource.swift */,
 				AA01FC482012293E00AA3DEB /* BookmakerDetailedVC.swift */,
 				AA01FC502013642D00AA3DEB /* DetailedNewsVC.swift */,
 			);
@@ -161,9 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				AAD47675200A291F00557679 /* BookmakersListVC.swift */,
-				AAD47677200A293A00557679 /* RaitingCellBig.swift */,
-				AA07BF55200A369800478F8B /* RaitingCellSmall.swift */,
+				AA07BF55200A369800478F8B /* BookmakersListCellSmall.swift */,
 				AA01FC44201135A900AA3DEB /* BookmakersListItem.swift */,
+				AA0DBA3B201552430042E1BF /* ExtensionRatingTableViewDelegateAndDataSource.swift */,
 			);
 			path = BookmakersList;
 			sourceTree = "<group>";
@@ -391,13 +388,12 @@
 				AACADAF821D51D8E002B3E8F /* BetratingDate.swift in Sources */,
 				AAC6F709200CC8C5006EC285 /* ForecastListVC.swift in Sources */,
 				AA07BF5A200AB77200478F8B /* FiltersVC.swift in Sources */,
-				AAD47678200A293A00557679 /* RaitingCellBig.swift in Sources */,
 				AA40FB92201519D800C73B81 /* WeekDateExtension.swift in Sources */,
 				AACADAFC21D523C6002B3E8F /* Condition.swift in Sources */,
 				AA07FF1C200F546600348641 /* NetworkService.swift in Sources */,
 				AAC6F70B200CC8EC006EC285 /* ForecastCell.swift in Sources */,
 				AACADB0021D60641002B3E8F /* Extension StringDevideByTwo.swift in Sources */,
-				AA07BF56200A369800478F8B /* RaitingCellSmall.swift in Sources */,
+				AA07BF56200A369800478F8B /* BookmakersListCellSmall.swift in Sources */,
 				AAD476622008C73F00557679 /* AppDelegate.swift in Sources */,
 				AA07BF5C200BA98300478F8B /* NewsVC.swift in Sources */,
 			);

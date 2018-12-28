@@ -10,6 +10,7 @@ import UIKit
 
 class BookmakerDetailedVC: UIViewController {
     
+    @IBOutlet weak var stackViewForStars: UIStackView!
     @IBOutlet weak var bookmakerLogo: UIImageView!
     @IBOutlet weak var firstStar: UIImageView!
     @IBOutlet weak var secondStar: UIImageView!
@@ -56,6 +57,14 @@ class BookmakerDetailedVC: UIViewController {
         self.firstText.attributedText  = rate.attrStr1
         self.secondText.attributedText = rate.attrStr2
         self.likesCounter.text = "\(rate.votes)"
+        
+        guard let stars = stackViewForStars.arrangedSubviews as? [UIImageView] else { return }
+        
+        for (index, star) in stars.enumerated() {
+            if index >= rate.rating {
+                star.removeFromSuperview()
+            }
+        }
         
     }
     

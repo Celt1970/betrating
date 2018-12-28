@@ -1,5 +1,5 @@
 //
-//  RaitingCell.swift
+//  BookmakersListCellSmall.swift
 //  betrating
 //
 //  Created by Yuriy borisov on 13.01.2018.
@@ -8,26 +8,26 @@
 
 import UIKit
 
-class RaitingCellBig: UICollectionViewCell {
+class BookmakersListCellSmall: UICollectionViewCell {
     @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var likesCounter: UILabel!
+    @IBOutlet weak var heartImage: UIImageView!
     
+    @IBOutlet weak var stackViewForStars: UIStackView!
     @IBOutlet weak var firstStar: UIImageView!
     @IBOutlet weak var secondStar: UIImageView!
     @IBOutlet weak var thirdStar: UIImageView!
     @IBOutlet weak var fourthStar: UIImageView!
     @IBOutlet weak var fifthStar: UIImageView!
     
-    @IBOutlet weak var heartImage: UIImageView!
-    
-    @IBOutlet weak var stackViewForStars: UIStackView!
-    @IBOutlet weak var likesCounter: UILabel!
-    
-    func configure(raiting: BookmakersListItem, service: NetworkService?, indexPath: IndexPath, width: CGFloat, height: CGFloat){
+    func configure(raiting: BookmakersListItem,
+                   service: NetworkService,
+                   indexPath: IndexPath){
+        
         self.logoImage.image = nil
         self.tag = indexPath.row
         
         self.likesCounter.text = "\(String(describing: raiting.votes!))"
-        
         if let stars = stackViewForStars.arrangedSubviews as? [UIImageView] {
             for (index, star) in stars.enumerated() {
                 if index < raiting.rating! {
@@ -37,9 +37,6 @@ class RaitingCellBig: UICollectionViewCell {
                 }
             }
         }
-
-        self.bounds.size.width = width
-        self.bounds.size.height = height
         
         self.contentView.layer.cornerRadius = 5.0
         self.contentView.layer.borderWidth = 1.0
@@ -51,10 +48,10 @@ class RaitingCellBig: UICollectionViewCell {
         self.layer.shadowRadius = 3.0
         self.layer.shadowOpacity = 0.8
         self.layer.masksToBounds = false
-        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds,
+                                             cornerRadius: self.contentView.layer.cornerRadius).cgPath
         
-        guard service != nil else {return}
-        service?.loadImage(url: raiting.logo!, completion: { [ weak self ] image, connect in
+        service.loadImage(url: raiting.logo!, completion: { [ weak self ] image, connect in
             if connect == true{
                 return
             }
@@ -63,5 +60,4 @@ class RaitingCellBig: UICollectionViewCell {
             }
         })
     }
-    
 }

@@ -19,21 +19,15 @@ class BookmakersListVC: UIViewController {
     
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-    var session: URLSession{
-        let configuration = URLSessionConfiguration.default
-        let session = URLSession(configuration: configuration)
-        return session
-    }
-    var service: NetworkService?
+    
+    var service = NetworkService()
     var raitings = [BookmakersListItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = NetworkService()
         collectionView.isHidden = true
         activityIndicator.startAnimating()
-        let tabBarHeight = (self.tabBarController?.tabBar.frame.size.height) ?? 0.0
-        service?.getBookmakersList(filters: activatedTriggers){ [weak self] ratings, connect in
+        service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings, connect in
             if connect == true{
                 return
             }
@@ -43,11 +37,10 @@ class BookmakersListVC: UIViewController {
             self?.collectionView.isHidden = false
             self?.activityIndicator.stopAnimating()
         }
-        collectionView.frame = CGRect(x: 0,
-                                      y: 0,
-                                      width: screenWidth,
-                                      height: screenHeight - tabBarHeight )
-        
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -55,10 +48,8 @@ class BookmakersListVC: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.minimumInteritemSpacing = 15
         layout.minimumLineSpacing = 15
-        
         collectionView.collectionViewLayout = layout
         self.view.addSubview(collectionView)
-        
     }
     @IBAction func filtersBtnPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "toFilters", sender: self)
@@ -73,7 +64,7 @@ class BookmakersListVC: UIViewController {
                 activityIndicator.startAnimating()
                 activatedTriggers = senderVC.activatedTriggers
                 collectionView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
-                service?.getBookmakersList(filters: activatedTriggers){ [weak self] ratings, connection in
+                service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings, connection in
                     if connection == true{
                         return
                     }
