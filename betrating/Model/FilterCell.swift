@@ -14,17 +14,6 @@ class FilterCellSimple: UITableViewCell {
     
     var delegate: FilterChangedDelegate?
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
     @IBAction func switcherSwitched(_ sender: UISwitch) {
         if switchfoRow.isOn{
             delegate?.changeStateTo(value: 1, position: [sender.tag - 1,0])
@@ -43,17 +32,6 @@ class FilterCellStars: UITableViewCell {
     
     var delegate: FilterChangedDelegate?
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
     @IBAction func anyStarPressed(_ sender: UIButton) {
         if sender.currentImage == UIImage(named: "star\(sender.tag)"){
             sender.setImage(UIImage(named: "starPressed\(sender.tag)"), for: .normal)
@@ -79,15 +57,6 @@ class FilterCellMoney: UITableViewCell {
     @IBOutlet weak var rublSign: UIButton!
     
     var delegate: FilterChangedDelegate?
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     @IBAction func moneySignPressed( _ sender: UIButton){
         if sender.tag == 1{
@@ -131,17 +100,6 @@ class FilterCellClear: UITableViewCell {
     
     var delegate: FilterChangedDelegate?
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
     @IBAction func clearFiltersBtnPressed(_ sender: UIButton) {
         delegate?.clearButton()
     }
