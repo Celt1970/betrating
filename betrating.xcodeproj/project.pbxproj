@@ -24,6 +24,7 @@
 		AA306E74200C0F1E00BBDE53 /* ForecastByIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA306E73200C0F1E00BBDE53 /* ForecastByIdVC.swift */; };
 		AA30D6042010A8EF00C69CEB /* ForecastByIdItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30D6032010A8EF00C69CEB /* ForecastByIdItem.swift */; };
 		AA40FB92201519D800C73B81 /* WeekDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40FB91201519D800C73B81 /* WeekDateExtension.swift */; };
+		AAAF3EB421D6723400FA5B31 /* ConfigurableNewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3EB321D6723400FA5B31 /* ConfigurableNewsListCell.swift */; };
 		AAC6F709200CC8C5006EC285 /* ForecastListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6F708200CC8C5006EC285 /* ForecastListVC.swift */; };
 		AAC6F70B200CC8EC006EC285 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6F70A200CC8EC006EC285 /* ForecastCell.swift */; };
 		AACADAF821D51D8E002B3E8F /* BetratingDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACADAF721D51D8E002B3E8F /* BetratingDate.swift */; };
@@ -70,6 +71,7 @@
 		AA306E73200C0F1E00BBDE53 /* ForecastByIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastByIdVC.swift; sourceTree = "<group>"; };
 		AA30D6032010A8EF00C69CEB /* ForecastByIdItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastByIdItem.swift; sourceTree = "<group>"; };
 		AA40FB91201519D800C73B81 /* WeekDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDateExtension.swift; sourceTree = "<group>"; };
+		AAAF3EB321D6723400FA5B31 /* ConfigurableNewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableNewsListCell.swift; sourceTree = "<group>"; };
 		AAC6F708200CC8C5006EC285 /* ForecastListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListVC.swift; sourceTree = "<group>"; };
 		AAC6F70A200CC8EC006EC285 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		AACADAF721D51D8E002B3E8F /* BetratingDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetratingDate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				AA07BF5B200BA98300478F8B /* NewsListVC.swift */,
 				AA07BF5D200BA99E00478F8B /* NewsListCell.swift */,
 				AA01FC4C20129F9200AA3DEB /* NewsListItem.swift */,
+				AAAF3EB321D6723400FA5B31 /* ConfigurableNewsListCell.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				AA07BF5A200AB77200478F8B /* FiltersVC.swift in Sources */,
 				AA40FB92201519D800C73B81 /* WeekDateExtension.swift in Sources */,
 				AACADAFC21D523C6002B3E8F /* Condition.swift in Sources */,
+				AAAF3EB421D6723400FA5B31 /* ConfigurableNewsListCell.swift in Sources */,
 				AA07FF1C200F546600348641 /* NetworkService.swift in Sources */,
 				AAC6F70B200CC8EC006EC285 /* ForecastCell.swift in Sources */,
 				AACADB0021D60641002B3E8F /* Extension StringDevideByTwo.swift in Sources */,

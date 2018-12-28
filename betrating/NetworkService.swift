@@ -44,8 +44,8 @@ enum forecastCategories: String{
 class NetworkService{
     
     private let baseUrl = URL(string: "http://betrating.ru/mobileapi")
-    let dateFormatter = DateFormatter()
-    var session: URLSession{
+    private let dateFormatter = DateFormatter()
+    private var session: URLSession{
         let conf = URLSessionConfiguration.default
         let sess = URLSession(configuration: conf)
         return sess
@@ -84,18 +84,12 @@ class NetworkService{
     
     func getNewsList(completion: @escaping getNewsListCompletion){
         request(endPoint: "/news/0/50") { data in
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-            
-            guard let list = json as? [[String : Any]] else {
-                DispatchQueue.main.async {
-                    completion(nil)
-                }
+            guard let decoded = try? JSONDecoder().decode([NewsListItem].self, from: data) else {
+                print("Invalid JSON")
                 return
             }
-            let news = list.compactMap({NewsListItem(json: $0)})
-            
             DispatchQueue.main.async {
-                completion(news)
+                completion(decoded)
             }
         }
     }
@@ -221,8 +215,6 @@ class NetworkService{
             }
         }
     }
-    
-    
     
     func loadImage(url: String?, completion: @escaping loadSinglePhotoCompletion){
         guard let str = url, let url = URL(string: str) else {

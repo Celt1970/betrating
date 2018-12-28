@@ -19,13 +19,14 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     var service = NetworkService()
     var idToSend = 0
     let numberOfSections = 1
+    var cachedImages: [Int: UIImage] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.startAnimating()
         
         service.getNewsList(completion: {[ weak self ] news in
-            guard news != nil else {return}
+            guard let news = news else {return}
             self?.news = news
             self?.collectionView?.reloadData()
             self?.activityIndicator.stopAnimating()
@@ -74,15 +75,41 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if indexPath.row == 0{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCellBig", for: indexPath) as! NewsCell
+            
             guard let currentNews = news?[indexPath.row] else {return cell}
-            cell.configure(currentNews: currentNews, service: service, indexPath: indexPath, collectionView: collectionView)
+            cell.configure(currentNews: currentNews, indexPath: indexPath)
+            getImageWithIndexAndUrl(index: indexPath.row, url: currentNews.preview.absoluteString) { image in
+                if cell.tag == indexPath.row {
+                    cell.newsImage.image = image
+                }
+            }
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCellSmall", for: indexPath) as! NewsCellSmall
+        
         guard let currentNews = news?[indexPath.row] else {return cell}
-        cell.configure(currentNews: currentNews, service: service, indexPath: indexPath, collectionView: collectionView)
+        cell.configure(currentNews: currentNews, indexPath: indexPath)
+        getImageWithIndexAndUrl(index: indexPath.row, url: currentNews.preview.absoluteString) { image in
+            if cell.tag == indexPath.row {
+                cell.newsImage.image = image
+            }
+        }
         return cell
+        
+    }
+    
+    func getImageWithIndexAndUrl(index: Int,url: String, completion: @escaping (UIImage) -> Void) {
+        if cachedImages[index] == nil {
+            service.loadImage(url: url) { [weak self] image, connect in
+                guard let image = image else { return }
+                self?.cachedImages[index] = image
+                completion(image)
+            }
+        } else {
+            completion(cachedImages[index]!)
+        }
     }
 }
