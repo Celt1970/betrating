@@ -33,13 +33,12 @@ class BookmakerDetailedVC: UIViewController {
         loadData()
     }
     
-    func loadData() {
-        scrollView.isHidden = true
-        activityIndicator.startAnimating()
+    private func loadData() {
+        update(condition: .start)
         service.getBookmakerByID(id: id) { [weak self] rate in
-            guard rate != nil else {return}
+            guard let rate = rate else { return }
             
-            self?.service.loadImage(url: rate!.logo!, completion: { [weak self ] image, connect in
+            self?.service.loadImage(url: rate.logo.absoluteString, completion: { [weak self ] image, connect in
                 if connect == true{
                     return
                 }
@@ -47,16 +46,33 @@ class BookmakerDetailedVC: UIViewController {
                 self?.bookmakerLogo.image = image
             })
             
-            
-            self?.firstText.attributedText  = rate!.attrStr1
-            self?.secondText.attributedText = rate!.attrStr2
-            self?.likesCounter.text = "\(rate!.votes!)"
-            self?.scrollView.reloadInputViews()
-            self?.scrollView.isHidden = false
-            self?.activityIndicator.stopAnimating()
+            self?.populateUI(bookmaker: rate)
+            self?.setupScrollView()
+            self?.update(condition: .stop)
         }
-        var contentRect = CGRect.zero
+    }
+    
+    private func populateUI(bookmaker rate: BookmakerById ) {
+        self.firstText.attributedText  = rate.attrStr1
+        self.secondText.attributedText = rate.attrStr2
+        self.likesCounter.text = "\(rate.votes)"
         
+    }
+    
+    private func update(condition: Condition) {
+        switch condition {
+        case .start:
+            scrollView.isHidden = true
+            activityIndicator.startAnimating()
+        case .stop:
+            self.scrollView.reloadInputViews()
+            self.scrollView.isHidden = false
+            self.activityIndicator.stopAnimating()
+        }
+    }
+    
+    private func setupScrollView() {
+        var contentRect = CGRect.zero
         for view in scrollView.subviews {
             contentRect = contentRect.union(view.frame)
         }

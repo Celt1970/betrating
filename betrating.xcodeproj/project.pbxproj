@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA01FC45201135A900AA3DEB /* RatingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC44201135A900AA3DEB /* RatingsList.swift */; };
-		AA01FC472012116500AA3DEB /* RatingByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC462012116500AA3DEB /* RatingByID.swift */; };
+		AA01FC472012116500AA3DEB /* BookmakerById.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC462012116500AA3DEB /* BookmakerById.swift */; };
 		AA01FC492012293E00AA3DEB /* BookmakerDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC482012293E00AA3DEB /* BookmakerDetailedVC.swift */; };
 		AA01FC4D20129F9200AA3DEB /* NewsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC4C20129F9200AA3DEB /* NewsListItem.swift */; };
 		AA01FC4F201361AD00AA3DEB /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FC4E201361AD00AA3DEB /* NewsItem.swift */; };
@@ -29,6 +29,8 @@
 		AACADAF821D51D8E002B3E8F /* BetratingDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACADAF721D51D8E002B3E8F /* BetratingDate.swift */; };
 		AACADAFA21D51DE8002B3E8F /* BetratingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACADAF921D51DE8002B3E8F /* BetratingCategory.swift */; };
 		AACADAFC21D523C6002B3E8F /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACADAFB21D523C6002B3E8F /* Condition.swift */; };
+		AACADAFE21D605B8002B3E8F /* ExtensionNSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACADAFD21D605B8002B3E8F /* ExtensionNSAttributedString.swift */; };
+		AACADB0021D60641002B3E8F /* Extension StringDevideByTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACADAFF21D60641002B3E8F /* Extension StringDevideByTwo.swift */; };
 		AAD476622008C73F00557679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD476612008C73F00557679 /* AppDelegate.swift */; };
 		AAD476672008C73F00557679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD476652008C73F00557679 /* Main.storyboard */; };
 		AAD476692008C73F00557679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD476682008C73F00557679 /* Assets.xcassets */; };
@@ -52,7 +54,7 @@
 		0A1FC6E28631DC11EABAD646 /* Pods_betrating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_betrating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F633DF44318B77CB74D68B9 /* Pods-betrating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-betrating.release.xcconfig"; path = "Pods/Target Support Files/Pods-betrating/Pods-betrating.release.xcconfig"; sourceTree = "<group>"; };
 		AA01FC44201135A900AA3DEB /* RatingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsList.swift; sourceTree = "<group>"; };
-		AA01FC462012116500AA3DEB /* RatingByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingByID.swift; sourceTree = "<group>"; };
+		AA01FC462012116500AA3DEB /* BookmakerById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmakerById.swift; sourceTree = "<group>"; };
 		AA01FC482012293E00AA3DEB /* BookmakerDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmakerDetailedVC.swift; sourceTree = "<group>"; };
 		AA01FC4C20129F9200AA3DEB /* NewsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListItem.swift; sourceTree = "<group>"; };
 		AA01FC4E201361AD00AA3DEB /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		AACADAF721D51D8E002B3E8F /* BetratingDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetratingDate.swift; sourceTree = "<group>"; };
 		AACADAF921D51DE8002B3E8F /* BetratingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetratingCategory.swift; sourceTree = "<group>"; };
 		AACADAFB21D523C6002B3E8F /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		AACADAFD21D605B8002B3E8F /* ExtensionNSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNSAttributedString.swift; sourceTree = "<group>"; };
+		AACADAFF21D60641002B3E8F /* Extension StringDevideByTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension StringDevideByTwo.swift"; sourceTree = "<group>"; };
 		AAD4765E2008C73F00557679 /* betrating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = betrating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD476612008C73F00557679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD476662008C73F00557679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,11 +136,13 @@
 				AA01FC4C20129F9200AA3DEB /* NewsListItem.swift */,
 				AAD47677200A293A00557679 /* RaitingCellBig.swift */,
 				AA07BF55200A369800478F8B /* RaitingCellSmall.swift */,
-				AA01FC462012116500AA3DEB /* RatingByID.swift */,
+				AA01FC462012116500AA3DEB /* BookmakerById.swift */,
 				AA01FC44201135A900AA3DEB /* RatingsList.swift */,
 				AA40FB91201519D800C73B81 /* WeekDateExtension.swift */,
 				AACADAF721D51D8E002B3E8F /* BetratingDate.swift */,
 				AACADAFB21D523C6002B3E8F /* Condition.swift */,
+				AACADAFD21D605B8002B3E8F /* ExtensionNSAttributedString.swift */,
+				AACADAFF21D60641002B3E8F /* Extension StringDevideByTwo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,11 +353,12 @@
 				AA01FC492012293E00AA3DEB /* BookmakerDetailedVC.swift in Sources */,
 				AA0DBA3C201552430042E1BF /* ExtensionRatingTableViewDelegateAndDataSource.swift in Sources */,
 				AA07FF1A200F518500348641 /* ForecastSmall.swift in Sources */,
-				AA01FC472012116500AA3DEB /* RatingByID.swift in Sources */,
+				AA01FC472012116500AA3DEB /* BookmakerById.swift in Sources */,
 				AA07BF58200AB50F00478F8B /* FilterCell.swift in Sources */,
 				AAD47676200A291F00557679 /* RaitingVC.swift in Sources */,
 				AA01FC512013642D00AA3DEB /* DetailedNewsVC.swift in Sources */,
 				AA30D6042010A8EF00C69CEB /* ForecastDetailed.swift in Sources */,
+				AACADAFE21D605B8002B3E8F /* ExtensionNSAttributedString.swift in Sources */,
 				AA07BF5E200BA99E00478F8B /* NewsCell.swift in Sources */,
 				AA01FC4F201361AD00AA3DEB /* NewsItem.swift in Sources */,
 				AA01FC4D20129F9200AA3DEB /* NewsListItem.swift in Sources */,
@@ -365,6 +372,7 @@
 				AACADAFC21D523C6002B3E8F /* Condition.swift in Sources */,
 				AA07FF1C200F546600348641 /* NetworkService.swift in Sources */,
 				AAC6F70B200CC8EC006EC285 /* ForecastCell.swift in Sources */,
+				AACADB0021D60641002B3E8F /* Extension StringDevideByTwo.swift in Sources */,
 				AA07BF56200A369800478F8B /* RaitingCellSmall.swift in Sources */,
 				AAD476622008C73F00557679 /* AppDelegate.swift in Sources */,
 				AA07BF5C200BA98300478F8B /* NewsVC.swift in Sources */,

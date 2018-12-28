@@ -9,16 +9,13 @@
 import Foundation
 import UIKit
 
-
 typealias getForecastListCompletion = ([ForecastSmall]?) -> Void
 typealias loadSinglePhotoCompletion = (UIImage?, Bool) -> Void
 typealias getForecastByIdCompletion = (ForecastDetailed?) -> Void
 typealias getRaitingsListCompletion = ([RaitingsList]?, Bool) -> Void
-typealias getBookmakerByIDCompletion = (RatingByID?) -> Void
+typealias getBookmakerByIDCompletion = (BookmakerById?) -> Void
 typealias getNewsListCompletion = ([NewsListItem]?) -> Void
 typealias getNewsByIdCompletion = (NewsItem?) -> Void
-//typealias getMatchesCompletion  = ([MatchesQueryQuery.Data.Match?]) -> Void
-
 
 enum forecastCategories: String{
     case all = "Все"
@@ -41,25 +38,6 @@ enum forecastCategories: String{
             return "basketball"
         }
         
-    }
-}
-enum statisticsCategoryes: String{
-    case soccer = "Футбол"
-    case hockey = "Хоккей"
-    case tennis = "Теннис"
-    case basketball = "Баскетбол"
-    
-    func getCategory() -> String{
-        switch self {
-        case .soccer:
-            return "soccer"
-        case .hockey:
-            return "ice-hockey"
-        case .tennis:
-            return "tennis"
-        case .basketball:
-            return "basketball"
-        }
     }
 }
 
@@ -124,12 +102,12 @@ class NetworkService{
     
     func getBookmakerByID(id: Int, completion: @escaping getBookmakerByIDCompletion){
         request(endPoint: "/bookmakers/\(id)") { data in
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-            let bookmaker = json as! [String: Any]
-            
-            let rate = RatingByID(json: bookmaker)
+            guard let decoded = try? JSONDecoder().decode(BookmakerById.self, from: data) else {
+                print("invalid JSON")
+                return
+            }
             DispatchQueue.main.async {
-                completion(rate)
+                completion(decoded)
             }
         }
     }
@@ -235,25 +213,12 @@ class NetworkService{
     }
     
     func getForecastById(_ id: Int, completion: @escaping getForecastByIdCompletion){
-        print(id)
         request(endPoint: "/bets/\(id)") { data in
             guard let decoded = try? JSONDecoder().decode(ForecastDetailed.self, from: data) else { return }
             
             DispatchQueue.main.async {
                 completion(decoded)
             }
-            
-//            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-//            guard json != nil else{
-//                print("Invalid json")
-//                return
-//            }
-//            let list = json as! [String:Any]
-//            let forecast = ForecastDetailed(json: list)
-//
-//            DispatchQueue.main.async {
-//                completion(forecast)
-//            }
         }
     }
     
