@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-typealias getForecastListCompletion = ([ForecastSmall]?) -> Void
+typealias getForecastListCompletion = ([ForecastListItem]?) -> Void
 typealias loadSinglePhotoCompletion = (UIImage?, Bool) -> Void
-typealias getForecastByIdCompletion = (ForecastDetailed?) -> Void
-typealias getRaitingsListCompletion = ([RaitingsList]?, Bool) -> Void
+typealias getForecastByIdCompletion = (ForecastByIdItem?) -> Void
+typealias getRaitingsListCompletion = ([BookmakersListItem]?, Bool) -> Void
 typealias getBookmakerByIDCompletion = (BookmakerById?) -> Void
 typealias getNewsListCompletion = ([NewsListItem]?) -> Void
 typealias getNewsByIdCompletion = (NewsItem?) -> Void
@@ -180,9 +180,9 @@ class NetworkService{
                     return
                 }
                 let list = json as! [[String:Any]]
-                var raitings = [RaitingsList]()
+                var raitings = [BookmakersListItem]()
                 for item in list{
-                    let rate = RaitingsList(json: item)
+                    let rate = BookmakersListItem(json: item)
                     raitings.append(rate)
                 }
                 DispatchQueue.main.async {
@@ -204,7 +204,7 @@ class NetworkService{
                 }
                 return
             }
-            guard let decodedJson = try? JSONDecoder().decode([ForecastSmall].self, from: data) else { return }
+            guard let decodedJson = try? JSONDecoder().decode([ForecastListItem].self, from: data) else { return }
             
             DispatchQueue.main.async {
                 completion(decodedJson)
@@ -214,7 +214,7 @@ class NetworkService{
     
     func getForecastById(_ id: Int, completion: @escaping getForecastByIdCompletion){
         request(endPoint: "/bets/\(id)") { data in
-            guard let decoded = try? JSONDecoder().decode(ForecastDetailed.self, from: data) else { return }
+            guard let decoded = try? JSONDecoder().decode(ForecastByIdItem.self, from: data) else { return }
             
             DispatchQueue.main.async {
                 completion(decoded)

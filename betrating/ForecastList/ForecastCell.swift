@@ -15,7 +15,7 @@ class ForecastCell: UICollectionViewCell {
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    func configCell(currentForecast: ForecastSmall?, service: NetworkService?, indexPath: IndexPath){
+    func configCell(currentForecast: ForecastListItem?, service: NetworkService?, indexPath: IndexPath){
         self.dateLabel.text = currentForecast?.fullDate
         self.forecastTextLabel.text = currentForecast?.name
         self.leagueLabel.text = currentForecast?.header

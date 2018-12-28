@@ -1,14 +1,14 @@
 //
 //  ScrollTest.swift
 //  betrating
-//
+//ForecastByIdVC
 //  Created by Yuriy borisov on 15.01.2018.
 //  Copyright © 2018 Yuriy borisov. All rights reserved.
 //
 
 import UIKit
 
-class DetailedVC: UIViewController {
+class ForecastByIdVC: UIViewController {
     @IBOutlet var myScroll: UIScrollView!
     @IBOutlet weak var forecastImage: UIImageView!
     @IBOutlet weak var leagueImage: UIImageView!
@@ -39,7 +39,7 @@ class DetailedVC: UIViewController {
         })
     }
     
-    private func populateUI(forecast: ForecastDetailed) {
+    private func populateUI(forecast: ForecastByIdItem) {
         let dispatchGroup: DispatchGroup = DispatchGroup()
         var tempForecastImage: UIImage? = nil
         var tempLeagueImage: UIImage? = nil

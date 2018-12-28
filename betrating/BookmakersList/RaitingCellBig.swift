@@ -1,5 +1,5 @@
 //
-//  RaitingCellSmall.swift
+//  RaitingCell.swift
 //  betrating
 //
 //  Created by Yuriy borisov on 13.01.2018.
@@ -8,10 +8,8 @@
 
 import UIKit
 
-class RaitingCellSmall: UICollectionViewCell {
+class RaitingCellBig: UICollectionViewCell {
     @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var likesCounter: UILabel!
-    @IBOutlet weak var heartImage: UIImageView!
     
     @IBOutlet weak var firstStar: UIImageView!
     @IBOutlet weak var secondStar: UIImageView!
@@ -19,7 +17,11 @@ class RaitingCellSmall: UICollectionViewCell {
     @IBOutlet weak var fourthStar: UIImageView!
     @IBOutlet weak var fifthStar: UIImageView!
     
-    func configure(raiting: RaitingsList, service: NetworkService?, indexPath: IndexPath, collectionView: UICollectionView){
+    @IBOutlet weak var heartImage: UIImageView!
+    
+    @IBOutlet weak var likesCounter: UILabel!
+    
+    func configure(raiting: BookmakersListItem, service: NetworkService?, indexPath: IndexPath, width: CGFloat, height: CGFloat){
         self.logoImage.image = nil
         self.tag = indexPath.row
         
@@ -37,34 +39,33 @@ class RaitingCellSmall: UICollectionViewCell {
             thirdStar.image = #imageLiteral(resourceName: "emptyStar")
             fourthStar.image = #imageLiteral(resourceName: "emptyStar")
             fifthStar.image = #imageLiteral(resourceName: "emptyStar")
-
+            
         case 3:
             firstStar.image = #imageLiteral(resourceName: "Star")
             secondStar.image = #imageLiteral(resourceName: "Star")
             thirdStar.image = #imageLiteral(resourceName: "Star")
             fourthStar.image = #imageLiteral(resourceName: "emptyStar")
             fifthStar.image = #imageLiteral(resourceName: "emptyStar")
-
+            
         case 4:
             firstStar.image = #imageLiteral(resourceName: "Star")
             secondStar.image = #imageLiteral(resourceName: "Star")
             thirdStar.image = #imageLiteral(resourceName: "Star")
             fourthStar.image = #imageLiteral(resourceName: "Star")
             fifthStar.image = #imageLiteral(resourceName: "emptyStar")
-
+            
         case 5:
             firstStar.image = #imageLiteral(resourceName: "Star")
             secondStar.image = #imageLiteral(resourceName: "Star")
             thirdStar.image = #imageLiteral(resourceName: "Star")
             fourthStar.image = #imageLiteral(resourceName: "Star")
             fifthStar.image = #imageLiteral(resourceName: "Star")
-
+            
         default:
-            print("default")
             break
         }
-        self.bounds.size.width = (collectionView.bounds.size.width - 20 ) / 2 - 3.5
-        self.bounds.size.height = collectionView.bounds.size.width / 3
+        self.bounds.size.width = width
+        self.bounds.size.height = height
         
         self.contentView.layer.cornerRadius = 5.0
         self.contentView.layer.borderWidth = 1.0
@@ -77,8 +78,8 @@ class RaitingCellSmall: UICollectionViewCell {
         self.layer.shadowOpacity = 0.8
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
-        guard service != nil else {return}
         
+        guard service != nil else {return}
         service?.loadImage(url: raiting.logo!, completion: { [ weak self ] image, connect in
             if connect == true{
                 return
@@ -88,4 +89,5 @@ class RaitingCellSmall: UICollectionViewCell {
             }
         })
     }
+    
 }

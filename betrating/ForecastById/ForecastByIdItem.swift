@@ -1,27 +1,31 @@
 //
-//  ForecastSmall.swift
+//  ForecastDetailed.swift
 //  betrating
 //
-//  Created by Yuriy borisov on 17.01.2018.
+//  Created by Yuriy borisov on 18.01.2018.
 //  Copyright © 2018 Yuriy borisov. All rights reserved.
 //
 
 import Foundation
+import UIKit
 
-struct ForecastSmall: Codable {
+struct ForecastByIdItem: Codable {
     let name: String
     let id: Int
     let leaguePreviewURL: URL
-    let date: BetratingDate
     let category: BetratingCategory
+    let date: BetratingDate
+    let permalink: URL
+    let content: String
+    let previewURL: URL
     var fullDate:String {
         return date.fullDate
     }
     var header: String {
         return [category.name, category.parent?.name].compactMap {return $0}.joined(separator: " • ")
     }
-    var slug: String? {
-        return category.parent?.parent?.slug
+    var attrStr: NSAttributedString{
+        return NSAttributedString.getAttributedStringFromHTML(from: content)
     }
     
     enum CodingKeys: String, CodingKey {
@@ -29,6 +33,9 @@ struct ForecastSmall: Codable {
         case id
         case leaguePreviewURL = "league_preview"
         case date
+        case permalink
+        case content
+        case previewURL = "preview"
         case category
     }
 }

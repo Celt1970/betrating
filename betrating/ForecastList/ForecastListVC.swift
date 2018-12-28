@@ -1,14 +1,14 @@
 //
 //  ForecastVC.swift
 //  betrating
-//
+//ForecastListVC
 //  Created by Yuriy borisov on 15.01.2018.
 //  Copyright © 2018 Yuriy borisov. All rights reserved.
 //
 
 import UIKit
 
-class ForecastVC: UIViewController {
+class ForecastListVC: UIViewController {
     
     @IBOutlet weak var allButton: UIButton!
     @IBOutlet weak var fotballButton: UIButton!
@@ -27,8 +27,8 @@ class ForecastVC: UIViewController {
     let betRatingGreen = UIColor(red: 0, green: 169/255, blue: 103/255, alpha: 1)
     let betRatingGray = UIColor(red: 99/255, green: 99/255, blue: 99/255, alpha: 1)
     
-    var all: [ForecastSmall]?
-    var filteredCategory: [ForecastSmall] = []
+    var all: [ForecastListItem]?
+    var filteredCategory: [ForecastListItem] = []
     var service = NetworkService()
     
     override func viewDidLoad() {
@@ -111,7 +111,7 @@ class ForecastVC: UIViewController {
     }
 }
 
-extension ForecastVC: UICollectionViewDelegate, UICollectionViewDataSource{
+extension ForecastListVC: UICollectionViewDelegate, UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -121,7 +121,7 @@ extension ForecastVC: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "forecastCell", for: indexPath) as! ForecastCell
-        let currentForecast: ForecastSmall = filteredCategory[indexPath.row]
+        let currentForecast: ForecastListItem = filteredCategory[indexPath.row]
         cell.configCell(currentForecast: currentForecast,
                         service: service,
                         indexPath: indexPath)
@@ -130,8 +130,8 @@ extension ForecastVC: UICollectionViewDelegate, UICollectionViewDataSource{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toForecastDetails"{
-            if segue.destination is DetailedVC{
-                let destinationVC = segue.destination as! DetailedVC
+            if segue.destination is ForecastByIdVC{
+                let destinationVC = segue.destination as! ForecastByIdVC
                 destinationVC.id = self.idToTransfer
             }
         }

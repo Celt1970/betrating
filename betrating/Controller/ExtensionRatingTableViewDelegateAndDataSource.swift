@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension RaitingVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension BookmakersListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         idToSend = raitings[indexPath.row].id!
@@ -45,7 +45,7 @@ extension RaitingVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
             return cell
             
         }else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ratingCell", for: indexPath) as! RaitingCellSmall
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookmakersListCellSmall", for: indexPath) as! BookmakersListCellSmall
             if raitings.count != 0{
                 let rate = raitings[indexPath.row]
                 

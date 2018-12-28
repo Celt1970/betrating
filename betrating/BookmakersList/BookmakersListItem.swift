@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  BookmakersListItem.swift
 //  betrating
 //
 //  Created by Yuriy borisov on 18.01.2018.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RaitingsList{
+class BookmakersListItem {
     var id: Int?
     var name: String?
     var logo: String?

@@ -352,10 +352,10 @@
             </objects>
             <point key="canvasLocation" x="1747.5" y="-2610.211267605634"/>
         </scene>
-        <!--DetailedVC-->
+        <!--Forecast By IdVC-->
         <scene sceneID="IyG-x0-ge8">
             <objects>
-                <viewController id="TNR-0M-SS4" customClass="DetailedVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TNR-0M-SS4" customClass="ForecastByIdVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GET-hF-bNE"/>
                         <viewControllerLayoutGuide type="bottom" id="sKM-VV-Wqc"/>
@@ -496,7 +496,7 @@
         <!--Рейтинг букмекеров-->
         <scene sceneID="AbV-CP-I7w">
             <objects>
-                <viewController id="dGI-2M-hj4" customClass="RaitingVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dGI-2M-hj4" customClass="BookmakersListVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jIa-n4-SR2"/>
                         <viewControllerLayoutGuide type="bottom" id="Slx-fG-cKY"/>
@@ -639,7 +639,7 @@
                                             <outlet property="thirdStar" destination="rhj-1r-BAq" id="gmw-J8-K2c"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ratingCell" id="n55-sG-Izk" customClass="RaitingCellSmall" customModule="betrating" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookmakersListCellSmall" id="n55-sG-Izk" userLabel="BookmakersListCellSmall" customClass="BookmakersListCellSmall" customModule="betrating" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="100" width="144" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1260,10 +1260,10 @@
             </objects>
             <point key="canvasLocation" x="1845" y="-1741"/>
         </scene>
-        <!--ForecastVC-->
+        <!--Forecast ListVC-->
         <scene sceneID="dXC-rI-vPb">
             <objects>
-                <viewController id="Fh9-0Q-8ir" customClass="ForecastVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fh9-0Q-8ir" customClass="ForecastListVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Abi-oa-trf"/>
                         <viewControllerLayoutGuide type="bottom" id="Aq1-HF-9T7"/>

@@ -1,14 +1,14 @@
 //
 //  RaitingVC.swift
 //  betrating
-//
+// BookmakersListVC
 //  Created by Yuriy borisov on 13.01.2018.
 //  Copyright © 2018 Yuriy borisov. All rights reserved.
 //
 
 import UIKit
 
-class RaitingVC: UIViewController {
+class BookmakersListVC: UIViewController {
     
     var activatedTriggers: [[Int]] = [[0],[0,0,0,0,0],[0],[0],[0,0,0],[0],[0],[0],[0],[0],[0],[0]]
     
@@ -25,7 +25,7 @@ class RaitingVC: UIViewController {
         return session
     }
     var service: NetworkService?
-    var raitings = [RaitingsList]()
+    var raitings = [BookmakersListItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
