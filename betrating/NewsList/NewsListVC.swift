@@ -29,17 +29,17 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         service.getNewsList(completion: {[ weak self ] news in
             guard let news = news else {return}
             self?.news = news
-            self?.loadAllImages()
             self?.collectionView?.reloadData()
+            self?.loadAllImages()
             self?.activityIndicator.stopAnimating()
         })
         
         setupLayout()
     }
-    
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCurrentNews" && segue.destination is DetailedNewsVC{
-            if let destinationVC = segue.destination as? DetailedNewsVC{
+        if segue.identifier == "toCurrentNews" && segue.destination is NewsByIdVC{
+            if let destinationVC = segue.destination as? NewsByIdVC{
                 destinationVC.id = idToSend
             }
         }
@@ -57,12 +57,14 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     }
     
     private func loadAllImages() {
+        self.service.setConnectionsPerHost(10)
         guard let news = news else {return}
         for (index, item) in news.enumerated() {
             if cachedImages[index] == nil {
                 service.loadImage(url: item.preview) { [weak self] image in
                     if self?.cachedImages[index] == nil {
                         self?.cachedImages[index] = image
+                        self?.collectionView?.reloadItems(at: [IndexPath(row: index, section: 0)])
                     }
                 }
             }

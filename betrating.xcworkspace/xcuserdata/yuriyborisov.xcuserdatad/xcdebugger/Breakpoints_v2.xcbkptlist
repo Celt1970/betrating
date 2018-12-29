@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "betrating/ForecastList/ForecastListVC.swift"
-            timestampString = "567769265.231649"
+            timestampString = "567777919.683058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "betrating/ForecastList/ForecastListVC.swift"
-            timestampString = "567769265.23171"
+            timestampString = "567777919.683161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -218,13 +218,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "betrating/ForecastList/ForecastListVC.swift"
-            timestampString = "567769265.231756"
+            timestampString = "567777919.683228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
             landmarkName = "changeCategory(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "betrating/NetworkService.swift"
+            timestampString = "567784182.120165"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "getBookmakersList(filters:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "betrating/NetworkService.swift"
+            timestampString = "567784182.120536"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "getBookmakersList(filters:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in betrating.NetworkService.getBookmakersList(filters: Swift.Array&lt;Swift.Array&lt;Swift.Int&gt;&gt;, completion: (Swift.Optional&lt;Swift.Array&lt;betrating.BookmakersListItem2&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "betrating"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriyborisov/Documents/developer/betrating/betrating/betrating/NetworkService.swift"
+                  timestampString = "567783807.622485"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; () in betrating.NetworkService.getBookmakersList(filters: Swift.Array&lt;Swift.Array&lt;Swift.Int&gt;&gt;, completion: (Swift.Optional&lt;Swift.Array&lt;betrating.BookmakersListItem2&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "betrating"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriyborisov/Documents/developer/betrating/betrating/betrating/NetworkService.swift"
+                  timestampString = "567783807.629341"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "98">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

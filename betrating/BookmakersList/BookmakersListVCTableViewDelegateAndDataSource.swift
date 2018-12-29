@@ -12,7 +12,7 @@ import UIKit
 extension BookmakersListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        idToSend = raitings[indexPath.row].id!
+        idToSend = raitings[indexPath.row].id
         performSegue(withIdentifier: "toBookmaker", sender: self)
     }
     

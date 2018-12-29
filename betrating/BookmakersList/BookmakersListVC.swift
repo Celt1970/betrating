@@ -21,18 +21,16 @@ class BookmakersListVC: UIViewController {
     let screenHeight = UIScreen.main.bounds.height
     
     var service = NetworkService()
-    var raitings = [BookmakersListItem]()
+    var raitings = [BookmakersListItem2]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.isHidden = true
         activityIndicator.startAnimating()
-        service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings, connect in
-            if connect == true{
-                return
-            }
-            guard ratings != nil else { return }
-            self?.raitings = ratings!
+        service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings in
+            
+            guard let ratings = ratings else { return }
+            self?.raitings = ratings
             self?.collectionView.reloadData()
             self?.collectionView.isHidden = false
             self?.activityIndicator.stopAnimating()
@@ -64,12 +62,10 @@ class BookmakersListVC: UIViewController {
                 activityIndicator.startAnimating()
                 activatedTriggers = senderVC.activatedTriggers
                 collectionView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
-                service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings, connection in
-                    if connection == true{
-                        return
-                    }
-                    guard ratings != nil else { return }
-                    self?.raitings = ratings!
+                service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings in
+                    
+                    guard let ratings = ratings else { return }
+                    self?.raitings = ratings
                     self?.activityIndicator.stopAnimating()
                     self?.collectionView.reloadData()
                 }

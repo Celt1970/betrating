@@ -12,10 +12,10 @@ import UIKit
 typealias getForecastListCompletion = ([ForecastListItem]?) -> Void
 typealias loadSinglePhotoCompletion = (UIImage) -> Void
 typealias getForecastByIdCompletion = (ForecastByIdItem?) -> Void
-typealias getRaitingsListCompletion = ([BookmakersListItem]?, Bool) -> Void
+typealias getRaitingsListCompletion = ([BookmakersListItem2]?) -> Void
 typealias getBookmakerByIDCompletion = (BookmakerById?) -> Void
 typealias getNewsListCompletion = ([NewsListItem]?) -> Void
-typealias getNewsByIdCompletion = (NewsItem?) -> Void
+typealias getNewsByIdCompletion = (NewsByIdItem?) -> Void
 
 class NetworkService{
     
@@ -28,9 +28,13 @@ class NetworkService{
         return sess
     }
     
-    private func request(url: URL, completion: @escaping (Data) -> Void) {
+    func setConnectionsPerHost(_ value: Int) {
+        session.configuration.httpMaximumConnectionsPerHost = value
+    }
+    
+    private func request(url: URL,queue: DispatchQueue, completion: @escaping (Data) -> Void) {
         let request = URLRequest(url: url)
-        DispatchQueue.global(qos: .userInteractive).async {
+        queue.async {
             let task = self.session.dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     print(error.localizedDescription)
@@ -45,12 +49,14 @@ class NetworkService{
         }
     }
     
+    
     private func dataRequest <T:Decodable> (endPoint: String, type: T.Type, completion: @escaping (T) -> Void ) {
         guard let url = baseUrl?.appendingPathComponent(endPoint) else {
             print("Wrong url")
             return
         }
-        request(url: url) { data in
+        let queue = DispatchQueue.global(qos: .userInteractive)
+        request(url: url, queue: queue) { data in
             guard let decoded = try? self.decoder.decode(type, from: data) else {
                 print("Invalid JSON")
                 return
@@ -62,13 +68,13 @@ class NetworkService{
     }
     
     func getNewsById(id: Int, completion: @escaping getNewsByIdCompletion) {
-        dataRequest(endPoint: "/news/\(id)", type: NewsItem.self) { data in
+        dataRequest(endPoint: "/news/\(id)", type: NewsByIdItem.self) { data in
             completion(data)
         }
     }
     
     func getNewsList(completion: @escaping getNewsListCompletion){
-        dataRequest(endPoint: "/news/0/50", type: [NewsListItem].self) { data in
+        dataRequest(endPoint: "/news/0/20", type: [NewsListItem].self) { data in
             completion(data)
         }
     }
@@ -126,6 +132,7 @@ class NetworkService{
             return
         }
         
+        print(url.absoluteString)
         let request = URLRequest(url: url)
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
@@ -137,24 +144,17 @@ class NetworkService{
                     if err?.code == NSURLErrorNotConnectedToInternet || err?.domain == NSURLErrorDomain{
                         print("\(err?.localizedDescription ?? "no error data")")
                         DispatchQueue.main.async {
-                            completion(nil, true)
-                        }                    }
+                            completion(nil)
+                        }
+                    }
                     return
                 }
-                let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                guard json != nil else{
-                    print("Can not get json")
+                guard let data = data, let decoded = try? self.decoder.decode([BookmakersListItem2].self, from: data) else {
+                    print("Invalid JSON")
                     return
-                }
-                let list = json as! [[String:Any]]
-                var raitings = [BookmakersListItem]()
-                for item in list{
-                    let rate = BookmakersListItem(json: item)
-                    raitings.append(rate)
                 }
                 DispatchQueue.main.async {
-                    completion(raitings, false)
-                    
+                    completion(decoded)
                 }
             }
             task.resume()
@@ -178,7 +178,25 @@ class NetworkService{
             print("Invalid URL")
             return
         }
-        request(url: url) { data in
+        let queue = DispatchQueue.global(qos: .userInteractive)
+        request(url: url, queue: queue) { data in
+            guard let image = UIImage(data: data) else {
+                print("Can't make image from data")
+                return
+            }
+            DispatchQueue.main.async {
+                completion(image)
+            }
+        }
+    }
+    
+    func loadImageInBackground(url: URL?, completion: @escaping loadSinglePhotoCompletion){
+        guard let url = url else {
+            print("Invalid URL")
+            return
+        }
+        let queue = DispatchQueue.global(qos: .userInteractive)
+        request(url: url, queue: queue) { data in
             guard let image = UIImage(data: data) else {
                 print("Can't make image from data")
                 return

@@ -45,3 +45,38 @@ class BookmakersListItem {
         self.hasMobileMode = json["has_mobile_mode"] as? Bool
     }
 }
+
+struct BookmakersListItem2: Codable {
+    let id: Int
+    let name: String
+    let logo: String
+    let votes: Int
+    let legal: Bool
+    let rating: Int
+    let russianLanguage: Bool
+    let russianSupport: Bool
+    let live: Bool
+    let bonus: Int
+    let hasProfeesional: Bool
+    let hasDemo: Bool
+    let hasBetting: Bool
+    let hasMobileMode: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case logo
+        case votes
+        case legal
+        case rating
+        case russianLanguage = "russian_language"
+        case russianSupport = "russian_support"
+        case live
+        case bonus
+        case hasProfeesional = "has_professional"
+        case hasDemo = "has_demo"
+        case hasBetting = "has_betting"
+        case hasMobileMode = "has_mobile_mode"
+    }
+}
+

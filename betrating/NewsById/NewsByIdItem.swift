@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  NewsByIdItem.swift
 //  betrating
 //
 //  Created by Yuriy borisov on 20.01.2018.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct NewsItem: Codable {
+struct NewsByIdItem: Codable {
     let id: Int
     let name: String
     let preview: URL

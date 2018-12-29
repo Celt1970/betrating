@@ -33,11 +33,3 @@ struct ForecastListItem: Codable, ListItem {
         case category
     }
 }
-
-protocol ListItem {
-    var name: String {get}
-    var id: Int {get}
-    var preview: URL {get}
-    var date: String {get}
-    var header: String {get}
-}

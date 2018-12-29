@@ -1,5 +1,5 @@
 //
-//  DetailedNewsVC.swift
+//  NewsByIdVC.swift
 //  betrating
 //
 //  Created by Yuriy borisov on 20.01.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailedNewsVC: UIViewController {
+class NewsByIdVC: UIViewController {
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var newsLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -18,6 +18,7 @@ class DetailedNewsVC: UIViewController {
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var separatingView: UIView!
     @IBOutlet weak var activityIndecator: UIActivityIndicatorView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -30,12 +31,13 @@ class DetailedNewsVC: UIViewController {
         scrollView.isHidden = true
         activityIndecator.startAnimating()
         separatingView.isHidden = true
-        
+        imageActivityIndicator.startAnimating()
         service.getNewsById(id: id) { [weak self] news  in
             guard let news = news else {return}
             
             self?.service.loadImage(url: news.preview, completion: { [ weak self ] image in
                 self?.newsImage.image = image
+                self?.imageActivityIndicator.stopAnimating()
             })
             
             self?.newsLabel.text = news.name

@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="958" y="-2610"/>
         </scene>
-        <!--Detailed NewsVC-->
+        <!--News By IdVC-->
         <scene sceneID="IuW-bz-NFa">
             <objects>
-                <viewController id="6ja-If-2S4" customClass="DetailedNewsVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6ja-If-2S4" customClass="NewsByIdVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pte-Zk-b41"/>
                         <viewControllerLayoutGuide type="bottom" id="S00-j3-cdo"/>
@@ -295,11 +295,16 @@
                                         <color key="textColor" red="0.0" green="0.66246527430000002" blue="0.40339928870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Dd6-PE-fTb">
+                                        <rect key="frame" x="150" y="80" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4ge-vR-wwA" secondAttribute="trailing" constant="15" id="0YF-Nn-qAg"/>
+                                    <constraint firstItem="Dd6-PE-fTb" firstAttribute="centerY" secondItem="VKj-4t-gk5" secondAttribute="centerY" id="2G1-dl-vmX"/>
                                     <constraint firstItem="4ge-vR-wwA" firstAttribute="leading" secondItem="G1z-Qo-ics" secondAttribute="leading" constant="15" id="GMu-aL-AkQ"/>
                                     <constraint firstItem="402-9b-qBF" firstAttribute="leading" secondItem="G1z-Qo-ics" secondAttribute="leading" constant="15" id="GX7-qZ-OQA"/>
+                                    <constraint firstItem="Dd6-PE-fTb" firstAttribute="centerX" secondItem="VKj-4t-gk5" secondAttribute="centerX" id="Gqu-9i-qEU"/>
                                     <constraint firstItem="402-9b-qBF" firstAttribute="top" secondItem="aKD-4p-DGu" secondAttribute="bottom" constant="15" id="KR7-yp-9Dg"/>
                                     <constraint firstItem="VKj-4t-gk5" firstAttribute="leading" secondItem="G1z-Qo-ics" secondAttribute="leading" id="LG5-7t-UvY"/>
                                     <constraint firstAttribute="trailing" secondItem="402-9b-qBF" secondAttribute="trailing" constant="15" id="LnG-Yb-T7b"/>
@@ -340,6 +345,7 @@
                         <outlet property="categoryLabel" destination="Jzp-uR-TFl" id="Xy9-jk-KhO"/>
                         <outlet property="dateLabel" destination="9ME-B5-MeT" id="jdJ-Ks-LJA"/>
                         <outlet property="firstTextView" destination="4ge-vR-wwA" id="1Ja-wp-VMQ"/>
+                        <outlet property="imageActivityIndicator" destination="Dd6-PE-fTb" id="vqi-br-abN"/>
                         <outlet property="newsImage" destination="VKj-4t-gk5" id="LA0-Vv-xCL"/>
                         <outlet property="newsLabel" destination="MhN-zR-Oz4" id="EHy-wm-Hrp"/>
                         <outlet property="scrollView" destination="G1z-Qo-ics" id="Io7-3Z-fjM"/>

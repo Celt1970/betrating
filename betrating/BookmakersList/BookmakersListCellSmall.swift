@@ -20,17 +20,17 @@ class BookmakersListCellSmall: UICollectionViewCell {
     @IBOutlet weak var fourthStar: UIImageView!
     @IBOutlet weak var fifthStar: UIImageView!
     
-    func configure(raiting: BookmakersListItem,
+    func configure(raiting: BookmakersListItem2,
                    service: NetworkService,
                    indexPath: IndexPath){
         
         self.logoImage.image = nil
         self.tag = indexPath.row
         
-        self.likesCounter.text = "\(String(describing: raiting.votes!))"
+        self.likesCounter.text = "\(String(describing: raiting.votes))"
         if let stars = stackViewForStars.arrangedSubviews as? [UIImageView] {
             for (index, star) in stars.enumerated() {
-                if index < raiting.rating! {
+                if index < raiting.rating {
                     star.image = UIImage(named: "Star")
                 } else {
                     star.image = UIImage(named: "emptyStar")
@@ -51,7 +51,7 @@ class BookmakersListCellSmall: UICollectionViewCell {
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds,
                                              cornerRadius: self.contentView.layer.cornerRadius).cgPath
         
-        service.loadImage(url: URL(string: raiting.logo!), completion: { [ weak self ] image in
+        service.loadImage(url:URL(string: raiting.logo), completion: { [ weak self ] image in
             if self?.tag == indexPath.row{
                 self?.logoImage.image = image
             }

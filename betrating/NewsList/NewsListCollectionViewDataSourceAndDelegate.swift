@@ -39,11 +39,12 @@ extension NewsVC {
         guard let currentNews = news?[indexPath.row] else {return cell as! UICollectionViewCell}
         
         cell.configure(currentNews: currentNews, indexPath: indexPath)
-        getImageWithIndexAndUrl(index: indexPath.row, url: currentNews.preview) { image in
-            if cell.tag == indexPath.row {
-                cell.image.image = image
-            }
-        }
+        cell.image.image = cachedImages[indexPath.row]
+//        getImageWithIndexAndUrl(index: indexPath.row, url: currentNews.preview) { image in
+//            if cell.tag == indexPath.row {
+//                cell.image.image = image
+//            }
+//        }
         return cell as! UICollectionViewCell
     }
 }
