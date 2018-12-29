@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct NewsListItem: Codable {
+struct NewsListItem: Codable, ListItem {
     var id: Int
     var name: String
     var preview: URL
     var date: String
     var category: [String]
-    var allcategoryes: String{
+    var header: String{
         let str = category.joined(separator: " • ")
         return str
     }

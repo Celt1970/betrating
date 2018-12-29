@@ -20,7 +20,8 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     var idToSend = 0
     let numberOfSections = 1
     var cachedImages: [Int: UIImage] = [:]
-    
+    let insets: CGFloat = 10
+
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.startAnimating()
@@ -28,15 +29,12 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         service.getNewsList(completion: {[ weak self ] news in
             guard let news = news else {return}
             self?.news = news
+            self?.loadAllImages()
             self?.collectionView?.reloadData()
             self?.activityIndicator.stopAnimating()
         })
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 10
-        collectionView?.collectionViewLayout = layout
+        setupLayout()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,69 +45,27 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let id = news?[indexPath.row].id else { return }
-        idToSend = id
-        performSegue(withIdentifier: "toCurrentNews", sender: self)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let big = CGSize(width: collectionView.bounds.size.width - 20 , height:  collectionView.bounds.size.width  / 1.77 )
-        let small =  CGSize(width: collectionView.bounds.size.width - 20, height:  screenWidth  / 3.26 )
-        if indexPath.row == 0{
-            return big
-        }else{
-            return small
-        }
-    }
-    
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return numberOfSections
-    }
-    
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return news?.count ?? 0
-    }
-    
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if indexPath.row == 0{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCellBig", for: indexPath) as! NewsCell
-            
-            guard let currentNews = news?[indexPath.row] else {return cell}
-            cell.configure(currentNews: currentNews, indexPath: indexPath)
-            getImageWithIndexAndUrl(index: indexPath.row, url: currentNews.preview.absoluteString) { image in
-                if cell.tag == indexPath.row {
-                    cell.newsImage.image = image
-                }
-            }
-            return cell
-        }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCellSmall", for: indexPath) as! NewsCellSmall
-        
-        guard let currentNews = news?[indexPath.row] else {return cell}
-        cell.configure(currentNews: currentNews, indexPath: indexPath)
-        getImageWithIndexAndUrl(index: indexPath.row, url: currentNews.preview.absoluteString) { image in
-            if cell.tag == indexPath.row {
-                cell.newsImage.image = image
-            }
-        }
-        return cell
-        
-    }
-    
-    func getImageWithIndexAndUrl(index: Int,url: String, completion: @escaping (UIImage) -> Void) {
+     func getImageWithIndexAndUrl(index: Int,url: URL, completion: @escaping (UIImage) -> Void) {
         if cachedImages[index] == nil {
-            service.loadImage(url: url) { [weak self] image, connect in
-                guard let image = image else { return }
+            service.loadImage(url: url) { [weak self] image in
                 self?.cachedImages[index] = image
                 completion(image)
             }
         } else {
             completion(cachedImages[index]!)
+        }
+    }
+    
+    private func loadAllImages() {
+        guard let news = news else {return}
+        for (index, item) in news.enumerated() {
+            if cachedImages[index] == nil {
+                service.loadImage(url: item.preview) { [weak self] image in
+                    if self?.cachedImages[index] == nil {
+                        self?.cachedImages[index] = image
+                    }
+                }
+            }
         }
     }
 }

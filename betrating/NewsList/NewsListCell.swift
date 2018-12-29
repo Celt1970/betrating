@@ -8,30 +8,30 @@
 
 import UIKit
 
-class NewsCell: UICollectionViewCell, ConfigurableNewsListCell {
+class NewsCell: UICollectionViewCell, ConfigurableCell {
     
     
-    @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var viewForLabels: UIView!
-    @IBOutlet weak var newsLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var groupLabel: UILabel!
 
-    func configure(currentNews:NewsListItem?, indexPath: IndexPath ){
+    func configure(currentNews:ListItem?, indexPath: IndexPath ){
         self.configureCell(currentNews: currentNews, indexPath: indexPath)
-        self.viewForLabels.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.7)
+        self.viewForLabels.backgroundColor = BetratingColors.betRatingBlackWithoutAlpha
     }
     
 }
 
-class NewsCellSmall: UICollectionViewCell, ConfigurableNewsListCell {
+class NewsCellSmall: UICollectionViewCell, ConfigurableCell {
     
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var newsLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var groupLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
 
-    func configure(currentNews:NewsListItem?, indexPath: IndexPath){
+    func configure(currentNews:ListItem?, indexPath: IndexPath){
         self.configureCell(currentNews: currentNews, indexPath: indexPath)
     }
 }

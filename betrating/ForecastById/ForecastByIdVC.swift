@@ -45,29 +45,19 @@ class ForecastByIdVC: UIViewController {
         var tempLeagueImage: UIImage? = nil
         
         dispatchGroup.enter()
-        service.loadImage(url: forecast.previewURL.absoluteString, completion: { image, connect2 in
-            if connect2 == true {
-                return
-            }
-            guard image != nil else {return}
+        service.loadImage(url: forecast.previewURL, completion: { image in
             tempForecastImage = image
             dispatchGroup.leave()
         })
         
         dispatchGroup.enter()
-        service.loadImage(url: forecast.leaguePreviewURL.absoluteString, completion: { image, connect3 in
-            if connect3 == true{
-                return
-            }
-            guard image != nil else {return}
+        service.loadImage(url: forecast.leaguePreviewURL, completion: { image in
             tempLeagueImage = image
             dispatchGroup.leave()
         })
         
         dispatchGroup.notify(queue: DispatchQueue.main) {
-            print("downloading ended")
             self.update(.stop)
-
             self.leagueImage.image = tempLeagueImage
             self.forecastImage.image = tempForecastImage
             self.leagueLabel.text = forecast.header

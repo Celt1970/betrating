@@ -34,11 +34,7 @@ class DetailedNewsVC: UIViewController {
         service.getNewsById(id: id) { [weak self] news  in
             guard let news = news else {return}
             
-            self?.service.loadImage(url: news.preview.absoluteString, completion: { [ weak self ] image, connect in
-                if connect == true{
-                    return
-                }
-                guard image != nil else {return}
+            self?.service.loadImage(url: news.preview, completion: { [ weak self ] image in
                 self?.newsImage.image = image
             })
             

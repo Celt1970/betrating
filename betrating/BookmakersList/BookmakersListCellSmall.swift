@@ -51,10 +51,7 @@ class BookmakersListCellSmall: UICollectionViewCell {
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds,
                                              cornerRadius: self.contentView.layer.cornerRadius).cgPath
         
-        service.loadImage(url: raiting.logo!, completion: { [ weak self ] image, connect in
-            if connect == true{
-                return
-            }
+        service.loadImage(url: URL(string: raiting.logo!), completion: { [ weak self ] image in
             if self?.tag == indexPath.row{
                 self?.logoImage.image = image
             }

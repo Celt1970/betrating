@@ -39,13 +39,9 @@ class BookmakerDetailedVC: UIViewController {
         service.getBookmakerByID(id: id) { [weak self] rate in
             guard let rate = rate else { return }
             
-            self?.service.loadImage(url: rate.logo.absoluteString, completion: { [weak self ] image, connect in
-                if connect == true{
-                    return
-                }
-                guard image != nil else {return}
+            self?.service.loadImage(url: rate.logo) { [weak self ] image in
                 self?.bookmakerLogo.image = image
-            })
+            }
             
             self?.populateUI(bookmaker: rate)
             self?.setupScrollView()

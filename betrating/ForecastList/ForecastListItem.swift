@@ -8,15 +8,16 @@
 
 import Foundation
 
-struct ForecastListItem: Codable {
+struct ForecastListItem: Codable, ListItem {
     let name: String
     let id: Int
-    let leaguePreviewURL: URL
-    let date: BetratingDate
-    let category: BetratingCategory
-    var fullDate:String {
-        return date.fullDate
+    let preview: URL
+    var date: String {
+        return fullDate.fullDate
     }
+    let category: BetratingCategory
+    let fullDate: BetratingDate
+    
     var header: String {
         return [category.name, category.parent?.name].compactMap {return $0}.joined(separator: " • ")
     }
@@ -27,8 +28,16 @@ struct ForecastListItem: Codable {
     enum CodingKeys: String, CodingKey {
         case name
         case id
-        case leaguePreviewURL = "league_preview"
-        case date
+        case preview = "league_preview"
+        case fullDate = "date"
         case category
     }
+}
+
+protocol ListItem {
+    var name: String {get}
+    var id: Int {get}
+    var preview: URL {get}
+    var date: String {get}
+    var header: String {get}
 }

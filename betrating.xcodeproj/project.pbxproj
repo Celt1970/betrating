@@ -25,6 +25,11 @@
 		AA30D6042010A8EF00C69CEB /* ForecastByIdItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30D6032010A8EF00C69CEB /* ForecastByIdItem.swift */; };
 		AA40FB92201519D800C73B81 /* WeekDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40FB91201519D800C73B81 /* WeekDateExtension.swift */; };
 		AAAF3EB421D6723400FA5B31 /* ConfigurableNewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3EB321D6723400FA5B31 /* ConfigurableNewsListCell.swift */; };
+		AAAF3EB721D67A2600FA5B31 /* ForecastCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3EB621D67A2600FA5B31 /* ForecastCategories.swift */; };
+		AAAF3EB921D7451700FA5B31 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3EB821D7451700FA5B31 /* Colors.swift */; };
+		AAAF3EBB21D750EE00FA5B31 /* NewsListCollectionViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3EBA21D750EE00FA5B31 /* NewsListCollectionViewDataSourceAndDelegate.swift */; };
+		AAAF3EBD21D7517A00FA5B31 /* NewsListDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3EBC21D7517A00FA5B31 /* NewsListDelegateFlowLayout.swift */; };
+		AAAF3EBF21D755D000FA5B31 /* ForecastListCollectionViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF3EBE21D755D000FA5B31 /* ForecastListCollectionViewDelegateDataSource.swift */; };
 		AAC6F709200CC8C5006EC285 /* ForecastListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6F708200CC8C5006EC285 /* ForecastListVC.swift */; };
 		AAC6F70B200CC8EC006EC285 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6F70A200CC8EC006EC285 /* ForecastCell.swift */; };
 		AACADAF821D51D8E002B3E8F /* BetratingDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACADAF721D51D8E002B3E8F /* BetratingDate.swift */; };
@@ -72,6 +77,11 @@
 		AA30D6032010A8EF00C69CEB /* ForecastByIdItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastByIdItem.swift; sourceTree = "<group>"; };
 		AA40FB91201519D800C73B81 /* WeekDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDateExtension.swift; sourceTree = "<group>"; };
 		AAAF3EB321D6723400FA5B31 /* ConfigurableNewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableNewsListCell.swift; sourceTree = "<group>"; };
+		AAAF3EB621D67A2600FA5B31 /* ForecastCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCategories.swift; sourceTree = "<group>"; };
+		AAAF3EB821D7451700FA5B31 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AAAF3EBA21D750EE00FA5B31 /* NewsListCollectionViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCollectionViewDataSourceAndDelegate.swift; sourceTree = "<group>"; };
+		AAAF3EBC21D7517A00FA5B31 /* NewsListDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListDelegateFlowLayout.swift; sourceTree = "<group>"; };
+		AAAF3EBE21D755D000FA5B31 /* ForecastListCollectionViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListCollectionViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		AAC6F708200CC8C5006EC285 /* ForecastListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListVC.swift; sourceTree = "<group>"; };
 		AAC6F70A200CC8EC006EC285 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		AACADAF721D51D8E002B3E8F /* BetratingDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetratingDate.swift; sourceTree = "<group>"; };
@@ -122,14 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				AA07BF57200AB50F00478F8B /* FilterCell.swift */,
-				AACADAF921D51DE8002B3E8F /* BetratingCategory.swift */,
 				AA01FC4E201361AD00AA3DEB /* NewsItem.swift */,
 				AA01FC462012116500AA3DEB /* BookmakerById.swift */,
-				AA40FB91201519D800C73B81 /* WeekDateExtension.swift */,
-				AACADAF721D51D8E002B3E8F /* BetratingDate.swift */,
-				AACADAFB21D523C6002B3E8F /* Condition.swift */,
-				AACADAFD21D605B8002B3E8F /* ExtensionNSAttributedString.swift */,
-				AACADAFF21D60641002B3E8F /* Extension StringDevideByTwo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,8 +145,25 @@
 				AA07BF5D200BA99E00478F8B /* NewsListCell.swift */,
 				AA01FC4C20129F9200AA3DEB /* NewsListItem.swift */,
 				AAAF3EB321D6723400FA5B31 /* ConfigurableNewsListCell.swift */,
+				AAAF3EBA21D750EE00FA5B31 /* NewsListCollectionViewDataSourceAndDelegate.swift */,
+				AAAF3EBC21D7517A00FA5B31 /* NewsListDelegateFlowLayout.swift */,
 			);
 			path = NewsList;
+			sourceTree = "<group>";
+		};
+		AAAF3EB521D6794100FA5B31 /* Utills */ = {
+			isa = PBXGroup;
+			children = (
+				AACADAF921D51DE8002B3E8F /* BetratingCategory.swift */,
+				AA40FB91201519D800C73B81 /* WeekDateExtension.swift */,
+				AACADAF721D51D8E002B3E8F /* BetratingDate.swift */,
+				AACADAFB21D523C6002B3E8F /* Condition.swift */,
+				AACADAFD21D605B8002B3E8F /* ExtensionNSAttributedString.swift */,
+				AACADAFF21D60641002B3E8F /* Extension StringDevideByTwo.swift */,
+				AAAF3EB621D67A2600FA5B31 /* ForecastCategories.swift */,
+				AAAF3EB821D7451700FA5B31 /* Colors.swift */,
+			);
+			path = Utills;
 			sourceTree = "<group>";
 		};
 		AACADB0221D644A0002B3E8F /* ForecastList */ = {
@@ -151,6 +172,7 @@
 				AAC6F708200CC8C5006EC285 /* ForecastListVC.swift */,
 				AAC6F70A200CC8EC006EC285 /* ForecastCell.swift */,
 				AA07FF19200F518500348641 /* ForecastListItem.swift */,
+				AAAF3EBE21D755D000FA5B31 /* ForecastListCollectionViewDelegateDataSource.swift */,
 			);
 			path = ForecastList;
 			sourceTree = "<group>";
@@ -201,11 +223,12 @@
 				AACADB0421D6480B002B3E8F /* BookmakersList */,
 				AACADB0321D645F3002B3E8F /* ForecastById */,
 				AACADB0221D644A0002B3E8F /* ForecastList */,
-				AAD476612008C73F00557679 /* AppDelegate.swift */,
 				AA01FC4A2012962E00AA3DEB /* Controller */,
 				AA01FC4B2012965500AA3DEB /* Model */,
+				AAAF3EB521D6794100FA5B31 /* Utills */,
 				AAD476682008C73F00557679 /* Assets.xcassets */,
 				AA07FF1B200F546600348641 /* NetworkService.swift */,
+				AAD476612008C73F00557679 /* AppDelegate.swift */,
 				AAD476652008C73F00557679 /* Main.storyboard */,
 				AAD4766A2008C73F00557679 /* LaunchScreen.storyboard */,
 				AAD4766D2008C73F00557679 /* Info.plist */,
@@ -394,18 +417,23 @@
 				AA07BF5E200BA99E00478F8B /* NewsListCell.swift in Sources */,
 				AA01FC4F201361AD00AA3DEB /* NewsItem.swift in Sources */,
 				AA01FC4D20129F9200AA3DEB /* NewsListItem.swift in Sources */,
+				AAAF3EBF21D755D000FA5B31 /* ForecastListCollectionViewDelegateDataSource.swift in Sources */,
 				AA01FC45201135A900AA3DEB /* BookmakersListItem.swift in Sources */,
 				AA306E74200C0F1E00BBDE53 /* ForecastByIdVC.swift in Sources */,
 				AACADAF821D51D8E002B3E8F /* BetratingDate.swift in Sources */,
+				AAAF3EB721D67A2600FA5B31 /* ForecastCategories.swift in Sources */,
 				AAC6F709200CC8C5006EC285 /* ForecastListVC.swift in Sources */,
 				AA07BF5A200AB77200478F8B /* FiltersVC.swift in Sources */,
 				AA40FB92201519D800C73B81 /* WeekDateExtension.swift in Sources */,
+				AAAF3EB921D7451700FA5B31 /* Colors.swift in Sources */,
 				AACADAFC21D523C6002B3E8F /* Condition.swift in Sources */,
 				AAAF3EB421D6723400FA5B31 /* ConfigurableNewsListCell.swift in Sources */,
 				AA07FF1C200F546600348641 /* NetworkService.swift in Sources */,
+				AAAF3EBD21D7517A00FA5B31 /* NewsListDelegateFlowLayout.swift in Sources */,
 				AAC6F70B200CC8EC006EC285 /* ForecastCell.swift in Sources */,
 				AACADB0021D60641002B3E8F /* Extension StringDevideByTwo.swift in Sources */,
 				AA07BF56200A369800478F8B /* BookmakersListCellSmall.swift in Sources */,
+				AAAF3EBB21D750EE00FA5B31 /* NewsListCollectionViewDataSourceAndDelegate.swift in Sources */,
 				AAD476622008C73F00557679 /* AppDelegate.swift in Sources */,
 				AA07BF5C200BA98300478F8B /* NewsListVC.swift in Sources */,
 			);

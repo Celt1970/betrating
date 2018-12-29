@@ -18,14 +18,11 @@ class ForecastListVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionB: UICollectionView!
     
-    
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
+    let insets: CGFloat = 10
     
     var idToTransfer = 0
-    
-    let betRatingGreen = UIColor(red: 0, green: 169/255, blue: 103/255, alpha: 1)
-    let betRatingGray = UIColor(red: 99/255, green: 99/255, blue: 99/255, alpha: 1)
     
     var all: [ForecastListItem]?
     var filteredCategory: [ForecastListItem] = []
@@ -38,24 +35,23 @@ class ForecastListVC: UIViewController {
     }
     
     @IBAction func sportButtonPressed(_ sender: UIButton) {
-        if sender.currentTitleColor == betRatingGreen{
+        if sender.currentTitleColor == BetratingColors.betRatingGreen {
             collectionB.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
             return
         }
         let buttons = [allButton, fotballButton, hockeyButton, tennisButton, basketballButton]
-        for button in buttons{
+        for button in buttons {
             if button == sender{
-                sender.setTitleColor(betRatingGreen, for: .normal)
-            }else{
-                button?.setTitleColor(betRatingGray, for: .normal)
+                sender.setTitleColor(BetratingColors.betRatingGreen, for: .normal)
+            } else {
+                button?.setTitleColor(BetratingColors.betRatingGray, for: .normal)
             }
         }
-        let cat = forecastCategories(rawValue: sender.currentTitle!)!
-        reload(category: cat)
+        let category = ForecastCategories(rawValue: sender.currentTitle!)!
+        changeCategory(category)
     }
     
-    private func reload(category: forecastCategories){
-        self.update(.start)
+    private func changeCategory(_ category: ForecastCategories) {
         let newForecast = self.all?.filter { forecast in
             return forecast.slug == category.getCategory()
         }
@@ -64,7 +60,7 @@ class ForecastListVC: UIViewController {
         if category == .all {
             self.filteredCategory = self.all!
         }
-        self.update(.stop)
+        update(.stop)
     }
     
     private func update(_ condition: Condition ) {
@@ -84,11 +80,12 @@ class ForecastListVC: UIViewController {
         self.update(.start)
         service.getForecastList(category: .all,
                                 offset: 0,
-                                limit: 100) { [weak self] list in
+                                limit: 100)
+        { [weak self] list in
             guard let list = list else {
                 self?.update(.stop)
                 return
-        }
+            }
             self?.all = list
             self?.filteredCategory = list
             self?.update(.stop)
@@ -99,33 +96,15 @@ class ForecastListVC: UIViewController {
         collectionB.delegate = self
         collectionB.dataSource = self
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10,
-                                           left: 10,
-                                           bottom: 10,
-                                           right: 10)
+        layout.sectionInset = UIEdgeInsets(top: insets,
+                                           left: insets,
+                                           bottom: insets,
+                                           right: insets)
         layout.itemSize = CGSize(width: screenWidth  - 20,
                                  height: collectionB.bounds.width  / 3)
-        layout.minimumInteritemSpacing = 15
-        layout.minimumLineSpacing = 15
+        layout.minimumInteritemSpacing = insets
+        layout.minimumLineSpacing = insets
         collectionB.collectionViewLayout = layout
-    }
-}
-
-extension ForecastListVC: UICollectionViewDelegate, UICollectionViewDataSource{
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.filteredCategory.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "forecastCell", for: indexPath) as! ForecastCell
-        let currentForecast: ForecastListItem = filteredCategory[indexPath.row]
-        cell.configCell(currentForecast: currentForecast,
-                        service: service,
-                        indexPath: indexPath)
-        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -136,11 +115,5 @@ extension ForecastListVC: UICollectionViewDelegate, UICollectionViewDataSource{
             }
         }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentForecast = filteredCategory[indexPath.row]
-        let id = currentForecast.id
-        self.idToTransfer = id
-        performSegue(withIdentifier: "toForecastDetails", sender: self)
-    }
 }
+

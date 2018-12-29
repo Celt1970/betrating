@@ -105,10 +105,10 @@
                                 </constraints>
                                 <size key="customSize" width="312" height="176"/>
                                 <connections>
+                                    <outlet property="contentLabel" destination="Wbu-mQ-f3L" id="duS-GX-LIr"/>
                                     <outlet property="dateLabel" destination="u67-ya-hwp" id="J0s-v4-BfJ"/>
                                     <outlet property="groupLabel" destination="2mw-Ly-Q2O" id="C63-T3-q7C"/>
-                                    <outlet property="newsImage" destination="FhF-4c-dbE" id="PZO-6I-CYK"/>
-                                    <outlet property="newsLabel" destination="Wbu-mQ-f3L" id="HXO-JE-6f7"/>
+                                    <outlet property="image" destination="FhF-4c-dbE" id="Xey-3x-JVb"/>
                                     <outlet property="viewForLabels" destination="gdA-sZ-k8z" id="cFV-bc-lnx"/>
                                 </connections>
                             </collectionViewCell>
@@ -203,10 +203,10 @@
                                 </constraints>
                                 <size key="customSize" width="320" height="88"/>
                                 <connections>
+                                    <outlet property="contentLabel" destination="R2R-4o-uRv" id="s5o-1U-rDG"/>
                                     <outlet property="dateLabel" destination="wTf-tq-sZO" id="LAG-9v-KUU"/>
                                     <outlet property="groupLabel" destination="mNP-OZ-yuT" id="QDE-Nd-Fui"/>
-                                    <outlet property="newsImage" destination="T7v-tm-2pq" id="Dm2-Hj-tjQ"/>
-                                    <outlet property="newsLabel" destination="R2R-4o-uRv" id="tIw-g9-8YW"/>
+                                    <outlet property="image" destination="T7v-tm-2pq" id="jxE-a6-I64"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1361,10 +1361,10 @@
                                         </constraints>
                                         <size key="customSize" width="320" height="88"/>
                                         <connections>
+                                            <outlet property="contentLabel" destination="7Kx-lQ-Y2d" id="Btx-Xe-KD2"/>
                                             <outlet property="dateLabel" destination="sYN-wl-0PY" id="IG3-Yu-9dV"/>
-                                            <outlet property="forecastImage" destination="fAh-j8-2en" id="sLf-i7-FsG"/>
-                                            <outlet property="forecastTextLabel" destination="7Kx-lQ-Y2d" id="QaA-Kx-i58"/>
-                                            <outlet property="leagueLabel" destination="qzk-kR-jVm" id="Sr2-MF-8mt"/>
+                                            <outlet property="groupLabel" destination="qzk-kR-jVm" id="z6e-SK-gf4"/>
+                                            <outlet property="image" destination="fAh-j8-2en" id="NGY-2y-84f"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

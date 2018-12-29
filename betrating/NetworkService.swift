@@ -10,54 +10,26 @@ import Foundation
 import UIKit
 
 typealias getForecastListCompletion = ([ForecastListItem]?) -> Void
-typealias loadSinglePhotoCompletion = (UIImage?, Bool) -> Void
+typealias loadSinglePhotoCompletion = (UIImage) -> Void
 typealias getForecastByIdCompletion = (ForecastByIdItem?) -> Void
 typealias getRaitingsListCompletion = ([BookmakersListItem]?, Bool) -> Void
 typealias getBookmakerByIDCompletion = (BookmakerById?) -> Void
 typealias getNewsListCompletion = ([NewsListItem]?) -> Void
 typealias getNewsByIdCompletion = (NewsItem?) -> Void
 
-enum forecastCategories: String{
-    case all = "Все"
-    case soccer = "Футбол"
-    case hockey = "Хоккей"
-    case tennis = "Теннис"
-    case basketball = "Баскетбол"
-    
-    func getCategory() -> String{
-        switch self {
-        case .all:
-            return "all"
-        case .soccer:
-            return "soccer"
-        case .hockey:
-            return "hockey"
-        case .tennis:
-            return "tennis"
-        case .basketball:
-            return "basketball"
-        }
-        
-    }
-}
-
 class NetworkService{
     
     private let baseUrl = URL(string: "http://betrating.ru/mobileapi")
     private let dateFormatter = DateFormatter()
+    private let decoder = JSONDecoder()
     private var session: URLSession{
         let conf = URLSessionConfiguration.default
         let sess = URLSession(configuration: conf)
         return sess
     }
     
-    private func request(endPoint: String, completion: @escaping (Data) -> Void ) {
-        guard let url = baseUrl?.appendingPathComponent(endPoint) else {
-            print("Wrong url")
-            return
-        }
+    private func request(url: URL, completion: @escaping (Data) -> Void) {
         let request = URLRequest(url: url)
-        
         DispatchQueue.global(qos: .userInteractive).async {
             let task = self.session.dataTask(with: request) { (data, response, error) in
                 if let error = error {
@@ -73,18 +45,13 @@ class NetworkService{
         }
     }
     
-    func getNewsById(id: Int, completion: @escaping getNewsByIdCompletion) {
-        request(endPoint: "/news/\(id)") { data in
-            guard let decoded = try? JSONDecoder().decode(NewsItem.self, from: data) else { return }
-            DispatchQueue.main.async {
-                completion(decoded)
-            }
+    private func dataRequest <T:Decodable> (endPoint: String, type: T.Type, completion: @escaping (T) -> Void ) {
+        guard let url = baseUrl?.appendingPathComponent(endPoint) else {
+            print("Wrong url")
+            return
         }
-    }
-    
-    func getNewsList(completion: @escaping getNewsListCompletion){
-        request(endPoint: "/news/0/50") { data in
-            guard let decoded = try? JSONDecoder().decode([NewsListItem].self, from: data) else {
+        request(url: url) { data in
+            guard let decoded = try? self.decoder.decode(type, from: data) else {
                 print("Invalid JSON")
                 return
             }
@@ -94,15 +61,21 @@ class NetworkService{
         }
     }
     
+    func getNewsById(id: Int, completion: @escaping getNewsByIdCompletion) {
+        dataRequest(endPoint: "/news/\(id)", type: NewsItem.self) { data in
+            completion(data)
+        }
+    }
+    
+    func getNewsList(completion: @escaping getNewsListCompletion){
+        dataRequest(endPoint: "/news/0/50", type: [NewsListItem].self) { data in
+            completion(data)
+        }
+    }
+    
     func getBookmakerByID(id: Int, completion: @escaping getBookmakerByIDCompletion){
-        request(endPoint: "/bookmakers/\(id)") { data in
-            guard let decoded = try? JSONDecoder().decode(BookmakerById.self, from: data) else {
-                print("invalid JSON")
-                return
-            }
-            DispatchQueue.main.async {
-                completion(decoded)
-            }
+        dataRequest(endPoint: "/bookmakers/\(id)", type: BookmakerById.self) { data in
+            completion(data)
         }
     }
     
@@ -188,62 +161,31 @@ class NetworkService{
         }
     }
     
-    
-    func getForecastList(category: forecastCategories, offset: Int, limit: Int, completion: @escaping getForecastListCompletion){
-        request(endPoint: "/bets/\(category.getCategory())/\(offset)/\(limit)") { data in
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-            guard json != nil else{
-                DispatchQueue.main.async {
-                    completion(nil)
-                }
-                return
-            }
-            guard let decodedJson = try? JSONDecoder().decode([ForecastListItem].self, from: data) else { return }
-            
-            DispatchQueue.main.async {
-                completion(decodedJson)
-            }
+    func getForecastList(category: ForecastCategories, offset: Int, limit: Int, completion: @escaping getForecastListCompletion){
+        dataRequest(endPoint: "/bets/\(category.getCategory())/\(offset)/\(limit)", type: [ForecastListItem].self) { data in
+            completion(data)
         }
     }
     
     func getForecastById(_ id: Int, completion: @escaping getForecastByIdCompletion){
-        request(endPoint: "/bets/\(id)") { data in
-            guard let decoded = try? JSONDecoder().decode(ForecastByIdItem.self, from: data) else { return }
-            
-            DispatchQueue.main.async {
-                completion(decoded)
-            }
+        dataRequest(endPoint: "/bets/\(id)", type: ForecastByIdItem.self) { data in
+            completion(data)
         }
     }
     
-    func loadImage(url: String?, completion: @escaping loadSinglePhotoCompletion){
-        guard let str = url, let url = URL(string: str) else {
-            completion(nil, false)
+    func loadImage(url: URL?, completion: @escaping loadSinglePhotoCompletion){
+        guard let url = url else {
+            print("Invalid URL")
             return
         }
-        let request = URLRequest(url: url)
-        let queue = DispatchQueue.global(qos: .userInteractive)
-        
-        queue.async {
-            let task = self.session.dataTask(with: request) { (data, response, error) -> Void in
-                if let error = error {
-                    print(error.localizedDescription)
-                    DispatchQueue.main.async {
-                        completion(nil, true)
-                    }
-                    return
-                }
-                guard let data = data, let image = UIImage(data: data) else {
-                    DispatchQueue.main.async {
-                        completion(nil, false)
-                    }
-                    return
-                }
-                DispatchQueue.main.async {
-                    completion(image, false)
-                }
+        request(url: url) { data in
+            guard let image = UIImage(data: data) else {
+                print("Can't make image from data")
+                return
             }
-            task.resume()
+            DispatchQueue.main.async {
+                completion(image)
+            }
         }
     }
 }
