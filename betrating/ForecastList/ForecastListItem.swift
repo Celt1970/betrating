@@ -24,6 +24,9 @@ struct ForecastListItem: Codable, ListItem {
     var slug: String? {
         return category.parent?.parent?.slug
     }
+    var fullName: String {
+        return name.replacingOccurrences(of: "&#171;", with: "\"").replacingOccurrences(of: "&#187;", with: "\"")
+    }
     
     enum CodingKeys: String, CodingKey {
         case name

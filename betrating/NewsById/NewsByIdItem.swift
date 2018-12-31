@@ -27,7 +27,9 @@ struct NewsByIdItem: Codable {
         let secondStr = content.devideByTwo(isFirstHalf: false)
         return NSAttributedString.getAttributedStringFromHTML(from: secondStr)
     }
-    
+    var fullName: String {
+        return name.replacingOccurrences(of: "&#171;", with: "\"").replacingOccurrences(of: "&#187;", with: "\"")
+    }
     func getTags() -> String {
         return tags.map {
             return "#" + $0

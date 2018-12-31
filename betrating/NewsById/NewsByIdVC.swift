@@ -40,7 +40,7 @@ class NewsByIdVC: UIViewController {
                 self?.imageActivityIndicator.stopAnimating()
             })
             
-            self?.newsLabel.text = news.name
+            self?.newsLabel.text = news.fullName
             self?.dateLabel.text = news.date
             self?.categoryLabel.text = news.category.joined(separator: " • ")
             self?.firstTextView.attributedText = news.attrStr1

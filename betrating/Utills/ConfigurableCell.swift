@@ -25,7 +25,7 @@ extension ConfigurableCell where Self: UICollectionViewCell {
         self.image.image = nil
         tag = indexPath.row
         
-        self.contentLabel.text = currentNews?.name
+        self.contentLabel.text = currentNews?.fullName
         self.groupLabel.text = currentNews?.header
         self.dateLabel.text = currentNews?.date
         self.contentView.layer.cornerRadius = 5.0

@@ -18,4 +18,7 @@ struct NewsListItem: Codable, ListItem {
         let str = category.joined(separator: " • ")
         return str
     }
+    var fullName: String {
+        return name.replacingOccurrences(of: "&#171;", with: "\"").replacingOccurrences(of: "&#187;", with: "\"")
+    }
 }

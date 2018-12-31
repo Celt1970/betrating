@@ -24,4 +24,7 @@ struct BookmakerById: Codable {
         let secondStr = description.devideByTwo(isFirstHalf: false)
         return NSAttributedString.getAttributedStringFromHTML(from: secondStr)
     }
+    var fullName: String {
+        return name.replacingOccurrences(of: "&#171;", with: "\"").replacingOccurrences(of: "&#187;", with: "\"")
+    }
 }

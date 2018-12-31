@@ -14,4 +14,5 @@ protocol ListItem {
     var preview: URL {get}
     var date: String {get}
     var header: String {get}
+    var fullName: String {get}
 }

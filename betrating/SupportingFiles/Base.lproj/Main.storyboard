@@ -659,18 +659,10 @@
                             <constraint firstAttribute="trailing" secondItem="YSv-NH-R8L" secondAttribute="trailing" constant="5" id="q8a-E5-KBW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Рейтинг букмекеров" id="w7i-em-h5M">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Group" id="vnM-Zn-RdM">
-                            <color key="tintColor" red="0.1170524731" green="0.65873342749999997" blue="0.44777929779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="filtersBtnPressed:" destination="dGI-2M-hj4" id="2iQ-3p-JcW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Рейтинг букмекеров" id="w7i-em-h5M"/>
                     <connections>
                         <outlet property="activityIndicator" destination="l3U-nZ-XaE" id="MVQ-Ap-wE7"/>
                         <outlet property="collectionView" destination="YSv-NH-R8L" id="xB1-qa-hUC"/>
-                        <segue destination="fK6-aC-B57" kind="show" identifier="toFilters" id="Pfc-ZF-C7s"/>
                         <segue destination="Ewq-5f-Num" kind="show" identifier="toBookmaker" id="A8I-IG-saf"/>
                     </connections>
                 </viewController>
@@ -678,10 +670,10 @@
             </objects>
             <point key="canvasLocation" x="969.375" y="-1029.9295774647887"/>
         </scene>
-        <!--Bookmaker DetailedVC-->
+        <!--Bookmaker By IdVC-->
         <scene sceneID="BRM-nt-JC9">
             <objects>
-                <viewController id="Ewq-5f-Num" customClass="BookmakerDetailedVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ewq-5f-Num" customClass="BookmakerByIdVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WJi-x7-S6P"/>
                         <viewControllerLayoutGuide type="bottom" id="d07-2p-KDb"/>
@@ -868,265 +860,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ai3-na-uEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="-1030.9859154929577"/>
-        </scene>
-        <!--Фильтр-->
-        <scene sceneID="PtC-FS-lmF">
-            <objects>
-                <tableViewController id="fK6-aC-B57" customClass="FiltersVC" customModule="betrating" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="L2j-4n-0co">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="simpleFilterCell" rowHeight="43" id="qOB-zU-PeP" customClass="FilterCellSimple" customModule="betrating" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="320" height="43"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qOB-zU-PeP" id="s6o-BE-1GN">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Легальные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC1-IE-c3p">
-                                            <rect key="frame" x="16" y="11" width="239" height="21"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9U4-O8-vDm">
-                                            <rect key="frame" x="255" y="6" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="switcherSwitched:" destination="qOB-zU-PeP" eventType="valueChanged" id="IqA-Jz-Wzt"/>
-                                            </connections>
-                                        </switch>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="9U4-O8-vDm" firstAttribute="leading" secondItem="SC1-IE-c3p" secondAttribute="trailing" id="4PM-9j-9lb"/>
-                                        <constraint firstItem="SC1-IE-c3p" firstAttribute="top" secondItem="s6o-BE-1GN" secondAttribute="topMargin" id="5BQ-jB-5Yq"/>
-                                        <constraint firstItem="SC1-IE-c3p" firstAttribute="leading" secondItem="s6o-BE-1GN" secondAttribute="leadingMargin" id="854-ZG-Pxk"/>
-                                        <constraint firstItem="9U4-O8-vDm" firstAttribute="centerY" secondItem="s6o-BE-1GN" secondAttribute="centerY" id="SdM-oj-siN"/>
-                                        <constraint firstItem="9U4-O8-vDm" firstAttribute="trailing" secondItem="s6o-BE-1GN" secondAttribute="trailingMargin" id="hCB-lH-duC"/>
-                                        <constraint firstItem="SC1-IE-c3p" firstAttribute="bottom" secondItem="s6o-BE-1GN" secondAttribute="bottomMargin" id="wD2-yO-Vhj"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="labelForRow" destination="SC1-IE-c3p" id="b1o-ky-ku3"/>
-                                    <outlet property="switchfoRow" destination="9U4-O8-vDm" id="HbW-tu-NYt"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsFiltersCell" rowHeight="43" id="TRC-QW-LRo" customClass="FilterCellStars" customModule="betrating" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="98.5" width="320" height="43"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TRC-QW-LRo" id="r2Y-CC-Agk">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-mN-6sZ">
-                                            <rect key="frame" x="55" y="6" width="210" height="30"/>
-                                            <subviews>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZX-z3-ajG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
-                                                    <state key="normal" image="star1"/>
-                                                    <connections>
-                                                        <action selector="anyStarPressed:" destination="TRC-QW-LRo" eventType="touchUpInside" id="89f-92-1Ca"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkX-8g-B27">
-                                                    <rect key="frame" x="42" y="0.0" width="42" height="30"/>
-                                                    <state key="normal" image="star2"/>
-                                                    <connections>
-                                                        <action selector="anyStarPressed:" destination="TRC-QW-LRo" eventType="touchUpInside" id="DCY-BL-naz"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNd-OC-RaZ">
-                                                    <rect key="frame" x="84" y="0.0" width="42" height="30"/>
-                                                    <state key="normal" image="star3"/>
-                                                    <connections>
-                                                        <action selector="anyStarPressed:" destination="TRC-QW-LRo" eventType="touchUpInside" id="v33-P2-RZB"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5r-gj-PUa">
-                                                    <rect key="frame" x="168" y="0.0" width="42" height="30"/>
-                                                    <state key="normal" image="star5"/>
-                                                    <connections>
-                                                        <action selector="anyStarPressed:" destination="TRC-QW-LRo" eventType="touchUpInside" id="xjp-0A-rSb"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtM-UY-wy1">
-                                                    <rect key="frame" x="126" y="0.0" width="42" height="30"/>
-                                                    <state key="normal" image="star4"/>
-                                                    <connections>
-                                                        <action selector="anyStarPressed:" destination="TRC-QW-LRo" eventType="touchUpInside" id="1ms-HF-Q7u"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="r5r-gj-PUa" secondAttribute="trailing" id="390-dY-vHk"/>
-                                                <constraint firstItem="r5r-gj-PUa" firstAttribute="width" secondItem="jZX-z3-ajG" secondAttribute="width" id="6iZ-17-rK6"/>
-                                                <constraint firstItem="jNd-OC-RaZ" firstAttribute="width" secondItem="jZX-z3-ajG" secondAttribute="width" id="AJp-fF-20v"/>
-                                                <constraint firstItem="r5r-gj-PUa" firstAttribute="leading" secondItem="jtM-UY-wy1" secondAttribute="trailing" id="Ct1-Nd-9ct"/>
-                                                <constraint firstItem="r5r-gj-PUa" firstAttribute="centerY" secondItem="1RD-mN-6sZ" secondAttribute="centerY" id="Li2-7Y-ccy"/>
-                                                <constraint firstItem="jNd-OC-RaZ" firstAttribute="centerY" secondItem="1RD-mN-6sZ" secondAttribute="centerY" id="Ufg-tl-2eQ"/>
-                                                <constraint firstItem="UkX-8g-B27" firstAttribute="width" secondItem="jZX-z3-ajG" secondAttribute="width" id="V9o-eA-jPi"/>
-                                                <constraint firstItem="jZX-z3-ajG" firstAttribute="leading" secondItem="1RD-mN-6sZ" secondAttribute="leading" id="b1P-Uw-lMn"/>
-                                                <constraint firstItem="jtM-UY-wy1" firstAttribute="leading" secondItem="jNd-OC-RaZ" secondAttribute="trailing" id="dVk-gm-o2T"/>
-                                                <constraint firstItem="jtM-UY-wy1" firstAttribute="width" secondItem="jZX-z3-ajG" secondAttribute="width" id="dz5-h9-hSu"/>
-                                                <constraint firstItem="UkX-8g-B27" firstAttribute="leading" secondItem="jZX-z3-ajG" secondAttribute="trailing" id="fiO-CD-pfX"/>
-                                                <constraint firstItem="UkX-8g-B27" firstAttribute="centerY" secondItem="1RD-mN-6sZ" secondAttribute="centerY" id="gAq-iG-7sq"/>
-                                                <constraint firstItem="jtM-UY-wy1" firstAttribute="centerY" secondItem="1RD-mN-6sZ" secondAttribute="centerY" id="i6d-tR-H4J"/>
-                                                <constraint firstItem="jNd-OC-RaZ" firstAttribute="centerX" secondItem="1RD-mN-6sZ" secondAttribute="centerX" id="lRv-Cj-8ru"/>
-                                                <constraint firstItem="jNd-OC-RaZ" firstAttribute="leading" secondItem="UkX-8g-B27" secondAttribute="trailing" id="t3y-0I-1gv"/>
-                                                <constraint firstItem="jZX-z3-ajG" firstAttribute="centerY" secondItem="1RD-mN-6sZ" secondAttribute="centerY" id="zfk-p4-DYQ"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="1RD-mN-6sZ" firstAttribute="top" secondItem="r2Y-CC-Agk" secondAttribute="top" constant="6" id="00U-sC-bNe"/>
-                                        <constraint firstAttribute="bottom" secondItem="1RD-mN-6sZ" secondAttribute="bottom" constant="6.5" id="WuC-OM-HSE"/>
-                                        <constraint firstItem="1RD-mN-6sZ" firstAttribute="leading" secondItem="r2Y-CC-Agk" secondAttribute="leading" constant="55" id="c8g-vi-Mfc"/>
-                                        <constraint firstAttribute="trailing" secondItem="1RD-mN-6sZ" secondAttribute="trailing" constant="55" id="zSn-Za-dfO"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="fifthStar" destination="r5r-gj-PUa" id="3y1-tJ-rv3"/>
-                                    <outlet property="firstStar" destination="jZX-z3-ajG" id="Glu-Wq-q9u"/>
-                                    <outlet property="fourthStar" destination="jtM-UY-wy1" id="twk-Jj-2Dt"/>
-                                    <outlet property="secondStar" destination="UkX-8g-B27" id="nrZ-dl-MAv"/>
-                                    <outlet property="thirdStar" destination="jNd-OC-RaZ" id="o4i-6U-1Qx"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moneyFilterCell" rowHeight="43" id="oon-fV-wjK" customClass="FilterCellMoney" customModule="betrating" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="141.5" width="320" height="43"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oon-fV-wjK" id="waW-gW-31p">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqR-Cc-GC1">
-                                            <rect key="frame" x="189" y="0.0" width="115" height="42.5"/>
-                                            <subviews>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whR-Ok-aGo">
-                                                    <rect key="frame" x="3" y="5.5" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="fE7-pN-3WD"/>
-                                                        <constraint firstAttribute="width" constant="32" id="tim-Ob-BTI"/>
-                                                    </constraints>
-                                                    <state key="normal" image="dollarSign"/>
-                                                    <connections>
-                                                        <action selector="moneySignPressed:" destination="oon-fV-wjK" eventType="touchUpInside" id="QrF-vq-H92"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSq-T7-NzB">
-                                                    <rect key="frame" x="43" y="5.5" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="13q-lm-YRu"/>
-                                                        <constraint firstAttribute="width" constant="32" id="DEx-D9-iHu"/>
-                                                    </constraints>
-                                                    <state key="normal" image="euroSign"/>
-                                                    <connections>
-                                                        <action selector="moneySignPressed:" destination="oon-fV-wjK" eventType="touchUpInside" id="mMr-Io-wor"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq8-g0-b1q">
-                                                    <rect key="frame" x="83" y="5.5" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="pgj-mY-7ND"/>
-                                                        <constraint firstAttribute="width" constant="32" id="vxN-5L-79v"/>
-                                                    </constraints>
-                                                    <state key="normal" image="rublSign"/>
-                                                    <connections>
-                                                        <action selector="moneySignPressed:" destination="oon-fV-wjK" eventType="touchUpInside" id="dKB-px-HLG"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="qq8-g0-b1q" firstAttribute="leading" secondItem="rSq-T7-NzB" secondAttribute="trailing" constant="8" id="1aA-Ya-K6i"/>
-                                                <constraint firstItem="rSq-T7-NzB" firstAttribute="leading" secondItem="whR-Ok-aGo" secondAttribute="trailing" constant="8" id="3xF-hn-887"/>
-                                                <constraint firstAttribute="trailing" secondItem="qq8-g0-b1q" secondAttribute="trailing" id="5Lu-2H-QyE"/>
-                                                <constraint firstItem="rSq-T7-NzB" firstAttribute="centerY" secondItem="iqR-Cc-GC1" secondAttribute="centerY" id="Bcl-Ya-3zE"/>
-                                                <constraint firstItem="whR-Ok-aGo" firstAttribute="centerY" secondItem="iqR-Cc-GC1" secondAttribute="centerY" id="G7l-cc-5NR"/>
-                                                <constraint firstItem="qq8-g0-b1q" firstAttribute="centerY" secondItem="iqR-Cc-GC1" secondAttribute="centerY" id="ePe-gr-0Pp"/>
-                                                <constraint firstAttribute="width" constant="115" id="n2g-XT-6zM"/>
-                                            </constraints>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Популярные валюты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bh-Qf-vyE">
-                                            <rect key="frame" x="16" y="11" width="173" height="21"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="5Bh-Qf-vyE" firstAttribute="leading" secondItem="waW-gW-31p" secondAttribute="leadingMargin" id="3rX-fL-eH0"/>
-                                        <constraint firstItem="iqR-Cc-GC1" firstAttribute="leading" secondItem="5Bh-Qf-vyE" secondAttribute="trailing" id="AbZ-ih-Q5y"/>
-                                        <constraint firstItem="iqR-Cc-GC1" firstAttribute="top" secondItem="waW-gW-31p" secondAttribute="top" id="IwW-WW-nXT"/>
-                                        <constraint firstItem="5Bh-Qf-vyE" firstAttribute="bottom" secondItem="waW-gW-31p" secondAttribute="bottomMargin" id="V5M-Y5-u2w"/>
-                                        <constraint firstAttribute="bottom" secondItem="iqR-Cc-GC1" secondAttribute="bottom" id="o2J-qF-MyR"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="iqR-Cc-GC1" secondAttribute="trailing" id="qHI-I9-wLF"/>
-                                        <constraint firstItem="5Bh-Qf-vyE" firstAttribute="top" secondItem="waW-gW-31p" secondAttribute="topMargin" id="uBZ-ao-o0w"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dollarSign" destination="whR-Ok-aGo" id="uW9-xZ-QBY"/>
-                                    <outlet property="euroSign" destination="rSq-T7-NzB" id="5b6-Wg-S3R"/>
-                                    <outlet property="labelForRow" destination="5Bh-Qf-vyE" id="dE5-cu-wII"/>
-                                    <outlet property="rublSign" destination="qq8-g0-b1q" id="22j-oc-FKO"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clearFiltersCell" rowHeight="43" id="nr5-Jp-qi1" customClass="FilterCellClear" customModule="betrating" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="184.5" width="320" height="43"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nr5-Jp-qi1" id="bYP-Rd-J1m">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1W3-28-GkS">
-                                            <rect key="frame" x="16" y="11" width="288" height="21"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                            <state key="normal" title="Сбросить фильтр">
-                                                <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="clearFiltersBtnPressed:" destination="nr5-Jp-qi1" eventType="touchUpInside" id="b6O-SS-Iz9"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="1W3-28-GkS" firstAttribute="top" secondItem="bYP-Rd-J1m" secondAttribute="topMargin" id="6kC-8o-kQN"/>
-                                        <constraint firstItem="1W3-28-GkS" firstAttribute="leading" secondItem="bYP-Rd-J1m" secondAttribute="leadingMargin" id="Jyj-Od-eKY"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1W3-28-GkS" secondAttribute="bottom" id="Wni-F4-fLL"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="1W3-28-GkS" secondAttribute="trailing" id="bMN-ec-O8g"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="clearFiltersButton" destination="1W3-28-GkS" id="bab-dv-Zfk"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fK6-aC-B57" id="ohU-h3-PZB"/>
-                            <outlet property="delegate" destination="fK6-aC-B57" id="WEi-xC-Ndz"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Фильтр" id="1Yy-Dg-6ky">
-                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="4u0-AM-Zo2">
-                            <color key="tintColor" red="0.1170524731" green="0.65873342749999997" blue="0.44777929779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="KWW-40-R8l" kind="unwind" unwindAction="unwindFromFilterVC:" id="bdq-i3-Qe1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Готово" id="bwQ-Fa-njc">
-                            <color key="tintColor" red="0.1170524731" green="0.65873342749999997" blue="0.44777929779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="KWW-40-R8l" kind="unwind" unwindAction="unwindWithData:" id="Pu6-8k-JFW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VA7-Tt-BUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="KWW-40-R8l" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1845" y="-1741"/>
         </scene>
         <!--Прогнозы-->
         <scene sceneID="dXC-rI-vPb">
@@ -1491,22 +1224,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group" width="23" height="23"/>
         <image name="Star-1" width="27" height="26"/>
         <image name="bookmakerBackground" width="320" height="132"/>
-        <image name="dollarSign" width="34" height="34"/>
         <image name="emptyStar" width="12" height="11"/>
-        <image name="euroSign" width="34" height="34"/>
         <image name="goldenStar" width="16" height="15"/>
         <image name="heart" width="12" height="11"/>
         <image name="heartForBookmaker" width="12" height="11"/>
         <image name="news" width="25" height="26"/>
-        <image name="rublSign" width="34" height="34"/>
-        <image name="star1" width="30" height="30"/>
-        <image name="star2" width="30" height="30"/>
-        <image name="star3" width="30" height="30"/>
-        <image name="star4" width="30" height="30"/>
-        <image name="star5" width="30" height="30"/>
         <image name="trophy" width="26" height="24"/>
         <image name="wh-logo-dark-3" width="159" height="35"/>
     </resources>
