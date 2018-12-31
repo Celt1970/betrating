@@ -9,44 +9,7 @@
 import Foundation
 import UIKit
 
-class BookmakersListItem {
-    var id: Int?
-    var name: String?
-    var logo: String?
-    var votes: Int?
-    var legal: Bool?
-    var rating: Int?
-    var russianLanguage: Bool?
-    var russianSupport: Bool?
-    var currensies: [String]?
-    var live: Bool?
-    var bonus: Int?
-    var hasProfeesional: Bool?
-    var hasDemo: Bool?
-    var hasBetting: Bool?
-    var hasMobileMode: Bool?
-
-    
-    init(json: [String : Any]) {
-        self.id = json["id"] as? Int
-        self.name = json["name"] as? String
-        self.logo = json["logo"] as? String
-        self.votes = json["votes"] as? Int
-        self.legal = json["legal"] as? Bool
-        self.rating = json ["rating"] as? Int
-        self.russianLanguage = json["russian_language"] as? Bool
-        self.russianSupport = json["russian_support"] as? Bool
-        self.currensies = json["currencies"] as? [String]
-        self.live = json["live"] as? Bool
-        self.bonus = json["bonus"] as? Int
-        self.hasProfeesional = json["has_professional"] as? Bool
-        self.hasDemo = json["has_demo"] as? Bool
-        self.hasBetting = json["has_betting"] as? Bool
-        self.hasMobileMode = json["has_mobile_mode"] as? Bool
-    }
-}
-
-struct BookmakersListItem2: Codable {
+struct BookmakersListItem2: Codable, BookmakerCompare {
     let id: Int
     let name: String
     let logo: String
@@ -80,3 +43,50 @@ struct BookmakersListItem2: Codable {
     }
 }
 
+protocol BookmakerCompare {
+    var rating: Int {get}
+    var russianLanguage: Bool{get}
+    var russianSupport: Bool{get}
+    var live: Bool{get}
+    var bonus: Int{get}
+    var hasProfeesional: Bool{get}
+    var hasDemo: Bool{get}
+    var hasBetting: Bool{get}
+    var hasMobileMode: Bool{get}
+    var legal: Bool {get}
+
+    func isEqualTo (_ rhs: BookmakersListItem2) -> Bool
+}
+
+extension BookmakerCompare {
+    func isEqualTo (_ rhs: BookmakersListItem2) -> Bool {
+        if self.legal == rhs.legal,
+            self.rating >= rhs.rating,
+            self.russianLanguage == rhs.russianLanguage,
+            self.russianSupport == rhs.russianSupport,
+            self.live == rhs.live,
+            self.hasProfeesional == rhs.hasProfeesional,
+            self.hasDemo == rhs.hasDemo,
+            self.hasBetting == rhs.hasBetting,
+            self.hasMobileMode == rhs.hasMobileMode,
+            self.bonus == rhs.bonus
+            {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+struct BookMakerListItemMock: BookmakerCompare {
+    var hasMobileMode: Bool
+    var legal: Bool
+    var rating: Int
+    var russianLanguage: Bool
+    var russianSupport: Bool
+    var live: Bool
+    var bonus: Int
+    var hasProfeesional: Bool
+    var hasDemo: Bool
+    var hasBetting: Bool
+}

@@ -1,5 +1,5 @@
 //
-//  BookmakerDetailedVC.swift
+//  BookmakerByIdVC.swift
 //  betrating
 //
 //  Created by Yuriy borisov on 19.01.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookmakerDetailedVC: UIViewController {
+class BookmakerByIdVC: UIViewController {
     
     @IBOutlet weak var stackViewForStars: UIStackView!
     @IBOutlet weak var bookmakerLogo: UIImageView!

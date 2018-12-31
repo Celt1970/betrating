@@ -57,7 +57,6 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     }
     
     private func loadAllImages() {
-        self.service.setConnectionsPerHost(10)
         guard let news = news else {return}
         for (index, item) in news.enumerated() {
             if cachedImages[index] == nil {

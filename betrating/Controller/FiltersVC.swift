@@ -12,10 +12,12 @@ class FiltersVC: UITableViewController {
     
     var activatedTriggers: [[Int]] = [[0],[0,0,0,0,0],[0],[0],[0,0,0],[0],[0],[0],[0],[0],[0],[0]]
     var triggersToSend = [[0],[0,0,0,0,0],[0],[0],[0,0,0],[0],[0],[0],[0],[0],[0],[0]]
-    
+//    var filter: BookMakerListItemMock = BookMakerListItemMock(hasMobileMode: Bool, legal: <#Bool#>, rating: <#Int#>, russianLanguage: <#Bool#>, russianSupport: <#Bool#>, live: <#Bool#>, bonus: <#Int#>, hasProfeesional: <#Bool#>, hasDemo: <#Bool#>, hasBetting: <#Bool#>)
+    var array = [(BookmakerCompare) -> Bool]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var set = Set<(BookmakerCompare) -> Bool>(array)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,6 +81,8 @@ class FiltersVC: UITableViewController {
             }else{
                 cell.switchfoRow.isOn = true
             }
+            
+            cell.filter = {$0.legal == true}
             return cell
         }else if indexPath.section == 1{
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "starsFiltersCell", for: indexPath) as! FilterCellStars

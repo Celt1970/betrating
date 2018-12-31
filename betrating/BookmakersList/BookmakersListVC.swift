@@ -27,7 +27,7 @@ class BookmakersListVC: UIViewController {
         super.viewDidLoad()
         collectionView.isHidden = true
         activityIndicator.startAnimating()
-        service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings in
+        service.getBookmakersList { [weak self] ratings in
             
             guard let ratings = ratings else { return }
             self?.raitings = ratings
@@ -49,40 +49,15 @@ class BookmakersListVC: UIViewController {
         collectionView.collectionViewLayout = layout
         self.view.addSubview(collectionView)
     }
-    @IBAction func filtersBtnPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toFilters", sender: self)
-    }
+    
     @IBAction func unwindFromFilterVC(_ sender: UIStoryboardSegue){
         
     }
-    
-    @IBAction func unwindWithData(_ sender: UIStoryboardSegue){
-        if sender.source is FiltersVC{
-            if let senderVC = sender.source as? FiltersVC{
-                activityIndicator.startAnimating()
-                activatedTriggers = senderVC.activatedTriggers
-                collectionView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
-                service.getBookmakersList(filters: activatedTriggers){ [weak self] ratings in
-                    
-                    guard let ratings = ratings else { return }
-                    self?.raitings = ratings
-                    self?.activityIndicator.stopAnimating()
-                    self?.collectionView.reloadData()
-                }
-            }
-        }
-    }
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toFilters"{
-            if segue.destination is FiltersVC{
-                if let destinationVC = segue.destination as? FiltersVC{
-                    destinationVC.activatedTriggers = activatedTriggers
-                }
-            }
-        }
         if segue.identifier == "toBookmaker"{
-            if segue.destination is BookmakerDetailedVC{
-                if let destinationVC = segue.destination as? BookmakerDetailedVC{
+            if segue.destination is BookmakerByIdVC{
+                if let destinationVC = segue.destination as? BookmakerByIdVC{
                     destinationVC.id = idToSend
                 }
             }

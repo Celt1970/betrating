@@ -13,6 +13,7 @@ class FilterCellSimple: UITableViewCell {
     @IBOutlet weak var switchfoRow: UISwitch!
     
     var delegate: FilterChangedDelegate?
+    var filter: ((BookmakerCompare) -> Bool)?
     
     @IBAction func switcherSwitched(_ sender: UISwitch) {
         if switchfoRow.isOn{
