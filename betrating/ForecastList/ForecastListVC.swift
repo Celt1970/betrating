@@ -60,35 +60,25 @@ class ForecastListVC: UIViewController {
         if category == .all {
             self.filteredCategory = self.all!
         }
-        update(.stop)
+        update(view: self.collectionB, activityIndicator: activityIndicator, condition: .stop)
+        self.collectionB.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
     }
     
-    private func update(_ condition: Condition ) {
-        switch condition {
-        case .start:
-            collectionB.isHidden = true
-            activityIndicator.startAnimating()
-        case .stop:
-            self.collectionB.isHidden = false
-            self.collectionB.reloadData()
-            self.collectionB.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
-            self.activityIndicator.stopAnimating()
-        }
-    }
+
     
     private func loadData() {
-        self.update(.start)
+        self.update(view: collectionB, activityIndicator: activityIndicator, condition: .start)
         service.getForecastList(category: .all,
                                 offset: 0,
                                 limit: 100)
         { [weak self] list in
             guard let list = list else {
-                self?.update(.stop)
+                self?.update(view: self?.collectionB, activityIndicator: self?.activityIndicator, condition: .stop)
                 return
             }
             self?.all = list
             self?.filteredCategory = list
-            self?.update(.stop)
+            self?.update(view: self?.collectionB, activityIndicator: self?.activityIndicator, condition: .stop)
         }
     }
     

@@ -25,15 +25,15 @@ class BookmakersListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.isHidden = true
-        activityIndicator.startAnimating()
+        loadData()
+    }
+    
+    private func loadData() {
+        update(view: collectionView, activityIndicator: activityIndicator, condition: .start)
         service.getBookmakersList { [weak self] ratings in
-            
             guard let ratings = ratings else { return }
             self?.raitings = ratings
-            self?.collectionView.reloadData()
-            self?.collectionView.isHidden = false
-            self?.activityIndicator.stopAnimating()
+            self?.update(view: self?.collectionView, activityIndicator: self?.activityIndicator, condition: .stop)
         }
         setupCollectionView()
     }

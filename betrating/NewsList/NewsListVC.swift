@@ -24,16 +24,18 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.startAnimating()
-        
+        loadData()
+    }
+    
+    private func loadData() {
+        update(view: self.collectionView, activityIndicator: activityIndicator, condition: .start)
         service.getNewsList(completion: {[ weak self ] news in
             guard let news = news else {return}
             self?.news = news
             self?.collectionView?.reloadData()
             self?.loadAllImages()
-            self?.activityIndicator.stopAnimating()
+            self?.update(view: self?.collectionView, activityIndicator: self?.activityIndicator, condition: .stop)
         })
-        
         setupLayout()
     }
    

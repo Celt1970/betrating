@@ -19,25 +19,23 @@ class NewsByIdVC: UIViewController {
     @IBOutlet weak var separatingView: UIView!
     @IBOutlet weak var activityIndecator: UIActivityIndicatorView!
     @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
-
     var id = 0
     var service = NetworkService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.isHidden = true
-        activityIndecator.startAnimating()
-        separatingView.isHidden = true
-        imageActivityIndicator.startAnimating()
+
+        update(view: self.scrollView, activityIndicator: self.activityIndecator, condition: .start)
+        update(view: separatingView, activityIndicator: imageActivityIndicator, condition: .start)
+
         service.getNewsById(id: id) { [weak self] news  in
             guard let news = news else {return}
             
             self?.service.loadImage(url: news.preview, completion: { [ weak self ] image in
                 self?.newsImage.image = image
-                self?.imageActivityIndicator.stopAnimating()
+                self?.update(view: self?.separatingView, activityIndicator: self?.activityIndecator, condition: .stop)
             })
             
             self?.newsLabel.text = news.fullName
@@ -49,9 +47,8 @@ class NewsByIdVC: UIViewController {
             }
             self?.secondTextView.attributedText = news.attrStr2
             self?.tagsLabel.text = news.getTags()
-            self?.separatingView.isHidden = false
-            self?.scrollView.isHidden = false
-            self?.activityIndecator.stopAnimating()
+
+            self?.update(view: self?.scrollView, activityIndicator: self?.activityIndecator, condition: .stop)
         }
     }
 }

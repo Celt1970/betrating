@@ -19,6 +19,6 @@ struct NewsListItem: Codable, ListItem {
         return str
     }
     var fullName: String {
-        return name.replacingOccurrences(of: "&#171;", with: "\"").replacingOccurrences(of: "&#187;", with: "\"")
+        return name.htmlDecoded
     }
 }

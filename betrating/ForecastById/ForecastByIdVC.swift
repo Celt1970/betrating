@@ -25,13 +25,13 @@ class ForecastByIdVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        update(.start)
         fetchData()
     }
     private func fetchData() {
+        update(view: self.myScroll, activityIndicator: self.activityIndicator, condition: .start)
         service.getForecastById(id, completion: { [weak self] forecast in
             guard let forecast = forecast else {
-                self?.update(.stop)
+                self?.update(view: self?.myScroll, activityIndicator: self?.activityIndicator, condition: .stop)
                 return
             }
             self?.populateUI(forecast: forecast)
@@ -57,7 +57,7 @@ class ForecastByIdVC: UIViewController {
         })
         
         dispatchGroup.notify(queue: DispatchQueue.main) {
-            self.update(.stop)
+            self.update(view: self.myScroll, activityIndicator: self.activityIndicator, condition: .stop)
             self.leagueImage.image = tempLeagueImage
             self.forecastImage.image = tempForecastImage
             self.leagueLabel.text = forecast.header
@@ -74,20 +74,5 @@ class ForecastByIdVC: UIViewController {
             contentRect = contentRect.union(view.frame)
         }
         myScroll.contentSize = contentRect.size
-    }
-    
-    private func update(_ condition: Condition) {
-        switch condition {
-        case .start:
-            darkView.isHidden = true
-            activityIndicator.startAnimating()
-        case .stop:
-            myScroll.reloadInputViews()
-            darkView.isHidden = false
-            activityIndicator.stopAnimating()
-        }
-    }
-    
-
-    
+    } 
 }

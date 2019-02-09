@@ -35,7 +35,7 @@ class BookmakerByIdVC: UIViewController {
     }
     
     private func loadData() {
-        update(condition: .start)
+        update(view: self.scrollView, activityIndicator: activityIndicator, condition: .start)
         service.getBookmakerByID(id: id) { [weak self] rate in
             guard let rate = rate else { return }
             
@@ -45,7 +45,7 @@ class BookmakerByIdVC: UIViewController {
             
             self?.populateUI(bookmaker: rate)
             self?.setupScrollView()
-            self?.update(condition: .stop)
+            self?.update(view: self?.scrollView, activityIndicator: self?.activityIndicator, condition: .stop)
         }
     }
     
@@ -64,23 +64,31 @@ class BookmakerByIdVC: UIViewController {
         
     }
     
-    private func update(condition: Condition) {
-        switch condition {
-        case .start:
-            scrollView.isHidden = true
-            activityIndicator.startAnimating()
-        case .stop:
-            self.scrollView.reloadInputViews()
-            self.scrollView.isHidden = false
-            self.activityIndicator.stopAnimating()
-        }
-    }
-    
     private func setupScrollView() {
         var contentRect = CGRect.zero
         for view in scrollView.subviews {
             contentRect = contentRect.union(view.frame)
         }
         scrollView.contentSize = contentRect.size
+    }
+}
+
+extension UIViewController {
+    func update (view: UIView?, activityIndicator: UIActivityIndicatorView?, condition: Condition) {
+        guard let view = view, let activityIndicator = activityIndicator else { return }
+        switch condition {
+        case .start:
+            view.isHidden = true
+            activityIndicator.startAnimating()
+        case .stop:
+            view.isHidden = false
+            activityIndicator.stopAnimating()
+            if let scroll = view as? UIScrollView {
+                scroll.reloadInputViews()
+            }
+            if let collectionView = view as? UICollectionView {
+                collectionView.reloadData()
+            }
+        }
     }
 }

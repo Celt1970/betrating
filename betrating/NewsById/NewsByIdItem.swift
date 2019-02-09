@@ -28,7 +28,7 @@ struct NewsByIdItem: Codable {
         return NSAttributedString.getAttributedStringFromHTML(from: secondStr)
     }
     var fullName: String {
-        return name.replacingOccurrences(of: "&#171;", with: "\"").replacingOccurrences(of: "&#187;", with: "\"")
+        return name.htmlDecoded
     }
     func getTags() -> String {
         return tags.map {
@@ -36,6 +36,14 @@ struct NewsByIdItem: Codable {
         }.joined(separator: "\n")
     }
 }
-    
-    
 
+extension String {
+    var htmlDecoded: String {
+        let decoded = try? NSAttributedString(data: Data(utf8), options: [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+            ], documentAttributes: nil).string
+        
+        return decoded ?? self
+    }
+}
